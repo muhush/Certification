@@ -1,14 +1,21 @@
-1. Security Assessment and Testing
-  a. Security Assessment and Testing
+1. Security and Risk Management
+  a. Security Fundamentals
+    1) The five pillars of information security
+    2) Confidentiality - sensitive information, encryption, steganography
+    3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
+    4) Availability - patching
+    5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
+  b. Security Governance
+    1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
+    2) Organizational processes
+    3) Security roles and responsibilities - Due Care (legal responsibilities), Due Diligence (reasonable measures), 
+    4) Control and risk frameworks - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
+        While COBIT focuses more on aligning IT management with business objectives and governance,
+        ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
+        SABSA (Sherwood Applied Business Security Architecture)
 
-2. Security and Risk Management
-  a. Security Governance Through Principles and Policies
-  b. Personnel Security and Risk Management Concepts
-  c. Business Continuity Planning
-  d. Laws, Regulations, and Compliance
-  e. Security Vulnerabilities, Threats, and Countermeasures
-  f. Disaster Recovery Planning
-  g. Investigations and Ethics  
+2. Security Assessment and Testing
+  a. Security Assessment and Testing
 
 3. Communication and Network Security
   a. Secure Network Architecture and Securing Network Components
