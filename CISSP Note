@@ -1,11 +1,11 @@
 1. Security and Risk Management
-  a. Security Fundamentals
+  A. Security Fundamentals
     1) The five pillars of information security
     2) Confidentiality - sensitive information, encryption, steganography
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
     4) Availability - patching
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
-  b. Security Governance
+  B. Security Governance
     1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
     2) Organizational processes
     3) Security roles and responsibilities - Due Care (legal responsibilities), Due Diligence (reasonable measures), 
@@ -13,7 +13,7 @@
         While COBIT focuses more on aligning IT management with business objectives and governance,
         ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
         SABSA (Sherwood Applied Business Security Architecture)
-  c. Compliance and Ethics
+  C. Compliance and Ethics
     1) Legal and compliance risks - GDPR, PCI DSS
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
     3) GDPR - E.U regulations, anyone in E.U geolocation
@@ -25,13 +25,25 @@
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
     10) Data breaches    * Encryption is easy to protect data breach
     11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
-  d. Security Policy
+  D. Security Policy
     1) Security policy framework - policies > standard (details) > guidelines (advice),  procedures    * Policy, standards, and procedures are mandatory. Guidelines are optional
     2) Security Policies
-  e. Business Continuity
+  E. Business Continuity
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
-    2) Business continuity controls
+    2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
+    3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
+        Component redundancy - such as power supply or fan
+        clustering - all active working
+        RAID (Redundant Array of Inexpensive Disks) = Disk mirroring (RAID 1), Disk Striping (RAID 5)
+        * RAID is a fault-tolerance technique, not a backup state
+  F. Personnel Security
+    1) Personnel security - strong security policy, insider threat
+    2) Security in the hiring process - Employment Agreements, NDAs
+    3) Employee termination process - Exit interview, Revoke Access Promptly
+    4) Employee privacy - minimization, limit access, encryption, masking (hiding)
+    5) Social networking - multi-factoring
+  G. 
 
 2. Security Assessment and Testing
   a. Security Assessment and Testing
