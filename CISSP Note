@@ -45,26 +45,32 @@
     5) Social networking - multi-factoring
   G. Risk Management
     1) Risk analysis, assessment, and scope    * Threat vectors are the specific methods that threats use to exploit a vulnerability
-    2) Quantitative risk assessment - single risk and asset pair, Asset Value(AV), Exposure Factor(EF), Single-Loss Expectancy(SLE)
-                                    - AV * EF = SLE
-                                    - Annualized Rate of Occurrence(ARO), Annualized Loss Expectancy(ALE),
-                                    - SLE * ARO = ALE
-                                    * Be prepared to work through a quantitative risk assessment calculation on the exam
-                                    - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
+    2) Quantitative risk assessment 
+      - single risk and asset pair, Asset Value(AV), Exposure Factor(EF), Single-Loss Expectancy(SLE)
+      - AV * EF = SLE
+      - Annualized Rate of Occurrence(ARO), Annualized Loss Expectancy(ALE),
+      - SLE * ARO = ALE
+      * Be prepared to work through a quantitative risk assessment calculation on the exam
+      - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
     4) Security control selection and implementation - Defense in Depth    
-        * Technical controls are implemented by technology while operational controls are implemented by people!
+      * Technical controls are implemented by technology while operational controls are implemented by people!
     5) Continuous monitoring, measurement, and tuning
     6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
     7) Risk visibility and reporting
   H. Threat Modeling
-    1) Threat intelligence
-    2) Managing threat indicators
-    3) Intelligence sharing
+    1) Threat intelligence - Open-source intelligence, Email Address Harvesting
+    2) Managing threat indicators -CybOX, STIX, TAXII, OpenIOC
+    3) Intelligence sharing -ISACs
     4) Threat research
-    5) Identifying threats
-    6) Automating threat intelligence
+    5) Identifying threats - structured approach
+    6) Automating threat intelligence - Data Enrichment
     7) Threat hunting
+  I. Supply Chain Risk Management
+    1) Managing vendor relationships
+    2) Vendor agreements
+    3) Vendor information management
+    4) Cloud audits
 
 2. Security Assessment and Testing
   a. Security Assessment and Testing
