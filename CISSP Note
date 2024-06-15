@@ -43,7 +43,28 @@
     3) Employee termination process - Exit interview, Revoke Access Promptly
     4) Employee privacy - minimization, limit access, encryption, masking (hiding)
     5) Social networking - multi-factoring
-  G. 
+  G. Risk Management
+    1) Risk analysis, assessment, and scope    * Threat vectors are the specific methods that threats use to exploit a vulnerability
+    2) Quantitative risk assessment - single risk and asset pair, Asset Value(AV), Exposure Factor(EF), Single-Loss Expectancy(SLE)
+                                    - AV * EF = SLE
+                                    - Annualized Rate of Occurrence(ARO), Annualized Loss Expectancy(ALE),
+                                    - SLE * ARO = ALE
+                                    * Be prepared to work through a quantitative risk assessment calculation on the exam
+                                    - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
+    3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
+    4) Security control selection and implementation - Defense in Depth    
+        * Technical controls are implemented by technology while operational controls are implemented by people!
+    5) Continuous monitoring, measurement, and tuning
+    6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
+    7) Risk visibility and reporting
+  H. Threat Modeling
+    1) Threat intelligence
+    2) Managing threat indicators
+    3) Intelligence sharing
+    4) Threat research
+    5) Identifying threats
+    6) Automating threat intelligence
+    7) Threat hunting
 
 2. Security Assessment and Testing
   a. Security Assessment and Testing
