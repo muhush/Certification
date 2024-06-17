@@ -68,9 +68,21 @@
     7) Threat hunting
   I. Supply Chain Risk Management
     1) Managing vendor relationships
-    2) Vendor agreements
+    2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
     3) Vendor information management
-    4) Cloud audits
+    4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
+  J. Awareness and Training
+    1) Security awareness training
+    2) Compliance training
+    3) User habits
+    4) Measuring compliance and security
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Asset Security
+  a. Protecting Security of Assets
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Security Assessment and Testing
   a. Security Assessment and Testing
@@ -79,8 +91,6 @@
   a. Secure Network Architecture and Securing Network Components
   b. Secure Communications and Network Attacks
 
-4. Asset Security
-  a. Protecting Security of Assets
 
 5. Software Development Security
   a. Software Development Security
