@@ -9,7 +9,8 @@
     1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
     2) Organizational processes
     3) Security roles and responsibilities - Due Care (legal responsibilities), Due Diligence (reasonable measures), 
-    4) Control and risk frameworks - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
+    4) Control and risk frameworks 
+        - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
         While COBIT focuses more on aligning IT management with business objectives and governance,
         ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
         SABSA (Sherwood Applied Business Security Architecture)
@@ -20,13 +21,15 @@
     4) California privacy law - CPRA (SPI = Sensitive)
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
     6) Computer crimes - CFAA (Access), ECPA (network communication), ITADA (Identity)
-    7) Software Licensing - SLA, ELAs (Enterprise), EULAs
+    7) Software Licensing - SLA, ELAs (Enterprise), EULAs, 
+      - Contractual agreements(high value)
     8) Intellectual Property - Copyrights, Trademarks, Patents(protect inventions)
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
     10) Data breaches    * Encryption is easy to protect data breach
     11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
   D. Security Policy
-    1) Security policy framework - policies > standard (details) > guidelines (advice),  procedures    * Policy, standards, and procedures are mandatory. Guidelines are optional
+    1) Security policy framework - policies > standard (details) > guidelines (advice),  procedures    
+      * Policy, standards, and procedures are mandatory. Guidelines are optional
     2) Security Policies
   E. Business Continuity
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
