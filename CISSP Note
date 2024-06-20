@@ -83,7 +83,23 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Asset Security
-  a. Protecting Security of Assets
+  A. Data Security
+    1) Understanding data security
+      - Data at Rest, Data in Transit, Data in Use
+    2) Data security policies
+      - Data classification, Data Lifecycle Policy (Retention, Disposal)
+    3) Data security roles
+      - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
+      - Data Subject(collected data), Data processors(third parties)
+      * GDPR uses the term data controller instead of data owner
+      * System ownership and data ownership are two different concepts
+    4) Limiting data collection
+      - Minimize information collected, Monitor Third Parties
+    5) The data lifecycle
+      - Create, Store, Use, Share, Archive, Destroy
+      - Clearing(Casual), Purging(advanced), Destroying
+  B. Data Security Controls
+  C. Change and Configuration Management
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
