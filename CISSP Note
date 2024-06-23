@@ -99,7 +99,45 @@
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
   B. Data Security Controls
+    1) Developing security baselines
+      - Baselines are generic, Monitoring is critical
+      - Security baselines often require hundreds or thousands of individual security settings on a particular device.
+    2) Leveraging industry standards
+    3) Customizing security standards
+    4) Cloud storage security
+      - Encryption, Access control
+    5) Information classification
+      - Data Classification Policy, Labeling Requirement, 
+    6) Digital rights management
+      - IRM(information rights management), DRM(Digital Right)
+    7) Data loss prevention
+      - DLP(Data Loss Prevention), Host-based, Network-based, Pattern Matching, Watermarking, Cloud-based
   C. Change and Configuration Management
+    1) Change management
+      - RFC(Request for change)
+    2) Configuration and asset management
+      - Baselines, Versioning
+    3) Physical asset management
+      - Media management(tracks highly sensitive data)
+    4) Supply chain risks and mitigations
+      - End of Sale(no longer be offered for purchase), End of Support(reduce or eliminate support), End of Life(no longer provide any support)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Security Architecture and Engineering
+  A. Secure Design
+  B. Virtualization and Cloud Computing
+  C. Hardware Security
+  D. ServerSecurity Issues
+  E. Embedded Systems Security
+  F. Encryption
+  G. Symmetric Cryptography
+  H. Asymmetric Cryptography
+  I. Key management
+  J. Public Key Infrastructure
+  K. Cryptanalytic Attacks
+  L. Physical Security
+  M. Software Security Architecture
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -110,7 +148,6 @@
   a. Secure Network Architecture and Securing Network Components
   b. Secure Communications and Network Attacks
 
-
 5. Software Development Security
   a. Software Development Security
   b. Malicious Code and Application Attacks
@@ -119,10 +156,7 @@
   a. Managing Identity and Authentication
   b. Controlling and Monitoring Access
 
-7. Security Architecture and Engineering
-  a. Cryptography and Symmetric Key Algorithms
-  b. PKI and Cryptographic Applications
-  c. Principles of Security Models, Design, and Capabilities
+
 
 8. Security Operations
   a. Physical Security Requirements
