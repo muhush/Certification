@@ -101,7 +101,7 @@
   B. Data Security Controls
     1) Developing security baselines
       - Baselines are generic, Monitoring is critical
-      - Security baselines often require hundreds or thousands of individual security settings on a particular device.
+      % Security baselines often require hundreds or thousands of individual security settings on a particular device.
     2) Leveraging industry standards
     3) Customizing security standards
     4) Cloud storage security
@@ -126,7 +126,67 @@
 
 3. Security Architecture and Engineering
   A. Secure Design
+    1) Secure design principles
+      - Fail open, Fail secure
+      % Network segmentation involves dividing a network into smaller parts to improve security and manageability, 
+        but it doesn't directly prevent programs from accessing each other.
+      % Process isolation is a security measure that ensures different programs run separately,
+        preventing them from accessing or interfering with each other.
+    2) Security models
+      - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up)
+      * The Bell-LaPadula model is rarely implemented outside of military applications
+      * The Bell-LaPadula model and Biba models are important for the exam but rarely used in the real world
+    3) Security evaluation models
+      - TCSEC, Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
+      * Certification and accreditation are different. Accreditation and authorization are the same.
+    4) Segregation of duties
+      % Segregation of duties is the principle that ensures no individual has access to multiple permissions
+        that would allow them to perform a highly sensitive action alone, preventing fraud and errors.
+      % Two-person control is a security measure that requires at least two authorized individuals to perform certain actions,
+        ensuring that no single person can complete sensitive tasks alone.
+    5) Privacy by design
+      (1) Proactive preventive
+      (2) Privacy as the Default Setting
+      (3) Privacy Embedded into Design
+      (4) Full Functionality
+      (5) End to End security
+      (6) Visibility and Transparency
+      (7) Respect for User Privacy
+    6) Secure defaults
+      - Keep It Simple and Small
+    7) Information system lifecycle
   B. Virtualization and Cloud Computing
+    1) What is the cloud?
+    2) Cloud computing roles
+      - Cloud Access Security Broker(CASB)
+    3) Drivers for cloud computing
+      - On-demand self-service, Scalability, Elasticity, Broad Network Access, Measured Service
+    4) Security service providers
+      * MSSPs(Managed Security Service Providers) may also be referred to as security as a service (SECaaS)
+      - Network-based CASB, API-Based CASB
+    5) Multitenant computing
+      - Oversubscription, Resource Pooling
+    6) Virtualization
+      - Type 1, Type 2(Operating system, personal device), VM Sprawl
+      % Type 1 hypervisor is known as bare metal and runs on top of bare hardware.
+      % Type 2 hypervisor is known as hosted and runs on top of an operating system.
+    7) Desktop and application virtualization
+      - VDI(Virtual Desktop Infrastructure), Application Virtualization
+    8) Cloud compute resources
+    9) Containerization
+      - Applications are what containerized computing environments are created for.
+      % A hypervisor is not part of containerization. A hypervisor is an application where you can create, manage, and run multiple VMs.
+    10) Cloud activities and the cloud reference architecture
+      - ISO/IEC 17789:2014
+      * Reference architectures provide a useful framework, but they're just a starting point.
+    11) Cloud deployment models
+      * No cloud model is inherently superior to the other approaches. It all depends on the context.
+      % Vertical scaling adds more resources to existing servers to meet demand.
+      % Horizontal scaling adds more servers to the pool to meet increased demand.
+    12) Cloud service categories
+      - XaaS, SaaS(entire app / Data), PaaS(app platform / Data, Application), IaaS(Servers/storage / Data, Application, OS), FaaS(serverless computing)
+      * Understanding the shared responsibility model is crucial for cybersecurity professionals.
+    13) Edge and fog computing
   C. Hardware Security
   D. ServerSecurity Issues
   E. Embedded Systems Security
