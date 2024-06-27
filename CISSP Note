@@ -188,8 +188,35 @@
       * Understanding the shared responsibility model is crucial for cybersecurity professionals.
     13) Edge and fog computing
   C. Hardware Security
+    1) Memory protection
+      - Segmentation Fault, Memory Leak
+    2) Hardware encryption
+      - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
+    3) Hardware and firmware security
+      - BIOS, UEFI(Unified Extensible Firmware Interface), Measured Boot, Attestation, Hardware Root of Trust, EMI(Electromagnetic Interference, EMP)
   D. ServerSecurity Issues
+    1) Server and database security
+      - Aggregation(Combing), Inference
+    2) NoSQL databases
+    3) Distributed and high-performance computing
+      - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
+      % Grid computing utilizes the unused processing power of multiple computers across different locations,
+        combining them to form a virtual supercomputer that is managed by a centralized controller.
   E. Embedded Systems Security
+    1) Industrial control systems and operational technology
+      - SCADA(Remote Central), DCS(Controlling processes), PLC
+      % SCADA is used to gather information from remote sensors via telemetry.
+      % Distributed Control System (DCS) is used to control industrial processes.
+      % Programmable Logic Controller (PLCs) is a device used to monitor and control industrial equipment.
+    2) Internet of things
+    3) Securing smart devices
+      - Firmware Version Control, Security Wrapper
+    4) Secure networking for smart devices
+      * Network segmentation is the most important control for embedded devices
+      * Embedded device security controls are effective for mainframes as well
+    5) Embedded systems
+      - RTOSs(Real-time), CAN bus
+    6) Communications for embedded devices
   F. Encryption
   G. Symmetric Cryptography
   H. Asymmetric Cryptography
