@@ -257,6 +257,9 @@
         meaning it does not depend on the previous encrypted block for the next block's encryption.
     6) Steganography
   H. Asymmetric Cryptography
+    1) Rivest-Shamir-Adelman(RSA)
+    2) PGP and GnuPG
+    3) Elliptic curve and quantum cryptography
   I. Key management
   J. Public Key Infrastructure
   K. Cryptanalytic Attacks
