@@ -24,6 +24,7 @@
     7) Software Licensing - SLA, ELAs (Enterprise), EULAs, 
       - Contractual agreements(high value)
     8) Intellectual Property - Copyrights, Trademarks, Patents(protect inventions)
+      % The Digital Millennium Copyright Act contains provisions prohibiting the circumvention of copyright protection mechanisms.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
     10) Data breaches    * Encryption is easy to protect data breach
     11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
@@ -34,6 +35,7 @@
   E. Business Continuity
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
+      % People should always be your highest priority in business continuity planning.
     2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
     3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
         Component redundancy - such as power supply or fan
@@ -65,13 +67,13 @@
   H. Threat Modeling
     1) Threat intelligence - Open-source intelligence, Email Address Harvesting
     2) Managing threat indicators -CybOX, STIX, TAXII, OpenIOC
-    3) Intelligence sharing -ISACs
+    3) Intelligence sharing -ISACs, ISA(interconnection security agreement)
     4) Threat research
     5) Identifying threats - structured approach
     6) Automating threat intelligence - Data Enrichment
     7) Threat hunting
   I. Supply Chain Risk Management
-    1) Managing vendor relationships
+    1) Managing vendor relationships - VMS(vendor management system)
     2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
     3) Vendor information management
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
@@ -99,6 +101,7 @@
     5) The data lifecycle
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
+      % Purging writes a series of 1s and 0s over media multiple times, and it removes all data remnants.
   B. Data Security Controls
     1) Developing security baselines
       - Baselines are generic, Monitoring is critical
@@ -140,6 +143,7 @@
     3) Security evaluation models
       - TCSEC, Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
       * Certification and accreditation are different. Accreditation and authorization are the same.
+      % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
     4) Segregation of duties
       % Segregation of duties is the principle that ensures no individual has access to multiple permissions
         that would allow them to perform a highly sensitive action alone, preventing fraud and errors.
@@ -191,6 +195,7 @@
   C. Hardware Security
     1) Memory protection
       - Segmentation Fault, Memory Leak
+      % Write blockers are hardware devices used to prevent the accidental writing of data to media that was collected as evidence.
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
     3) Hardware and firmware security
