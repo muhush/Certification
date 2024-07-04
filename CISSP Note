@@ -8,10 +8,10 @@
   B. Security Governance
     1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
     2) Organizational processes
-    3) Security roles and responsibilities - Due Care (legal responsibilities), Due Diligence (reasonable measures), 
+    3) Security roles and responsibilities - Due Care(legal responsibilities), Due Diligence(reasonable measures), 
     4) Control and risk frameworks 
         - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
-        While COBIT focuses more on aligning IT management with business objectives and governance,
+        % While COBIT focuses more on aligning IT management with business objectives and governance,
         ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
         SABSA (Sherwood Applied Business Security Architecture)
   C. Compliance and Ethics
@@ -28,7 +28,7 @@
     10) Data breaches    * Encryption is easy to protect data breach
     11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
   D. Security Policy
-    1) Security policy framework - policies > standard (details) > guidelines (advice),  procedures    
+    1) Security policy framework - policies > standard(details) > guidelines(advice),  procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
     2) Security Policies
   E. Business Continuity
@@ -47,7 +47,8 @@
     4) Employee privacy - minimization, limit access, encryption, masking (hiding)
     5) Social networking - multi-factoring
   G. Risk Management
-    1) Risk analysis, assessment, and scope    * Threat vectors are the specific methods that threats use to exploit a vulnerability
+    1) Risk analysis, assessment, and scope    
+      * Threat vectors are the specific methods that threats use to exploit a vulnerability
     2) Quantitative risk assessment 
       - single risk and asset pair, Asset Value(AV), Exposure Factor(EF), Single-Loss Expectancy(SLE)
       - AV * EF = SLE
@@ -313,8 +314,8 @@
         It helps in preventing man-in-the-middle attacks by ensuring that the client accepts only a specific certificate or public key.
     11) Certificate types
       - Root Certificates, Wildcard Certificates
-      - Domain validation, organizational validation, extended validation(highest)
-    12) Certificate formats 
+      - Domain validation(DV), organizational validation(OV), extended validation(EV, highest)
+    12) Certificate formats
       - DER(Distinguished Encoding Rules), PEM(Privacy Enhanced Mail)
       * CRT files may be either DER binary certificates or PEM text certificates.
       - PFX(Personal Information Exchange), P7B
