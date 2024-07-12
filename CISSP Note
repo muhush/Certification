@@ -366,15 +366,151 @@
 
 4. Communication and Network Security
   A. TCP/IP Networking
-    1) 
+    1) Introducing TCP/IP - TCP / UDP, OSI Model
+      * Know the seven layers of the OSI model and the four layers of the TCP model.
+    2) IP addresses and DHCP - IPv4, IPv6
+    3) Network traffic
+    4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
+    5) Network ports
+      * Memorize the list of common ports before taking the exam.
+      - Port21(FTP), Port22(SSH), Port 3389(RDP), Port 137,138, and 139(NetBIOS)
+      - Port 25(SMTP), Port 110(POP), Port 143(IMAP)
+      - Port 80(HTTP), Port 443(HTTPS)
+    6) ICMP -Traceroute
+    7) Multilayer protocols -  DNP3(Distributed Network Protocol)
   B. Secure Network Design
+    1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
+    2) Subnetting - Subnet Masks
+    3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary)
+      % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
+    4) Isolating sensitive systems 
+      - Network Segmentation
+      * Physically isolated systems are called "air-gapped" systems.
+      - Jump Server
+      * Jump servers, jump boxes, and jump hosts are all the same thing.
+    5) VLANs and logical segmentation - VRF(Virtual Routing and Forwarding), Virtual Domain, Network Overlays, Encapsulation
+      % LiFi (Light Fidelity) uses light to transmit data wirelessly,
+        employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
+    6) Security device placement
+    7) Software defined networking(SDN)
+    8) Transmission media - VPC, SDV
+    9) Cloud networking
+    10) Zero trust and SASE
   C. Network Security Design
-  D. Network Security Yechniques
+    1) Routers, switches, and bridges
+      % A switch operates primarily at layer 2 of the OSI model, handling data frames between devices on the same local area network (LAN).
+      % A router operates mainly at layer 3, routing data packets between different networks based on IP addresses.
+    2) Network topologies
+    3) Transport architecture
+      % Configuring devices, monitoring performance, and troubleshooting problems are tasks associated with the management plane,
+        which oversees and manages the network.
+      % The control plane is responsible for making decisions about where data should flow through the network,
+        using protocols to determine the best path for data packets.
+    4) Firewalls - Stateful Inspection, Implicit Deny
+      * You need to understand the default/implicit deny principle of firewalls.
+    5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
+    6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
+    7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
+      * Split-tunnel VPNs provide users with a false sense of security
+    8) Network intrusion detection and prevention
+      * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
+      % Anomaly detection identifies unusual patterns that may indicate a security incident,
+        based on statistical analysis, without frequent specific threat updates.
+      % Signature detection relies on a database of known threat signatures and requires 
+        frequent updates from the vendor to recognize new threats.
+    9) Protocol analyzers - tcpdump, tcpreplay
+    10) Unified threat management
+    11) Content distribution networks(CDNs)
+  D. Network Security Techniques
+    1) Restricting network access 
+      - Perimeter security, Network Access Control
+      - Rule based, role based, time based, location based
+    2) Network access control - EAP(Supplicant), RADIUS (Authentication Server)
+    3) Firewall rule management
+      % A shadowed rule happens when an earlier rule in the firewall's rule set matches traffic that a later rule was intended to match,
+        rendering the later rule ineffective.
+      % An orphaned rule occurs when a service is decommissioned but the related firewall rules are not removed,
+        leaving unused or unnecessary rules.
+    4) Router configuration security
+      * You won't need to know the syntax of router access control list commands.
+    5) Switch configuration security - VLAN Pruning, VLAN Trunk Negotiation, Port Security, DHCP Snooping
+    6) Maintaining network availability - Flooding Attack, Flood Guard Technology, Routing Loops, Spanning Tree Protocol(STP), BPDU Guard
+    7) Network monitoring - Network Flow data
+    8) Firewall and network logs - SIEM
+    9) Network performance metrcis - Latency, Jitter
+    10) SNMP
+      * Use SNMPv3. Earlier versions have critical security flaws.
+      % GetRequest messages are used by a network management system to request information from an SNMP agent.
+      % SetRequest messages are used by a network management system to change a value on an SNMP agent.
+      % Response messages are sent by an SNMP agent to a network management system in reply to GetRequests and SetRequests, not to report unusual events.
+      % Trap can an SNMP agent send to a network management system to report an unusual event
+    11) Deception technologies - Darknets, DNS Sinkhole
+      % Using a DNS sinkhole, an admin can forward malicious DNS requests to another IP address to keep from harm.
+    12) Network support - SLA
   E. Specialized Networking
+    1) Telephony - VoIP
+    2) Multimedia collaboration - XMPP
+    3) Storage networks
+      % Fibre Channel requires the use of dedicated connections and is known for its high speed and reliability in connecting computer data storage to servers.
   F. Transport Encryption
+    1) TLS and SSL
+      * TLS depends upon pairings of encryption and hash functions known as cipher suites.
+      * Session keys are also known as ephemeral keys.
+    2) IPsec
+      - ESP(Encapsulating Security Payload, Confidentiality), Authentication Header(AH, Integrity)
+      - SA(Security Association)
+      - Older Linux systems used telnet for remote access
+    3) Remote network access
   G. Wireless Networking
+    1) Understanding wireless networking
+      * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
+    2) Wireless encryption
+      % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange,
+        providing enhanced protection against offline dictionary attacks compared to its predecessors.
+      % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out
+        in favor of more secure methods like CCMP and does not involve key exchange.
+      % CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) is an encryption protocol
+        used in Wi-Fi security for data confidentiality and is not specifically a key exchange mechanism.
+    3) Wireless authentication - Captive portals
+      * Make sure you understand the security status of the specific EAP variants in use on your network.
+    4) Wireless signal propagation - Omnidirectional, Directional, Site survey
+      % Beam forming uses multiple antennas to detect the location of a device connecting to the wireless access point
+        and then steers the signal in the direction of that device.
+      % Pulse modulation refers to a method of encoding information in a signal, rather than focusing wireless signals towards devices.
+    5) Wireless networking equipment - Fat Access Points, Wi-Fi Analyzer
+      % A wireless controller manages configurations, optimizes performance, and reduces interference among APs in wireless networks.
+      % Fat AP refers to an access point with built-in intelligence for handling data processing but does not manage or optimize multiple APs.
   H. Mobile Device Security
+    1) Mobile connection methods - Cellular Networks, Wi-Fi Networks, NFC, Bluetooth(30 feet)
+    2) Mobile device security
+    3) Mobile device management(MDM)
+    4) Mobile device tracking
+    5) Mobile application security
+    6) Mobile security enforcement
+      % Sideloading refers to the process of installing apps on a device from sources other than the official app store.
+      % Jailbreaking is the process of removing software restrictions imposed by iOS on devices by Apple, allowing the installation of unauthorized apps,
+        but does not specifically refer to the act of installing apps outside of the App Store.
+    7) Bring your own device (BYOD)
+    8) Mobile deployment models
   I. Host Security
+    1) Operating system security - System Hardening
+    2) Malware prevention
+      - Viruses, Worms, Trojan Horses, Spyware
+      - Protection = Sandboxing(isolates)
+      - Spam Filtering
+    3) Application management
+      * While the terms whitelisting and blacklisting are problematic, you should still know them for the exam.
+      % BitLocker is a full disk encryption feature designed to protect data by providing encryption for entire volumes.
+      % BitControl does not exist as an application control technology in Microsoft Windows.
+      % App control is a general term for technologies that manage or restrict application usage, but it is not a specific built-in feature of Windows.
+      % AppLocker is the application control technology built-in to Microsoft Windows
+    4) Host-based network security controls
+      * Granting network access requires configuring both network and host firewalls.
+      % Host firewall is a built-in feature of Microsoft Windows designed to block unauthorized access to or from private networks.
+    5) File integrity monitoring(FIM)
+      % Tripwire is a file integrity monitoring tool
+      % Microsoft Endpoint Configuration Manager (MECM), formerly known as SCCM, is used for managing large groups of computers,
+        focusing on configuration management rather than file integrity monitoring.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
