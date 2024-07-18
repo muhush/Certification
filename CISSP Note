@@ -8,12 +8,13 @@
   B. Security Governance
     1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
     2) Organizational processes
-    3) Security roles and responsibilities - Due Care(legal responsibilities), Due Diligence(reasonable measures), 
+    3) Security roles and responsibilities - Due Care(legal responsibilities), Due Diligence(reasonable measures)
+      % Due care is practicing the individual activities that maintain the security effort.
     4) Control and risk frameworks 
-        - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
-        % While COBIT focuses more on aligning IT management with business objectives and governance,
+      - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
+      % While COBIT focuses more on aligning IT management with business objectives and governance,
         ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
-        SABSA (Sherwood Applied Business Security Architecture)
+      - SABSA (Sherwood Applied Business Security Architecture)
   C. Compliance and Ethics
     1) Legal and compliance risks - GDPR, PCI DSS
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
@@ -93,6 +94,7 @@
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
     3) Data security roles
       - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
+      % A data controller decides what data to process and how it is processed.
       - Data Subject(collected data), Data processors(third parties)
       * GDPR uses the term data controller instead of data owner
       * System ownership and data ownership are two different concepts
@@ -349,8 +351,7 @@
     4) Power control - Blackouts, Sags, Brownouts, Spikes, Surges
     5) Physical access control - Locks
     6) Visitor management
-      % Cameras should always be disclosed to visitors when used as part of physical security controls
-        to ensure compliance with privacy laws and regulations.
+      % Cameras should always be disclosed to visitors when used as part of physical security controls to ensure compliance with privacy laws and regulations.
     7) Physical security personnel - Two-Person Integrity
   M. Software Security Architecture
     1) SOAP and REST 
