@@ -6,6 +6,7 @@
     4) Availability - patching
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
   B. Security Governance
+      % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
     1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
     2) Organizational processes
     3) Security roles and responsibilities - Due Care(legal responsibilities), Due Diligence(reasonable measures)
@@ -26,6 +27,7 @@
       - Contractual agreements(high value)
     8) Intellectual Property - Copyrights, Trademarks, Patents(protect inventions)
       % The Digital Millennium Copyright Act contains provisions prohibiting the circumvention of copyright protection mechanisms.
+      % Copyright protection generally lasts for 70 years after the death of the last surviving author of the work.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
     10) Data breaches    * Encryption is easy to protect data breach
     11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
@@ -37,6 +39,7 @@
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
       % People should always be your highest priority in business continuity planning.
+      % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
     2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
     3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
         Component redundancy - such as power supply or fan
@@ -58,6 +61,7 @@
       - Annualized Rate of Occurrence(ARO), Annualized Loss Expectancy(ALE),
       - SLE * ARO = ALE
       * Be prepared to work through a quantitative risk assessment calculation on the exam
+      % The annualized loss expectancy (ALE) is the best metric to compare relative risks because it incorporates both the likelihood and the impact of those risks.
       - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
     4) Security control selection and implementation - Defense in Depth    
@@ -118,9 +122,12 @@
       - IRM(information rights management), DRM(Digital Right)
     7) Data loss prevention
       - DLP(Data Loss Prevention), Host-based, Network-based, Pattern Matching, Watermarking, Cloud-based
+      % A network-based data loss prevention (DLP) system monitors outgoing traffic (egress monitoring) and can thwart data exfiltration attempts.
+      % Pseudonymization replaces data with a pseudonym or alias to protect the privacy of individuals identified in the original dataset. 
   C. Change and Configuration Management
     1) Change management
       - RFC(Request for change)
+      % Concurrency uses a “lock” feature to allow an authorized user to make changes and then “unlock” the data elements only after the changes are complete.
     2) Configuration and asset management
       - Baselines, Versioning
     3) Physical asset management
@@ -194,6 +201,8 @@
       - XaaS, SaaS(entire app / Data), PaaS(app platform / Data, Application), IaaS(Servers/storage / Data, Application, OS), FaaS(serverless computing)
       * Understanding the shared responsibility model is crucial for cybersecurity professionals.
     13) Edge and fog computing
+      % In edge computing, the intelligence and processing is contained within each device. Thus, rather than having to send data off to a master processing entity, each device can process its own data locally.
+      % Fog computing relies on sensors, IoT devices, or even edge computing devices to collect data and then transfer it back to a central location for processing.
   C. Hardware Security
     1) Memory protection
       - Segmentation Fault, Memory Leak
@@ -205,6 +214,7 @@
   D. ServerSecurity Issues
     1) Server and database security
       - Aggregation(Combing), Inference
+      % Open Database Connectivity (ODBC) is a database feature that allows applications to communicate with different types of databases without having to be directly programmed for interaction with each type.
     2) NoSQL databases
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
@@ -326,6 +336,7 @@
       - DER(Distinguished Encoding Rules), PEM(Privacy Enhanced Mail)
       * CRT files may be either DER binary certificates or PEM text certificates.
       - PFX(Personal Information Exchange), P7B
+      % The PFX format is most closely associated with Windows systems that store certificates in binary format, whereas the P7B format is used for Windows systems storing files in text format.
   K. Cryptanalytic Attacks
     1) Brute-force attacks
     2) Knowledge-based attacks
@@ -336,8 +347,11 @@
       - Chosen Plaintext Attack
       % Chosen plaintext attack allows the attacker to encrypt plaintexts of their choosing, gaining information to decrypt other messages 
         or deduce the encryption key, rather than analyzing ciphertext for patterns.
+      % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
+      % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
+      % Implementation attacks rely on flaws in the cryptographic algorithm.
     5) Limitations of encryption algorithms
     6) Ransomware - Mimikatz, Countermeasure(Backups, Antimalware)
       * Ransomware is specifically called out in the exam objectives
@@ -381,9 +395,11 @@
     7) Multilayer protocols -  DNP3(Distributed Network Protocol)
   B. Secure Network Design
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
+      % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
     2) Subnetting - Subnet Masks
     3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary)
       % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
+      % A screened subnet is a type of security zone that can be positioned so that it operates as a buffer network between the secured private network and the internet and can host publicly accessible services.
     4) Isolating sensitive systems 
       - Network Segmentation
       * Physically isolated systems are called "air-gapped" systems.
@@ -409,6 +425,7 @@
         using protocols to determine the best path for data packets.
     4) Firewalls - Stateful Inspection, Implicit Deny
       * You need to understand the default/implicit deny principle of firewalls.
+      % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
@@ -427,6 +444,7 @@
       - Perimeter security, Network Access Control
       - Rule based, role based, time based, location based
     2) Network access control - EAP(Supplicant), RADIUS (Authentication Server)
+      % The network access server is the client within a RADIUS architecture.
     3) Firewall rule management
       % A shadowed rule happens when an earlier rule in the firewall's rule set matches traffic that a later rule was intended to match,
         rendering the later rule ineffective.
@@ -515,16 +533,62 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+5. Identity and Access Management (IAM)
+  A. Identification
+    1) Authentication, authorization, and accounting (AAA)
+      * Remember that identification and authentication are separate and distinct steps!
+      % Authorization limits user activity to actions they are permitted to perform, following the principle of least privilege.
+      % Authentication verifies that a user is who they claim to be.
+    2) Usernames and access cards
+    3) Biometrics - Low false
+      % FAR measures the frequency at which unauthorized users are inadvertently admitted.
+      % FRR measures the frequency at which legitimate users are denied access to a system or facility.
+    4) Registration and identity proofing
+      - Request, Approval, Identity proofing, Issuance
+  B. Authentication
+    1) Authentication factors
+      - Something you know, Something you are, Something you have
+      - False Acceptance, False Rejection
+    2) Multifactor authentication
+    3) Something you have
+      % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP.
+    4) Password authentication protocols (PAP) - CHAP (Challenge-Handshake Authentication Protocol)
+    5) Single sign-on and federation
+      % Federated Identity Management (FIM) is best to implement when you have accounts across multiple service providers with whom you would like to share identity information.
+        With FIM, you can use one login to access resources you've been authorized throughout the federation.
+    6) RADIUS - Centralized approach
+      * Remember that a RADIUS client is usually an application server!
+      % RADIUS typically uses UDP, which is less reliable than TCP, and does not fully encrypt the authentication session, only the password.
+      % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
+      % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
+    7) Kerberos and LDAP 
+      - Kerberos = core protocols for MS Active directory, Port 88
+      - LDAP = port 389, Port 636
+      - NTLM
+      % TGT includes information about the client and a copy of the client TGS session key.
+      % When a client wishes to access a service, the client contacts the TGS.
+      % The AS looks up the user in its database and retrieves the user's password. It performs authentication of the end user.
+    8) SAML - Security Assertion Markup Langauge
+    9) Identity as a service (IDaaS) - Directory Integration, Application Integration
+    10) OAuth and OpenID Connect
+      % OAuth is an authorization protocol, but not an authentication protocol.
+    11) Certificate-based authentication
+    12) Passwordless authentication - Key-Based Authentication
+  C. Accountability
+    1) Accountability - Logs must be secure
+    2) Session management - Timeouts
+  D. Account Management
+  E. Authorization
+  F. Access Control Attacks
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 2. Security Assessment and Testing
   a. Security Assessment and Testing
 
 5. Software Development Security
   a. Software Development Security
   b. Malicious Code and Application Attacks
-
-6. Identity and Access Management (IAM)
-  a. Managing Identity and Authentication
-  b. Controlling and Monitoring Access
 
 8. Security Operations
   a. Physical Security Requirements
