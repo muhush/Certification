@@ -604,7 +604,9 @@
     1) Social engineering - Authority and Trust, Intimidation(Sharing), Consensus/Social Proof, Scarcity, Urgency, Familiarity/Liking
     2) Impersonation attacks - Spam, Phishing, Spear Phishing, Whaling, Pharming, Vishing, Smishing and SPIM, Spoofing, Brand Impersonation
     3) identity fraud and pretexting - Pretexting Attacks
+      % In a pretexting attack, the attacker contacts a third-party company pretending to be the consumer and attempts to gain access to that consumer's account.
     4) Watering hole attacks
+      % Watering hole attacks use sneaky techniques to lure unsuspecting users and infect their systems with malware. They use commonly visited sites without the website owner's knowledge.
     5) Physical social engineering - Shoulder surfing, Dumpster Diving, Tailgating
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
