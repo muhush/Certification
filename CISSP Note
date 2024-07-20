@@ -578,8 +578,34 @@
     1) Accountability - Logs must be secure
     2) Session management - Timeouts
   D. Account Management
+    1) Understand account and privilege management - Least Privilege, Segregation of Duties, Job Rotation, Mandatory Vacation
+    2) Account types - User Account, Privileged Account, Shared Account, Service Account
+      * Avoid the use of shared/generic accounts and credentials.
+    3) Account policies - Group Policy Object(GPO)
+    4) Password policies
+      * Current NIST guidance says that passwords should not expire.
+    5) Manage roles
+      % A security group assigns users to roles within his Windows enterprise, as it allows for the grouping of user accounts, computer accounts,
+        and other security groups into manageable units for assigning permissions and access rights.
+      % A Distribution group is used primarily in email applications to send messages to groups of users and is not designed for assigning roles or managing permissions.
+    6) Account monitoring - Inaccurate Permissions, Attestation, Unauthorized Use, Geotagging, Geofencing
+    7) Provisioning and de-provisioning - Privilege Creep
   E. Authorization
+    1) Understand authorization - Least Privilege, Account Review
+      * Be able to identify least privilege and segregation of duties issues in a scenario
+    2) Mandatory access controls (MAC)
+    3) Discretionary access controls (DAC)
+      % In a discretionary access control system, individual users have the ability to alter access permissions.
+    4) Access control lists
+    5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
+    6) Advanced authorization concepts - RBAC, ABAC, location-based control, Time-of-Day Restriction
+      * Risk-based access controls apply stronger standards in situations posing greater risk.
   F. Access Control Attacks
+    1) Social engineering - Authority and Trust, Intimidation(Sharing), Consensus/Social Proof, Scarcity, Urgency, Familiarity/Liking
+    2) Impersonation attacks - Spam, Phishing, Spear Phishing, Whaling, Pharming, Vishing, Smishing and SPIM, Spoofing, Brand Impersonation
+    3) identity fraud and pretexting - Pretexting Attacks
+    4) Watering hole attacks
+    5) Physical social engineering - Shoulder surfing, Dumpster Diving, Tailgating
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
