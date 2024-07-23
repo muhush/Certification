@@ -23,7 +23,7 @@
     4) California privacy law - CPRA (SPI = Sensitive)
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
     6) Computer crimes - CFAA (Access), ECPA (network communication), ITADA (Identity)
-    7) Software Licensing - SLA, ELAs (Enterprise), EULAs, 
+    7) Software Licensing - SLA, ELAs (Enterprise), EULAs(End User License Agreements)
       - Contractual agreements(high value)
     8) Intellectual Property - Copyrights, Trademarks, Patents(protect inventions)
       % The Digital Millennium Copyright Act contains provisions prohibiting the circumvention of copyright protection mechanisms.
@@ -48,7 +48,7 @@
         * RAID is a fault-tolerance technique, not a backup state
   F. Personnel Security
     1) Personnel security - strong security policy, insider threat
-    2) Security in the hiring process - Employment Agreements, NDAs
+    2) Security in the hiring process - Employment Agreements, NDAs(Non-Disclosure Agreements)
     3) Employee termination process - Exit interview, Revoke Access Promptly
     4) Employee privacy - minimization, limit access, encryption, masking (hiding)
     5) Social networking - multi-factoring
@@ -72,7 +72,7 @@
   H. Threat Modeling
     1) Threat intelligence - Open-source intelligence, Email Address Harvesting
     2) Managing threat indicators -CybOX, STIX, TAXII, OpenIOC
-    3) Intelligence sharing -ISACs, ISA(interconnection security agreement)
+    3) Intelligence sharing - ISACs, ISA(interconnection security agreement)
     4) Threat research
     5) Identifying threats - structured approach
     6) Automating threat intelligence - Data Enrichment
@@ -201,7 +201,8 @@
       - XaaS, SaaS(entire app / Data), PaaS(app platform / Data, Application), IaaS(Servers/storage / Data, Application, OS), FaaS(serverless computing)
       * Understanding the shared responsibility model is crucial for cybersecurity professionals.
     13) Edge and fog computing
-      % In edge computing, the intelligence and processing is contained within each device. Thus, rather than having to send data off to a master processing entity, each device can process its own data locally.
+      % In edge computing, the intelligence and processing are contained within each device. Thus, rather than having to send data off to a master processing entity,
+        each device can process its own data locally.
       % Fog computing relies on sensors, IoT devices, or even edge computing devices to collect data and then transfer it back to a central location for processing.
   C. Hardware Security
     1) Memory protection
@@ -214,7 +215,8 @@
   D. ServerSecurity Issues
     1) Server and database security
       - Aggregation(Combing), Inference
-      % Open Database Connectivity (ODBC) is a database feature that allows applications to communicate with different types of databases without having to be directly programmed for interaction with each type.
+      % Open Database Connectivity (ODBC) is a database feature that allows applications to communicate with different types of databases
+        without having to be directly programmed for interaction with each type.
     2) NoSQL databases
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
@@ -291,16 +293,14 @@
     3) Diffie-hellman - Symmetric
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
     4) Key escrow - Recovery Agents
-      % The clipper chip performed encryption, but it included a special law enforcement access field, 
-        or LEAF, value that allowed government agents to access the content of the communication.
+      % The clipper chip performed encryption, but it included a special law enforcement access field, or LEAF, value that allowed government agents to access the content of the communication.
     5) Key stretching - Salting, Hashing, PBKDF2 (Password-based key Derivation Function v2), bcryypt(blowfish)
     6) Hardware security modules(HSM)
   J. Public Key Infrastructure
     1) Trust models - Asymmetric Cryptography, Web of Trust(WOT)
     2) PKI and digital certificates
       - CA(Certificate Authority)
-      % The certificate owner can self-sign their own certificate. 
-        However, self-signed certificates may be used only internally and are not considered valid on the Internet.
+      % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
       % The certificate authority (CA) digitally signs applicant certificates with the CA's digital signature.
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
@@ -388,7 +388,7 @@
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
     5) Network ports
       * Memorize the list of common ports before taking the exam.
-      - Port21(FTP), Port22(SSH), Port 3389(RDP), Port 137,138, and 139(NetBIOS)
+      - Port 21(FTP), Port 22(SSH), Port 3389(RDP), Port 137, 138, and 139(NetBIOS)
       - Port 25(SMTP), Port 110(POP), Port 143(IMAP)
       - Port 80(HTTP), Port 443(HTTPS)
     6) ICMP -Traceroute
