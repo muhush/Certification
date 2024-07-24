@@ -432,10 +432,8 @@
       * Split-tunnel VPNs provide users with a false sense of security
     8) Network intrusion detection and prevention
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
-      % Anomaly detection identifies unusual patterns that may indicate a security incident,
-        based on statistical analysis, without frequent specific threat updates.
-      % Signature detection relies on a database of known threat signatures and requires 
-        frequent updates from the vendor to recognize new threats.
+      % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
+      % Signature detection relies on a database of known threat signatures and requires frequent updates from the vendor to recognize new threats.
     9) Protocol analyzers - tcpdump, tcpreplay
     10) Unified threat management
     11) Content distribution networks(CDNs)
@@ -446,10 +444,8 @@
     2) Network access control - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
     3) Firewall rule management
-      % A shadowed rule happens when an earlier rule in the firewall's rule set matches traffic that a later rule was intended to match,
-        rendering the later rule ineffective.
-      % An orphaned rule occurs when a service is decommissioned but the related firewall rules are not removed,
-        leaving unused or unnecessary rules.
+      % A shadowed rule happens when an earlier rule in the firewall's rule set matches traffic that a later rule was intended to match, rendering the later rule ineffective.
+      % An orphaned rule occurs when a service is decommissioned but the related firewall rules are not removed, leaving unused or unnecessary rules.
     4) Router configuration security
       * You won't need to know the syntax of router access control list commands.
     5) Switch configuration security - VLAN Pruning, VLAN Trunk Negotiation, Port Security, DHCP Snooping
@@ -484,17 +480,14 @@
     1) Understanding wireless networking
       * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
     2) Wireless encryption
-      % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange,
-        providing enhanced protection against offline dictionary attacks compared to its predecessors.
-      % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out
-        in favor of more secure methods like CCMP and does not involve key exchange.
-      % CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) is an encryption protocol
+      % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange, providing enhanced protection against offline dictionary attacks compared to its predecessors.
+      % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
+      % CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) is an encryption protocol 
         used in Wi-Fi security for data confidentiality and is not specifically a key exchange mechanism.
     3) Wireless authentication - Captive portals
       * Make sure you understand the security status of the specific EAP variants in use on your network.
     4) Wireless signal propagation - Omnidirectional, Directional, Site survey
-      % Beam forming uses multiple antennas to detect the location of a device connecting to the wireless access point
-        and then steers the signal in the direction of that device.
+      % Beam forming uses multiple antennas to detect the location of a device connecting to the wireless access point and then steers the signal in the direction of that device.
       % Pulse modulation refers to a method of encoding information in a signal, rather than focusing wireless signals towards devices.
     5) Wireless networking equipment - Fat Access Points, Wi-Fi Analyzer
       % A wireless controller manages configurations, optimizes performance, and reduces interference among APs in wireless networks.
