@@ -4,6 +4,7 @@
     2) Confidentiality - sensitive information, encryption, steganography
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
     4) Availability - patching
+      % A patch management process includes evaluating patches, testing patches, and auditing patches.
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
   B. Security Governance
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
@@ -28,6 +29,7 @@
     8) Intellectual Property - Copyrights, Trademarks, Patents(protect inventions)
       % The Digital Millennium Copyright Act contains provisions prohibiting the circumvention of copyright protection mechanisms.
       % Copyright protection generally lasts for 70 years after the death of the last surviving author of the work.
+      % U.S. patent law provides for an exclusivity period of 20 years beginning at the time a utility patent application is submitted to the Patent and Trademark Office.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
     10) Data breaches    * Encryption is easy to protect data breach
     11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
@@ -40,12 +42,14 @@
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
       % People should always be your highest priority in business continuity planning.
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
+      % Risk mitigation controls to address acceptable risks would not be in the BCP.
     2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
     3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
         Component redundancy - such as power supply or fan
         clustering - all active working
         RAID (Redundant Array of Inexpensive Disks) = Disk mirroring (RAID 1), Disk Striping (RAID 5)
         * RAID is a fault-tolerance technique, not a backup state
+        % Any backup strategy must include full backups at some point in the process. Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
   F. Personnel Security
     1) Personnel security - strong security policy, insider threat
     2) Security in the hiring process - Employment Agreements, NDAs(Non-Disclosure Agreements)
@@ -82,6 +86,7 @@
     2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
     3) Vendor information management
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
+      % SOC 3 engagements assess the organization’s controls that affect the security and privacy of information stored in a system.
   J. Awareness and Training
     1) Security awareness training
     2) Compliance training
@@ -96,9 +101,13 @@
       - Data at Rest, Data in Transit, Data in Use
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
+      % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
     3) Data security roles
       - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
       % A data controller decides what data to process and how it is processed.
+      % The data controller identifies what data to pass to the data processor and how that data should be processed.
+      % The data custodian is responsible for day-to-day tasks to protect data, such as backing up data.
+      % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
       - Data Subject(collected data), Data processors(third parties)
       * GDPR uses the term data controller instead of data owner
       * System ownership and data ownership are two different concepts
@@ -120,14 +129,17 @@
       - Data Classification Policy, Labeling Requirement, 
     6) Digital rights management
       - IRM(information rights management), DRM(Digital Right)
+      % Persistent online authentication, automatic expiration, and a continuous audit trail are all methods used with digital rights management (DRM) technologies.
     7) Data loss prevention
       - DLP(Data Loss Prevention), Host-based, Network-based, Pattern Matching, Watermarking, Cloud-based
-      % A network-based data loss prevention (DLP) system monitors outgoing traffic (egress monitoring) and can thwart data exfiltration attempts.
+      % A network-based data loss prevention (DLP) system monitors outgoing traffic (egress monitoring, outbound) and can thwart data exfiltration attempts.
       % Pseudonymization replaces data with a pseudonym or alias to protect the privacy of individuals identified in the original dataset. 
   C. Change and Configuration Management
     1) Change management
       - RFC(Request for change)
       % Concurrency uses a “lock” feature to allow an authorized user to make changes and then “unlock” the data elements only after the changes are complete.
+      % Change management aims to ensure that any change does not result in unintended outages or reduce security.
+      % Change management processes include requesting a change, creating a rollback plan for the change, and documenting the change.
     2) Configuration and asset management
       - Baselines, Versioning
     3) Physical asset management
@@ -236,6 +248,7 @@
       * Embedded device security controls are effective for mainframes as well
     5) Embedded systems
       - RTOSs(Real-time), CAN bus
+      % The embedded system is typically designed around a limited set of specific functions in relation to the larger product of which it’s a component.
     6) Communications for embedded devices
   F. Encryption
     1) Understanding encryption
@@ -304,6 +317,7 @@
       % The certificate authority (CA) digitally signs applicant certificates with the CA's digital signature.
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
+      % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       - Collision-resistant, Asymmetric                    
@@ -357,6 +371,8 @@
       * Ransomware is specifically called out in the exam objectives
   L. Physical Security
     1) Site and facility design
+      % Lighting is often claimed to be the most commonly deployed physical security mechanism.
+      % An access control vestibule is a double set of doors that is often protected by a guard and used to contain a subject until their identity and authentication is verified.
     2) Data center environmental controls - Expanded Envelope(64.5~80.6), Dew Point Range(15.8~59)
       * Watch for exam questions that are indirectly covering the hot aisle/cold aisle strategy
     3) Data center environment protection
@@ -393,6 +409,7 @@
       - Port 80(HTTP), Port 443(HTTPS)
     6) ICMP -Traceroute
     7) Multilayer protocols -  DNP3(Distributed Network Protocol)
+      % Encapsulation is both a benefit and a potentially harmful implication of multilayer protocols.
   B. Secure Network Design
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
@@ -403,6 +420,7 @@
     4) Isolating sensitive systems 
       - Network Segmentation
       * Physically isolated systems are called "air-gapped" systems.
+      % A VPN is a secure tunnel used to establish connections across a potentially insecure intermediary network. Intranet, subnet, extranet, and VLAN are examples of network segmentation.
       - Jump Server
       * Jump servers, jump boxes, and jump hosts are all the same thing.
     5) VLANs and logical segmentation - VRF(Virtual Routing and Forwarding), Virtual Domain, Network Overlays, Encapsulation
@@ -426,10 +444,12 @@
     4) Firewalls - Stateful Inspection, Implicit Deny
       * You need to understand the default/implicit deny principle of firewalls.
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
+      % Stateful inspection firewalls are able to grant a broader range of access for authorized users and activities and actively watch for and block unauthorized users and activities.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
       * Split-tunnel VPNs provide users with a false sense of security
+      % IPsec operates at the Network layer (layer 3).
     8) Network intrusion detection and prevention
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
@@ -496,6 +516,8 @@
     1) Mobile connection methods - Cellular Networks, Wi-Fi Networks, NFC, Bluetooth(30 feet)
     2) Mobile device security
     3) Mobile device management(MDM)
+      % The concept of corporate-owned, personally enabled (COPE) means the organization purchases devices and provides them to employees. Each user is then able to customize the device and use it for both work activities and personal activities.
+      % A corporate-owned mobile strategy is when the company purchases mobile devices that can support compliance with the security policy.
     4) Mobile device tracking
     5) Mobile application security
     6) Mobile security enforcement
@@ -533,9 +555,10 @@
       % Authorization limits user activity to actions they are permitted to perform, following the principle of least privilege.
       % Authentication verifies that a user is who they claim to be.
     2) Usernames and access cards
-    3) Biometrics - Low false
+    3) Biometrics - Low false, crossover error rate (CER)
       % FAR measures the frequency at which unauthorized users are inadvertently admitted.
       % FRR measures the frequency at which legitimate users are denied access to a system or facility.
+      % A lower CER indicates a higher-quality biometric device, and a higher CER indicates a less accurate device.
     4) Registration and identity proofing
       - Request, Approval, Identity proofing, Issuance
   B. Authentication
@@ -569,6 +592,9 @@
     12) Passwordless authentication - Key-Based Authentication
   C. Accountability
     1) Accountability - Logs must be secure
+      % Authentication is necessary to ensure a network supports accountability.
+      % Accountability is possible by reviewing logs and tracking user activity.
+      % Authentication of individuals is also needed to ensure the audit trails provide proof of identities listed in the logs.
     2) Session management - Timeouts
   D. Account Management
     1) Understand account and privilege management - Least Privilege, Segregation of Duties, Job Rotation, Mandatory Vacation
@@ -587,10 +613,12 @@
     1) Understand authorization - Least Privilege, Account Review
       * Be able to identify least privilege and segregation of duties issues in a scenario
     2) Mandatory access controls (MAC)
+      % Hybrid environments combine both hierarchical and compartmentalized environments so that security levels have subcompartments.
     3) Discretionary access controls (DAC)
       % In a discretionary access control system, individual users have the ability to alter access permissions.
     4) Access control lists
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
+      % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
     6) Advanced authorization concepts - RBAC, ABAC, location-based control, Time-of-Day Restriction
       * Risk-based access controls apply stronger standards in situations posing greater risk.
   F. Access Control Attacks
@@ -604,14 +632,25 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2. Security Assessment and Testing
-  a. Security Assessment and Testing
+6. Security Assessment and Testing
+  A. Vulnerability Scanning
+  B. Penetration Testing
+  C. Log Reviews
+  D. Code Testing
+  E. Disaster Recovery Planning
+  F. Assessing Security Processes
 
-5. Software Development Security
-  a. Software Development Security
-  b. Malicious Code and Application Attacks
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-8. Security Operations
+7. Security Operations
   a. Physical Security Requirements
   b. Managing Security Operations
   c. Preventing and Responding to Incidents
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. Software Development Security
+  a. Software Development Security
+  b. Malicious Code and Application Attacks
+
+
