@@ -49,7 +49,6 @@
         clustering - all active working
         RAID (Redundant Array of Inexpensive Disks) = Disk mirroring (RAID 1), Disk Striping (RAID 5)
         * RAID is a fault-tolerance technique, not a backup state
-        % Any backup strategy must include full backups at some point in the process. Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
   F. Personnel Security
     1) Personnel security - strong security policy, insider threat
     2) Security in the hiring process - Employment Agreements, NDAs(Non-Disclosure Agreements)
@@ -634,11 +633,71 @@
 
 6. Security Assessment and Testing
   A. Vulnerability Scanning
+    1) What is vulnerability management?
+      - Vulnerability Patching, Vulnerability management (detects, remediates, reports)
+      - PCI DSS = quarterly, ASV
+      - FISMA = regularly
+      - Network vulnerability scan, application, web application scans
+    2) Identify scan targets 
+      - Asset Inventory
+      - Impact, Likelihood, Criticality
+    3) Scan configuration
+    4) Scan perspective
+      - Agent-based scanning, Credential-based scanning
+    5) Analyzing scan reports
+      - vulnerability severity, system criticality, information sensitivity, remediation difficulty, system exposure
+      % Systems with many or risky services installed should be prioritized higher for scanning.
+      % The operating system is not necessarily a major factor in deciding whether a device should be scanned.
+      - Vulnerability validation
+    6) Correlating scan results
+      % If the vulnerability scanner is in the screened subnet, the scanner has unrestricted access to the web server because it doesn't need to pass through the firewall on the way to the web server.
   B. Penetration Testing
+    1) Penetration testing
+    2) Ethical disclosure - Responsible Disclosure
+    3) Bug bounty
+    4) Cybersecurity exercises
   C. Log Reviews
+    1) Logging security information - Lod and Data sources, Syslog (Linux), Tags, NXLog (Centralize)
+    2) Security information and event management (SIEM) - SOAR
+    3) Continuous security monitoring
+      - Monitoring Process (Define, Establish, Implement, Analyze/Report, Respond, Review/Update)
+      - Anomaly Analysis, Trend Analysis, Behavioral Analysis, Availability Analysis
+    4) Endpoint monitoring - IEBA (User and Entity Behavior Analytics)
   D. Code Testing
+    1) Code review
+    2) Code tests 
+      - Code Security Tests(SAST[Static] = SCA[Software Composition Analysis], DAST[Dynamic] = Synthetic transaction, IAST[Interactive])
+      * Different test types are complementary, rather than competitors!
+      % Static code testing software analyzes code without executing it, checking for syntax errors, coding standards, and other issues.
+    3) Fuzz testing - Avoid Looking Like a Hacker
+    4) Interface testing - APIs (Application Programming Interface)
+    5) Misuse case testing
+    6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
+    7) Code repositories - Integrity Measurement
+    8) Third-party code - Libraries, SDKS (Software Development Kits)
+    9) Software risk analysis and mitigation - Sandboxing
   E. Disaster Recovery Planning
+    1) Disaster recovery - RTO (Recovery Time Objective), RPO (Recovery Point Objective), RSL (Recovery Service Level)
+      * Disaster recovery efforts end only when the business is operating normally in its primary environment.
+      % The recovery time objective (RTO) is the targeted amount of time to restore a service after a failure during a disaster recovery.
+      % The recovery service level (RSL) is the percentage of a service that must be available during a disaster.
+    2) Backups - Full backups, Differential, Incremental
+      % Any backup strategy must include full backups at some point in the process. Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
+    3) Restoring backups
+    4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
+    5) Testing BC/DR plans - Business Continuity (BC) and Disaster Recovery (DR) plans
+    6) After action reports
   F. Assessing Security Processes
+    1) Collect security process data
+    2) Management review and approval
+    3) Security metrics
+      % KRIs are measures that seek to quantify the security risk facing an organization.
+      % KPIs are metrics that demonstrate the success of the security program in achieving its objectives.
+    4) Audits and assessments - User Access Reviews
+      % Account reviews should verify that every ACTIVE account is associated with a current employee.
+    5) Control management - Every Rule Has An Exception
+      % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
+      $ Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
