@@ -8,7 +8,8 @@
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
   B. Security Governance
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
-    1) Aligning security with the business - security leader, business leader, security professionals  *unbalanced decisions
+    1) Aligning security with the business - security leader, business leader, security professionals  
+      * unbalanced decisions
     2) Organizational processes
     3) Security roles and responsibilities - Due Care(legal responsibilities), Due Diligence(reasonable measures)
       % Due care is practicing the individual activities that maintain the security effort.
@@ -31,8 +32,10 @@
       % Copyright protection generally lasts for 70 years after the death of the last surviving author of the work.
       % U.S. patent law provides for an exclusivity period of 20 years beginning at the time a utility patent application is submitted to the Patent and Trademark Office.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
-    10) Data breaches    * Encryption is easy to protect data breach
-    11) Ethics    * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
+    10) Data breaches
+      * Encryption is easy to protect data breach
+    11) Ethics
+      * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
   D. Security Policy
     1) Security policy framework - policies > standard(details) > guidelines(advice),  procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
@@ -471,7 +474,7 @@
     6) Maintaining network availability - Flooding Attack, Flood Guard Technology, Routing Loops, Spanning Tree Protocol(STP), BPDU Guard
     7) Network monitoring - Network Flow data
     8) Firewall and network logs - SIEM
-    9) Network performance metrcis - Latency, Jitter
+    9) Network performance metrics - Latency, Jitter
     10) SNMP
       * Use SNMPv3. Earlier versions have critical security flaws.
       % GetRequest messages are used by a network management system to request information from an SNMP agent.
@@ -503,7 +506,14 @@
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
       % CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) is an encryption protocol 
         used in Wi-Fi security for data confidentiality and is not specifically a key exchange mechanism.
-    3) Wireless authentication - Captive portals
+    3) Wireless authentication - Captive portals, EAP (Extensible Authentication Protocol)
+      - EAP-TLS (Transport Layer Security): Uses public key infrastructure (PKI) for mutual authentication via digital certificates. It’s highly secure but requires a complex setup.
+      - EAP-TTLS (Tunneled TLS): Extends EAP-TLS by allowing the use of other authentication methods within a secure tunnel, reducing the need for client certificates.
+      - PEAP (Protected EAP): Similar to EAP-TTLS, it uses a TLS tunnel to protect other authentication methods, often combined with MS-CHAPv2.
+      - EAP-MD5: Provides simple password-based authentication, but it’s considered less secure due to lack of protection for the handshake.
+      - LEAP (Lightweight EAP): Proprietary to Cisco, used mainly in wireless networks but considered weak against certain attacks.
+      - EAP-SIM (Subscriber Identity Module): Used for authenticating with SIM cards in mobile networks.
+      - EAP-AKA (Authentication and Key Agreement): Used for authentication in 3G mobile networks.
       * Make sure you understand the security status of the specific EAP variants in use on your network.
     4) Wireless signal propagation - Omnidirectional, Directional, Site survey
       % Beam forming uses multiple antennas to detect the location of a device connecting to the wireless access point and then steers the signal in the direction of that device.
@@ -515,7 +525,8 @@
     1) Mobile connection methods - Cellular Networks, Wi-Fi Networks, NFC, Bluetooth(30 feet)
     2) Mobile device security
     3) Mobile device management(MDM)
-      % The concept of corporate-owned, personally enabled (COPE) means the organization purchases devices and provides them to employees. Each user is then able to customize the device and use it for both work activities and personal activities.
+      % The concept of corporate-owned, personally enabled (COPE) means the organization purchases devices and provides them to employees.
+        Each user is then able to customize the device and use it for both work activities and personal activities.
       % A corporate-owned mobile strategy is when the company purchases mobile devices that can support compliance with the security policy.
     4) Mobile device tracking
     5) Mobile application security
@@ -557,7 +568,7 @@
     3) Biometrics - Low false, crossover error rate (CER)
       % FAR measures the frequency at which unauthorized users are inadvertently admitted.
       % FRR measures the frequency at which legitimate users are denied access to a system or facility.
-      % A lower CER indicates a higher-quality biometric device, and a higher CER indicates a less accurate device.
+      % A lower CER indicates a higher-quality biometric device and a higher CER indicates a less accurate device.
     4) Registration and identity proofing
       - Request, Approval, Identity proofing, Issuance
   B. Authentication
@@ -567,7 +578,7 @@
     2) Multifactor authentication
     3) Something you have
       % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP.
-    4) Password authentication protocols (PAP) - CHAP (Challenge-Handshake Authentication Protocol)
+    4) Password authentication protocols(PAP) - CHAP(Challenge-Handshake Authentication Protocol)
     5) Single sign-on and federation
       % Federated Identity Management (FIM) is best to implement when you have accounts across multiple service providers with whom you would like to share identity information.
         With FIM, you can use one login to access resources you've been authorized throughout the federation.
@@ -579,7 +590,7 @@
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88
       - LDAP = port 389, Port 636
-      - NTLM
+      - NTLM (NT LAN Manager)
       % TGT includes information about the client and a copy of the client TGS session key.
       % When a client wishes to access a service, the client contacts the TGS.
       % The AS looks up the user in its database and retrieves the user's password. It performs authentication of the end user.
@@ -599,7 +610,7 @@
     1) Understand account and privilege management - Least Privilege, Segregation of Duties, Job Rotation, Mandatory Vacation
     2) Account types - User Account, Privileged Account, Shared Account, Service Account
       * Avoid the use of shared/generic accounts and credentials.
-    3) Account policies - Group Policy Object(GPO)
+    3) Account Policies - Group Policy Object(GPO)
     4) Password policies
       * Current NIST guidance says that passwords should not expire.
     5) Manage roles
@@ -657,8 +668,8 @@
     3) Bug bounty
     4) Cybersecurity exercises
   C. Log Reviews
-    1) Logging security information - Lod and Data sources, Syslog (Linux), Tags, NXLog (Centralize)
-    2) Security information and event management (SIEM) - SOAR
+    1) Logging security information - Lod and Data sources, Syslog(Linux), Tags, NXLog(Centralize)
+    2) Security information and event management(SIEM) - SOAR
     3) Continuous security monitoring
       - Monitoring Process (Define, Establish, Implement, Analyze/Report, Respond, Review/Update)
       - Anomaly Analysis, Trend Analysis, Behavioral Analysis, Availability Analysis
@@ -670,11 +681,11 @@
       * Different test types are complementary, rather than competitors!
       % Static code testing software analyzes code without executing it, checking for syntax errors, coding standards, and other issues.
     3) Fuzz testing - Avoid Looking Like a Hacker
-    4) Interface testing - APIs (Application Programming Interface)
+    4) Interface testing - APIs(Application Programming Interface)
     5) Misuse case testing
     6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
     7) Code repositories - Integrity Measurement
-    8) Third-party code - Libraries, SDKS (Software Development Kits)
+    8) Third-party code - Libraries, SDKs(Software Development Kits)
     9) Software risk analysis and mitigation - Sandboxing
   E. Disaster Recovery Planning
     1) Disaster recovery - RTO (Recovery Time Objective), RPO (Recovery Point Objective), RSL (Recovery Service Level)
@@ -682,7 +693,8 @@
       % The recovery time objective (RTO) is the targeted amount of time to restore a service after a failure during a disaster recovery.
       % The recovery service level (RSL) is the percentage of a service that must be available during a disaster.
     2) Backups - Full backups, Differential, Incremental
-      % Any backup strategy must include full backups at some point in the process. Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
+      % Any backup strategy must include full backups at some point in the process.
+        Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
     3) Restoring backups
     4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
     5) Testing BC/DR plans - Business Continuity (BC) and Disaster Recovery (DR) plans
@@ -691,8 +703,8 @@
     1) Collect security process data
     2) Management review and approval
     3) Security metrics
-      % KRIs are measures that seek to quantify the security risk facing an organization.
-      % KPIs are metrics that demonstrate the success of the security program in achieving its objectives.
+      % KRIs(Key Risk Indicators) are measures that seek to quantify the security risk facing an organization.
+      % KPIs(Key Performance Indicators) are metrics that demonstrate the success of the security program in achieving its objectives.
     4) Audits and assessments - User Access Reviews
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
     5) Control management - Every Rule Has An Exception
