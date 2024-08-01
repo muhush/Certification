@@ -32,10 +32,12 @@
       % Copyright protection generally lasts for 70 years after the death of the last surviving author of the work.
       % U.S. patent law provides for an exclusivity period of 20 years beginning at the time a utility patent application is submitted to the Patent and Trademark Office.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
+      % The Safe Harbor requirements were a framework established between the United States and the European Union
     10) Data breaches
       * Encryption is easy to protect data breach
     11) Ethics
       * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
+      % The Internet Architecture Board(IAB) developed an ethics-related statement concerning the use of the internet, particularly through their "Ethics and the Internet" document
   D. Security Policy
     1) Security policy framework - policies > standard(details) > guidelines(advice),  procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
@@ -47,6 +49,7 @@
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
       % Risk mitigation controls to address acceptable risks would not be in the BCP.
     2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
+      % Restoration team, damage assessment team, and salvage team execute the final plan.
     3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
         Component redundancy - such as power supply or fan
         clustering - all active working
@@ -109,6 +112,7 @@
       % A data controller decides what data to process and how it is processed.
       % The data controller identifies what data to pass to the data processor and how that data should be processed.
       % The data custodian is responsible for day-to-day tasks to protect data, such as backing up data.
+      % % Data custodians might have a role, but the overall responsibility often lies with security professionals and other relevant departments.
       % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
       - Data Subject(collected data), Data processors(third parties)
       * GDPR uses the term data controller instead of data owner
@@ -128,7 +132,8 @@
     4) Cloud storage security
       - Encryption, Access control
     5) Information classification
-      - Data Classification Policy, Labeling Requirement, 
+      - Data Classification Policy, Labeling Requirement
+      % The term synonymous with security label is sensitivity label.
     6) Digital rights management
       - IRM(information rights management), DRM(Digital Right)
       % Persistent online authentication, automatic expiration, and a continuous audit trail are all methods used with digital rights management (DRM) technologies.
@@ -222,6 +227,7 @@
     1) Memory protection
       - Segmentation Fault, Memory Leak
       % Write blockers are hardware devices used to prevent the accidental writing of data to media that was collected as evidence.
+      % indirect memory addressing is the address field points to a memory cell that contains the address of the operand.
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
     3) Hardware and firmware security
@@ -254,6 +260,7 @@
     6) Communications for embedded devices
   F. Encryption
     1) Understanding encryption
+      % Cryptanalysis is primarily concerned with studying and analyzing cryptographic systems to find weaknesses and vulnerabilities.
     2) Symmetric and asymmetric cryptography
       - Symmetric(same key), Asymmetric(different key, public, private)
       * Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pair
@@ -273,6 +280,7 @@
          as interception by a third party could compromise the security of the encrypted messages.
        % Using AES (Advanced Encryption Standard) in conjunction with the one-time pad is not critical to the security of one-time pad operations,
          as the one-time pad's security is already absolute if implemented correctly.
+       % The XOR operation is used to combine the plaintext with the one-time pad key to produce the ciphertext.
     8) The cryptographic lifecycle
   G. Symmetric Cryptography
     1) Data encryption standard(DES) - 64bit blocks, 54bit length
@@ -294,6 +302,7 @@
   H. Asymmetric Cryptography
     1) Rivest-Shamir-Adelman(RSA)
       * Users create RSA key pairs using two large prime numbers.
+      % A public key encryption algorithm
     2) PGP and GnuPG
       - Pretty Good Privacy, Open PGP, Combine Sym and Asym
       % A randomly generated symmetric key is used to encrypt the contents of a message when using PGP.
@@ -302,11 +311,13 @@
       * You won't need to know the details of ECC. Remember that it doesn't use prime factorization.
       % Elliptic curve cryptography relies on the difficulty of the elliptic curve discrete logarithm problem,
         which quantum algorithms can solve more efficiently than classical algorithms.
+      % Elliptic Curve Cryptography (ECC) is more efficient than RSA because it provides equivalent security with much smaller key sizes.
   I. Key management
     1) Key management practices
     2) Key exchange - Out-of-band key exchange, in-band key exchange(Diffie-Hellman)
     3) Diffie-hellman - Symmetric
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
+      % The Diffie-Hellman algorithm is used to securely exchange cryptographic keys over a public, nonsecure medium.
     4) Key escrow - Recovery Agents
       % The clipper chip performed encryption, but it included a special law enforcement access field, or LEAF, value that allowed government agents to access the content of the communication.
     5) Key stretching - Salting, Hashing, PBKDF2 (Password-based key Derivation Function v2), bcryypt(blowfish)
@@ -314,6 +325,7 @@
   J. Public Key Infrastructure
     1) Trust models - Asymmetric Cryptography, Web of Trust(WOT)
     2) PKI and digital certificates
+      % X.509 defines the format of public key certificates, which are used within PKI to authenticate and secure communications over networks, particularly the Internet.
       - CA(Certificate Authority)
       % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
       % The certificate authority (CA) digitally signs applicant certificates with the CA's digital signature.
@@ -322,6 +334,7 @@
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
+      % Authentication verifies the identity of the sender
       - Collision-resistant, Asymmetric                    
     5) Digital signature standard
       - RSA, ECDSA, EdDSA
@@ -381,7 +394,11 @@
       - Class A(wood), Class B(oil), Class C(data center), Class D (industrial), Class K(Kitchen)
       * Be able to identify the classes of fire extinguishers on the exam.
     4) Power control - Blackouts, Sags, Brownouts, Spikes, Surges
+      % Line conditioners are devices designed to regulate voltage and clean the power supply by filtering out noise, spikes, and other electrical disturbances, ensuring a steady and consistent voltage level to protect sensitive equipment.
+      % A UPS (Uninterruptible Power Supply) is a device that provides backup power to electronic equipment during power outages or voltage drops.
     5) Physical access control - Locks
+      % Shimming involves using a thin piece of metal or plastic, called a shim, to bypass the locking mechanism of a lock, especially padlocks or door locks.
+      % Raking is a lockpicking technique used to manipulate the pins inside a lock to align them with the shear line, allowing the lock to open.
     6) Visitor management
       % Cameras should always be disclosed to visitors when used as part of physical security controls to ensure compliance with privacy laws and regulations.
     7) Physical security personnel - Two-Person Integrity
@@ -401,6 +418,7 @@
   A. TCP/IP Networking
     1) Introducing TCP/IP - TCP / UDP, OSI Model
       * Know the seven layers of the OSI model and the four layers of the TCP model.
+      % Data-link layer has flow control, error notification, and physical addressing
     2) IP addresses and DHCP - IPv4, IPv6
     3) Network traffic
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
@@ -437,7 +455,9 @@
     1) Routers, switches, and bridges
       % A switch operates primarily at layer 2 of the OSI model, handling data frames between devices on the same local area network (LAN).
       % A router operates mainly at layer 3, routing data packets between different networks based on IP addresses.
+      % A router is the correct location to deploy Access Control Lists (ACLs) for confining sensitive internal data traffic to specific subnets
     2) Network topologies
+      % A Multistation Access Unit (MAU) is a central connecting device used in Token Ring networks
     3) Transport architecture
       % Configuring devices, monitoring performance, and troubleshooting problems are tasks associated with the management plane,
         which oversees and manages the network.
@@ -450,12 +470,14 @@
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
+      % L2TP (Layer 2 Tunneling Protocol) over IPSec (Internet Protocol Security) uses encryption to protect transmitted traffic and supports the transmission of multiple protocols.
       * Split-tunnel VPNs provide users with a false sense of security
       % IPsec operates at the Network layer (layer 3).
     8) Network intrusion detection and prevention
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
       % Signature detection relies on a database of known threat signatures and requires frequent updates from the vendor to recognize new threats.
+      % Snort is an open-source Intrusion Detection System (IDS) that monitors network traffic in real-time to detect suspicious activities and possible attacks.
     9) Protocol analyzers - tcpdump, tcpreplay
     10) Unified threat management
     11) Content distribution networks(CDNs)
@@ -463,6 +485,7 @@
     1) Restricting network access 
       - Perimeter security, Network Access Control
       - Rule based, role based, time based, location based
+      % Rule-based access control (RBAC) uses a set of pre-defined rules that determine access permissions based on conditions such as time of day, IP address, or other criteria.
     2) Network access control - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
     3) Firewall rule management
@@ -473,6 +496,8 @@
     5) Switch configuration security - VLAN Pruning, VLAN Trunk Negotiation, Port Security, DHCP Snooping
     6) Maintaining network availability - Flooding Attack, Flood Guard Technology, Routing Loops, Spanning Tree Protocol(STP), BPDU Guard
     7) Network monitoring - Network Flow data
+      % station statistics include metrics related to individual network stations, such as traffic patterns, errors, and packet loss
+      % packet capture offers detailed packet-level analysis, while station statistics provide a broader view of network activity for specific devices
     8) Firewall and network logs - SIEM
     9) Network performance metrics - Latency, Jitter
     10) SNMP
@@ -565,6 +590,7 @@
       % Authorization limits user activity to actions they are permitted to perform, following the principle of least privilege.
       % Authentication verifies that a user is who they claim to be.
     2) Usernames and access cards
+      % Memory cards are used for storing data but do not have the capability to process information or execute tasks.
     3) Biometrics - Low false, crossover error rate (CER)
       % FAR measures the frequency at which unauthorized users are inadvertently admitted.
       % FRR measures the frequency at which legitimate users are denied access to a system or facility.
@@ -585,12 +611,14 @@
     6) RADIUS - Centralized approach
       * Remember that a RADIUS client is usually an application server!
       % RADIUS typically uses UDP, which is less reliable than TCP, and does not fully encrypt the authentication session, only the password.
+      % Diameter supports more complex network access scenarios and is commonly used in modern telecommunications
       % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
       % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
+      - TGS (Ticket Granting Server), AS (Authentication Server),TGT (Ticket Granting Ticket)
       % TGT includes information about the client and a copy of the client TGS session key.
       % When a client wishes to access a service, the client contacts the TGS.
       % The AS looks up the user in its database and retrieves the user's password. It performs authentication of the end user.
@@ -605,12 +633,14 @@
       % Authentication is necessary to ensure a network supports accountability.
       % Accountability is possible by reviewing logs and tracking user activity.
       % Authentication of individuals is also needed to ensure the audit trails provide proof of identities listed in the logs.
-    2) Session management - Timeouts
+    2) Session management - Timeouts, randomized session IDs, Encrypt cookies
   D. Account Management
     1) Understand account and privilege management - Least Privilege, Segregation of Duties, Job Rotation, Mandatory Vacation
     2) Account types - User Account, Privileged Account, Shared Account, Service Account
       * Avoid the use of shared/generic accounts and credentials.
     3) Account Policies - Group Policy Object(GPO)
+      % Group policies provide centralized management and configuration of all entities to enforce security and compliance standards throughout the organization.
+      % Using a domain group policy allows you to centrally manage and enforce the restriction across all computers in the domain.
     4) Password policies
       * Current NIST guidance says that passwords should not expire.
     5) Manage roles
@@ -623,12 +653,14 @@
     1) Understand authorization - Least Privilege, Account Review
       * Be able to identify least privilege and segregation of duties issues in a scenario
     2) Mandatory access controls (MAC)
+      % In a Mandatory Access Control (MAC) system, objects are the resources or data entities that are being protected.
       % Hybrid environments combine both hierarchical and compartmentalized environments so that security levels have subcompartments.
     3) Discretionary access controls (DAC)
       % In a discretionary access control system, individual users have the ability to alter access permissions.
     4) Access control lists
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
       % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
+      % Detective controls are designed to identify and alert the organization to unauthorized activities, including when authorized users are involved in such actions.
     6) Advanced authorization concepts - RBAC, ABAC, location-based control, Time-of-Day Restriction
       * Risk-based access controls apply stronger standards in situations posing greater risk.
   F. Access Control Attacks
@@ -695,8 +727,10 @@
     2) Backups - Full backups, Differential, Incremental
       % Any backup strategy must include full backups at some point in the process.
         Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
+      % Incremental backs up all the new files that have changed since the last full or incremental backup and resets the archive bit.
     3) Restoring backups
     4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
+      % Contracts typically focus on ensuring that the vendor provides a functional offsite facility that meets the agreed-upon criteria, such as availability, cost, testing access, and general site availability.
     5) Testing BC/DR plans - Business Continuity (BC) and Disaster Recovery (DR) plans
     6) After action reports
   F. Assessing Security Processes
