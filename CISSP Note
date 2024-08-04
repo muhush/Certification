@@ -748,9 +748,39 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 7. Security Operations
-  a. Physical Security Requirements
-  b. Managing Security Operations
-  c. Preventing and Responding to Incidents
+  A. Investigations and Forensics
+    1) Conducting investigations
+      - Operational Investigation(technology issue), Criminal Investigation(possible crimes), Civil Investigation(Disputes), Regulatory Investigation(government regulators)
+      * Cybersecurity investigators should leave interrogation to law enforcement!
+    2) Evidence types
+      - Real(tangible objects), Documentary(written information), Testimonial(Witness)
+      - Documentary = Authentication rule, Best evidence (Original documents are superior), Parol evidence(Written contract agreement)
+      - Secondary evidence refers to copies or reproductions of original documents when the original is not available.
+      % Testimonial direct evidence is provided based on a witness's own observations. Testimonial expert evidence is conclusions based upon other evidence.
+      % Documentary evidence consists of written information, such as server logs.
+    3) Introduction to forensics
+      - Digital Forensics, Volatility(Permanence)
+    4) System and file forensics - Hashes Protect Evidence(Unique file signature)
+      * Never try to perform forensics yourself unless you've received appropriate training.
+    5) Network forensics - Wireshark Monitors Networks, NetFlow Summarizes Traffic
+    6) Software forensics - Intellectual Property, Malware Origins
+    7) Mobile device forensics
+    8) Embedded device forensics
+      % A write blocker prevents a forensic examiner from accidentally corrupting evidence while creating an image of a disk.
+      % Each piece of evidence should be accompanied by an evidence log that records important events that happen in the lifecycle of the evidence.
+      % Hashing is used to protect evidence by providing a unique file signature, demonstrating that a file hasn't been altered.
+    9) Chain of custody - A paper trail of evidence
+    10) Reporting and documenting incidents - Formal Incident Report
+      % Federal law does not require all U.S. businesses to report verified security incidents to US-CERT; reporting requirements vary by industry and specific regulations.
+    11) Electronic discovery (eDiscovery)
+      % For evidence to be admissible, it must meet certain criteria, including sufficiency, reliability, and relevance.
+  B. Privilege Management
+    1) Need to know and least privilege
+      - need to know(information access), least privilege(system permissions)
+      - Privilege Aggregation
+    2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
+  C. Incident Management
+  D. Personnel Safety
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
