@@ -780,7 +780,26 @@
       - Privilege Aggregation
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
   C. Incident Management
+    1) Bild an incident response program - Incident Response Plan
+    2) Creating an incident response team - IR Service Provider
+    3) Incident communications plan - Involving Law Enforcement, Secure Communication
+      % While you may believe a law has been violated, you do not typically have an obligation to report this to law enforcement.
+    4) Incident identification - Security incident and event management(SIEM), First Responders Must Act Quickly
+      * The highest priority of a first responder must be containing damage through isolation
+    5) Escalation and notification
+    6) Mitigation - mitigation ends with stability
+    7) Containment techniques
+      % When we divide networks into logical segments, grouped by types of users or systems, we have performed segmentation.
+      % When we move compromised systems to a network that is completely disconnected from the rest of the network, we have performed isolation. That is not the case in this scenario.
+    8) Incident eradication and recovery - Eradication(Remove all traces), Recovery, Attackers Compromise Systems
+    9) Validation
+    10) Post-incident activities - Incident Summary Report
+      % Independent facilitator is the most effective person to lead a lessons learned review
+      % The IR personnel are too close to the situation and may not be able to remain impartial or assist others to share their thoughts and feelings.
   D. Personnel Safety
+    1) Personnel safety
+      * Watch for tricky questions that ask you to prioritize other actions over personal safety
+    2) Emergency management
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
