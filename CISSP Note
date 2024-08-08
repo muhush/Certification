@@ -80,7 +80,7 @@
     7) Risk visibility and reporting
   H. Threat Modeling
     1) Threat intelligence - Open-source intelligence, Email Address Harvesting
-    2) Managing threat indicators -CybOX, STIX, TAXII, OpenIOC
+    2) Managing threat indicators - CybOX, STIX, TAXII, OpenIOC
     3) Intelligence sharing - ISACs, ISA(interconnection security agreement)
     4) Threat research
     5) Identifying threats - structured approach
