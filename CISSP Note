@@ -112,7 +112,7 @@
       % A data controller decides what data to process and how it is processed.
       % The data controller identifies what data to pass to the data processor and how that data should be processed.
       % The data custodian is responsible for day-to-day tasks to protect data, such as backing up data.
-      % % Data custodians might have a role, but the overall responsibility often lies with security professionals and other relevant departments.
+      % Data custodians might have a role, but the overall responsibility often lies with security professionals and other relevant departments.
       % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
       - Data Subject(collected data), Data processors(third parties)
       * GDPR uses the term data controller instead of data owner
@@ -235,7 +235,7 @@
   D. ServerSecurity Issues
     1) Server and database security
       - Aggregation(Combing), Inference
-      % Open Database Connectivity (ODBC) is a database feature that allows applications to communicate with different types of databases
+      % Open Database Connectivity(ODBC) is a database feature that allows applications to communicate with different types of databases
         without having to be directly programmed for interaction with each type.
     2) NoSQL databases
     3) Distributed and high-performance computing
@@ -290,11 +290,11 @@
     3) AES, Blowfish, and Twofish
       - Rihndael algorithm, 128-bit blocks, 128, 192, 256 bits lengths
       - Blowfish = 64 bit blocks, 32~448 bits key lengths
-      - Twofish = 128-bit blocks, 128,192, 256 bits lengths
+      - Twofish = 128-bit blocks, 128,192,256 bits lengths
     4) RC4 - WEP, WPA, SSL, TLS
     5) Cipher modes - ECB mode, CBC mode, Counter mode
       * Counter mode allows block ciphers to act more like stream ciphers
-      % CBC (Cipher Block Chaining) mode feeds the ciphertext of the previous block into the encryption of the next block, 
+      % CBC(Cipher Block Chaining) mode feeds the ciphertext of the previous block into the encryption of the next block, 
         ensuring that identical plaintext blocks encrypt to different ciphertext blocks when the preceding ciphertext block is different.
       % Counter mode (CTR) encrypts successive values of a "counter" and uses this to encrypt the plaintext, 
         meaning it does not depend on the previous encrypted block for the next block's encryption.
@@ -319,7 +319,8 @@
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
       % The Diffie-Hellman algorithm is used to securely exchange cryptographic keys over a public, nonsecure medium.
     4) Key escrow - Recovery Agents
-      % The clipper chip performed encryption, but it included a special law enforcement access field, or LEAF, value that allowed government agents to access the content of the communication.
+      % The clipper chip performed encryption, but it included a special law enforcement access field, or LEAF, value
+        that allowed government agents to access the content of the communication.
     5) Key stretching - Salting, Hashing, PBKDF2 (Password-based key Derivation Function v2), bcryypt(blowfish)
     6) Hardware security modules(HSM)
   J. Public Key Infrastructure
@@ -328,7 +329,7 @@
       % X.509 defines the format of public key certificates, which are used within PKI to authenticate and secure communications over networks, particularly the Internet.
       - CA(Certificate Authority)
       % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
-      % The certificate authority (CA) digitally signs applicant certificates with the CA's digital signature.
+      % The certificate authority(CA) digitally signs applicant certificates with the CA's digital signature.
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
@@ -603,7 +604,7 @@
       - False Acceptance, False Rejection
     2) Multifactor authentication
     3) Something you have
-      % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP.
+      % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP (HMAC-based One-Time Password).
     4) Password authentication protocols(PAP) - CHAP(Challenge-Handshake Authentication Protocol)
     5) Single sign-on and federation
       % Federated Identity Management (FIM) is best to implement when you have accounts across multiple service providers with whom you would like to share identity information.
@@ -700,7 +701,7 @@
     3) Bug bounty
     4) Cybersecurity exercises
   C. Log Reviews
-    1) Logging security information - Lod and Data sources, Syslog(Linux), Tags, NXLog(Centralize)
+    1) Logging security information - Log and Data sources, Syslog(Linux), Tags, NXLog(Centralize)
     2) Security information and event management(SIEM) - SOAR
     3) Continuous security monitoring
       - Monitoring Process (Define, Establish, Implement, Analyze/Report, Respond, Review/Update)
