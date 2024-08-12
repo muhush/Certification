@@ -42,6 +42,7 @@
     1) Security policy framework - policies > standard(details) > guidelines(advice),  procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
     2) Security Policies
+      % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
   E. Business Continuity
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
@@ -228,6 +229,7 @@
       - Segmentation Fault, Memory Leak
       % Write blockers are hardware devices used to prevent the accidental writing of data to media that was collected as evidence.
       % indirect memory addressing is the address field points to a memory cell that contains the address of the operand.
+      % Monitoring CPU load and memory usage helps identify performance-related problems, such as resource bottlenecks, application inefficiencies, and overall system health.
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
     3) Hardware and firmware security
@@ -336,6 +338,7 @@
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       % Authentication verifies the identity of the sender
+      % Digital signatures verify the authenticity and integrity of the driver files, ensuring they come from a trusted source and have not been tampered with since being published. 
       - Collision-resistant, Asymmetric                    
     5) Digital signature standard
       - RSA, ECDSA, EdDSA
@@ -389,6 +392,7 @@
     1) Site and facility design
       % Lighting is often claimed to be the most commonly deployed physical security mechanism.
       % An access control vestibule is a double set of doors that is often protected by a guard and used to contain a subject until their identity and authentication is verified.
+      % Security guards have the ability to make real-time decisions and discriminating judgments based on context, assess situations dynamically, and respond accordingly.
     2) Data center environmental controls - Expanded Envelope(64.5~80.6), Dew Point Range(15.8~59)
       * Watch for exam questions that are indirectly covering the hot aisle/cold aisle strategy
     3) Data center environment protection
@@ -419,7 +423,9 @@
   A. TCP/IP Networking
     1) Introducing TCP/IP - TCP / UDP, OSI Model
       * Know the seven layers of the OSI model and the four layers of the TCP model.
-      % Data-link layer has flow control, error notification, and physical addressing
+      % Data-link layer has flow control, error notification, and physical addressing.
+      % Flow control in Data and transport layers manages the rate of data transmission between two devices to ensure that a fast sender does not overwhelm a slow receiver.
+      % The Network layer (Layer 3) is responsible for ensuring that data is properly directed through the network to reach its intended endpoint such as path selection and logical addressing.
     2) IP addresses and DHCP - IPv4, IPv6
     3) Network traffic
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
@@ -479,6 +485,8 @@
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
       % Signature detection relies on a database of known threat signatures and requires frequent updates from the vendor to recognize new threats.
       % Snort is an open-source Intrusion Detection System (IDS) that monitors network traffic in real-time to detect suspicious activities and possible attacks.
+      % The primary functional components of an IDS include information sources (such as logs or network traffic), event report analysis (to analyze data for potential intrusions), and response mechanisms (to act on detected threats).
+        The other options listed (database component and event report analysis) are more closely related to typical IDS functions.
     9) Protocol analyzers - tcpdump, tcpreplay
     10) Unified threat management
     11) Content distribution networks(CDNs)
