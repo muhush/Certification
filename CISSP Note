@@ -43,6 +43,7 @@
       * Policy, standards, and procedures are mandatory. Guidelines are optional
     2) Security Policies
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
+      % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
   E. Business Continuity
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
@@ -56,6 +57,8 @@
         clustering - all active working
         RAID (Redundant Array of Inexpensive Disks) = Disk mirroring (RAID 1), Disk Striping (RAID 5)
         * RAID is a fault-tolerance technique, not a backup state
+        % Disk mirroring (RAID 1) creates an exact copy of the data on a second drive. If one drive fails, the system can immediately switch to the mirrored drive,
+          reducing downtime and making repairs more manageable and quicker without the need for data restoration.
   F. Personnel Security
     1) Personnel security - strong security policy, insider threat
     2) Security in the hiring process - Employment Agreements, NDAs(Non-Disclosure Agreements)
@@ -332,6 +335,7 @@
       - CA(Certificate Authority)
       % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
       % The certificate authority(CA) digitally signs applicant certificates with the CA's digital signature.
+      % In PKI, the revocation request grace period refers to the time it may take for a Certificate Authority (CA) to process and update the revocation status of a certificate.
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
@@ -339,6 +343,7 @@
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       % Authentication verifies the identity of the sender
       % Digital signatures verify the authenticity and integrity of the driver files, ensuring they come from a trusted source and have not been tampered with since being published. 
+      % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
       - Collision-resistant, Asymmetric                    
     5) Digital signature standard
       - RSA, ECDSA, EdDSA
@@ -520,6 +525,7 @@
     12) Network support - SLA
   E. Specialized Networking
     1) Telephony - VoIP
+      % Another term used for Plain Old Telephone Service (POTS) is PSTN (Public Switched Telephone Network).
     2) Multimedia collaboration - XMPP
     3) Storage networks
       % Fibre Channel requires the use of dedicated connections and is known for its high speed and reliability in connecting computer data storage to servers.
@@ -558,6 +564,7 @@
   H. Mobile Device Security
     1) Mobile connection methods - Cellular Networks, Wi-Fi Networks, NFC, Bluetooth(30 feet)
     2) Mobile device security
+      % Bluejacking involves sending anonymous, unsolicited messages to Bluetooth-enabled devices within range, typically for harmless pranks or marketing purposes.
     3) Mobile device management(MDM)
       % The concept of corporate-owned, personally enabled (COPE) means the organization purchases devices and provides them to employees.
         Each user is then able to customize the device and use it for both work activities and personal activities.
@@ -645,6 +652,7 @@
     2) Session management - Timeouts, randomized session IDs, Encrypt cookies
   D. Account Management
     1) Understand account and privilege management - Least Privilege, Segregation of Duties, Job Rotation, Mandatory Vacation
+      % When elevated privileges are required, the "Run as" command temporarily grants the necessary permissions without exposing the entire session to administrative rights, thereby adhering to the principle of least privilege.
     2) Account types - User Account, Privileged Account, Shared Account, Service Account
       * Avoid the use of shared/generic accounts and credentials.
     3) Account Policies - Group Policy Object(GPO)
@@ -750,6 +758,7 @@
       % KPIs(Key Performance Indicators) are metrics that demonstrate the success of the security program in achieving its objectives.
     4) Audits and assessments - User Access Reviews
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
+      % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
     5) Control management - Every Rule Has An Exception
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
       $ Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
@@ -767,6 +776,7 @@
       - Secondary evidence refers to copies or reproductions of original documents when the original is not available.
       % Testimonial direct evidence is provided based on a witness's own observations. Testimonial expert evidence is conclusions based upon other evidence.
       % Documentary evidence consists of written information, such as server logs.
+      % Corroborative evidence helps to establish the validity of a point or an idea by providing additional information or testimony that is consistent with the primary evidence.
     3) Introduction to forensics
       - Digital Forensics, Volatility(Permanence)
     4) System and file forensics - Hashes Protect Evidence(Unique file signature)
@@ -813,7 +823,52 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 8. Software Development Security
-  a. Software Development Security
-  b. Malicious Code and Application Attacks
+  A. Software Development Lifecycle
+    1) Software platforms - Endpoint Applications, Client/Server Apps, Web Applications
+      % Endpoint applications run on the host computer only without interacting with other systems.
+    2) Development methodologies - Integrated product team(IPT)
+      % The spiral model has four stages: requirements gathering/identification, design, build, and evaluation/risk analysis
+      % The manifesto for agile development talks about valuing individuals and interactions, working software, customer collaboration, and responding to change.
+      % DevOps combines Development and Operations to rapidly release code and meet customer demands.
+    3) Scaled agile framework
+      % The Large Solution SAFe configuration focuses on coordinating multiple Agile Release Trains (ARTs) and suppliers, which is necessary for building large, complex solutions but does not encompass the full breadth of SAFe.
+      % The Full SAFe configuration incorporates all aspects of SAFe, including essential, large solution, and portfolio levels, to support enterprises with large and complex solutions.
+      % The Essential SAFe configuration is the basic building block of SAFe, focusing on the team and program levels, but it does not include the large solution and portfolio levels.
+    4) Maturity models - Capability Maturity Model Integration(CMMI), Software Assurance Maturity Model(SAMM)
+      % Level 3 is defined and activities include: decision analysis & resolution, integrated project management, organizational process definition, organizational training,
+        organizational process focus, product integration, requirements development, risk management, technical solution, validation, and verification.
+      % Level 2 is managed and activities include: configuration management, measurement & analysis, project monitoring & control, project planning, process & product QA,
+        requirements management, and supplier agreement management.
+    5) Automation and DevOps - Infrastructure as Code
+      * DevSecOps applies DevOps techniques to a cybersecurity program.
+      % The DevOps model prioritizes operational tasks over development efforts.
+    6) Programming Languages - Reverse Engineering
+      % An assembler converts assembly language, a low-level programming language, into executable machine code, not the reverse.
+      % A compiler translates source code written in a high-level programming language into machine code or bytecode, but it does not perform the reverse process of generating source code from executable code.
+      % Interpreters translate source code into machine language when the software runs.
+        An interpreter directly executes instructions written in a programming or scripting language without previously converting them into machine code,
+        differing from decompilers which work with already compiled code.
+    7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
+  B. Application Attacks
+    1) OWASP top ten 
+      - Broken Access Control, Cryptographic failures, Injection, Insecure Design, Security misconfiguration, Vulnerabile and outdated components, Identification and authentication failures, software and data integrity failures
+        security logging and monitoring failures, server-side request forgery
+    2) Application Security - Prompt Patching is critical
+    3) Preventing SQL injection
+      * You won't need to write SQL on the exam, but you should know how SQL injection works.
+    4) Understanding cross-site scripting - Use input validation
+    5) Request forgery
+      * Cross-site request forgery, CSRF, XSRF, and "sea surf" all refer to the same attack.
+      - XSRF secretly sends requests, Server-side Request Forgery(SSRF)
+    6) Defending against directory traversal
+    7) Overflow attacks - Buffer Overflow Attacks
+    8) Explaining cookies and attachments
+    9) Session hijacking
+    10) Code execution attacks
+    11) Privilege escalation
+    12) Driver manipulation
+    13) Memory vulnerabilities
+    14) Race condition vulnerabilities
+  C. Secure Coding Practices
 
 
