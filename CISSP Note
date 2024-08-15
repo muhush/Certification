@@ -24,6 +24,7 @@
     3) GDPR - E.U regulations, anyone in E.U geolocation
     4) California privacy law - CPRA (SPI = Sensitive)
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
+      % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
     6) Computer crimes - CFAA (Access), ECPA (network communication), ITADA (Identity)
     7) Software Licensing - SLA, ELAs (Enterprise), EULAs(End User License Agreements)
       - Contractual agreements(high value)
@@ -31,6 +32,8 @@
       % The Digital Millennium Copyright Act contains provisions prohibiting the circumvention of copyright protection mechanisms.
       % Copyright protection generally lasts for 70 years after the death of the last surviving author of the work.
       % U.S. patent law provides for an exclusivity period of 20 years beginning at the time a utility patent application is submitted to the Patent and Trademark Office.
+      % A trade secret is a type of intellectual property that includes formulas, practices, designs, instruments, or processes that are not generally known or reasonably ascertainable by others,
+        and which provide a business with a competitive advantage.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
       % The Safe Harbor requirements were a framework established between the United States and the European Union
     10) Data breaches
@@ -39,17 +42,19 @@
       * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
       % The Internet Architecture Board(IAB) developed an ethics-related statement concerning the use of the internet, particularly through their "Ethics and the Internet" document
   D. Security Policy
-    1) Security policy framework - policies > standard(details) > guidelines(advice),  procedures    
+    1) Security policy framework - policies > standard(details) > guidelines(advice) / procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
     2) Security Policies
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
   E. Business Continuity
     1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
-      * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers
+      * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers.
+      % BCP includes strategies to prevent or minimize the impact of a disaster on the organization, ensuring that critical operations remain available or can be quickly restored.
       % People should always be your highest priority in business continuity planning.
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
       % Risk mitigation controls to address acceptable risks would not be in the BCP.
+      % An executive succession plan is designed to identify and prepare individuals to fill key leadership roles within an organization in the event that they become vacant, whether due to a disaster or other circumstances.
     2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
       % Restoration team, damage assessment team, and salvage team execute the final plan.
     3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
@@ -138,6 +143,7 @@
     5) Information classification
       - Data Classification Policy, Labeling Requirement
       % The term synonymous with security label is sensitivity label.
+      % Information is compartmentalized in the information flow model are classification(Assigns a security level) and need to know(Ensures that only individuals).
     6) Digital rights management
       - IRM(information rights management), DRM(Digital Right)
       % Persistent online authentication, automatic expiration, and a continuous audit trail are all methods used with digital rights management (DRM) technologies.
@@ -172,9 +178,14 @@
       - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up)
       * The Bell-LaPadula model is rarely implemented outside of military applications
       * The Bell-LaPadula model and Biba models are important for the exam but rarely used in the real world
+      % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
     3) Security evaluation models
       - TCSEC, Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
+      % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products. It ranges from EAL1 to EAL7:
+        EAL1: Functionally Tested. EAL2: Structurally Tested. EAL3: Methodically Tested and Checked. EAL4: Methodically Designed, Tested, and Reviewed (common benchmark for commercial products).
+        EAL5: Semi-Formally Designed and Tested. EAL6: Semi-Formally Verified Design and Tested. EAL7: Formally Verified Design and Tested (highest level of assurance).
       * Certification and accreditation are different. Accreditation and authorization are the same.
+      % Certification is the process of evaluating and verifying that security controls are correctly implemented and functioning as intended within an information system.
       % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
     4) Segregation of duties
       % Segregation of duties is the principle that ensures no individual has access to multiple permissions
@@ -233,6 +244,7 @@
       % Write blockers are hardware devices used to prevent the accidental writing of data to media that was collected as evidence.
       % indirect memory addressing is the address field points to a memory cell that contains the address of the operand.
       % Monitoring CPU load and memory usage helps identify performance-related problems, such as resource bottlenecks, application inefficiencies, and overall system health.
+      % Direct Memory Access (DMA) allows devices to transfer data directly to or from memory without involving the CPU in each step of the transfer process.
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
     3) Hardware and firmware security
@@ -266,6 +278,7 @@
   F. Encryption
     1) Understanding encryption
       % Cryptanalysis is primarily concerned with studying and analyzing cryptographic systems to find weaknesses and vulnerabilities.
+      % A trapdoor function is a type of cryptographic function that is easy to compute in one direction but difficult to reverse without special information.
     2) Symmetric and asymmetric cryptography
       - Symmetric(same key), Asymmetric(different key, public, private)
       * Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pair
@@ -286,6 +299,7 @@
        % Using AES (Advanced Encryption Standard) in conjunction with the one-time pad is not critical to the security of one-time pad operations,
          as the one-time pad's security is already absolute if implemented correctly.
        % The XOR operation is used to combine the plaintext with the one-time pad key to produce the ciphertext.
+       % The Message Authentication Code (MAC) ensures b. message integrity.
     8) The cryptographic lifecycle
   G. Symmetric Cryptography
     1) Data encryption standard(DES) - 64bit blocks, 54bit length
@@ -320,7 +334,7 @@
   I. Key management
     1) Key management practices
     2) Key exchange - Out-of-band key exchange, in-band key exchange(Diffie-Hellman)
-    3) Diffie-hellman - Symmetric
+    3) Diffie-hellman - Asymmetric
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
       % The Diffie-Hellman algorithm is used to securely exchange cryptographic keys over a public, nonsecure medium.
     4) Key escrow - Recovery Agents
@@ -336,14 +350,15 @@
       % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
       % The certificate authority(CA) digitally signs applicant certificates with the CA's digital signature.
       % In PKI, the revocation request grace period refers to the time it may take for a Certificate Authority (CA) to process and update the revocation status of a certificate.
+      % A trust anchor refers to a public key that can be used to verify the certificate used in a digital signature
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
+      % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       % Authentication verifies the identity of the sender
       % Digital signatures verify the authenticity and integrity of the driver files, ensuring they come from a trusted source and have not been tampered with since being published. 
-      % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
       - Collision-resistant, Asymmetric                    
     5) Digital signature standard
       - RSA, ECDSA, EdDSA
@@ -364,6 +379,7 @@
     10) Certificate subjects
       * You may find exam questions that discuss certificate object identifiers (OIDs).
       - Servers(SSH), Devices, Individuals, Developers(code signing)
+      % SSH encrypts the connection between the client and server, ensuring that data, commands, and terminal sessions are protected from eavesdropping and tampering.
       - Certificate Pinning
       % Certificate pinning is used to tell clients that a certificate, or its public key, is unlikely to change over time.
         It helps in preventing man-in-the-middle attacks by ensuring that the client accepts only a specific certificate or public key.
@@ -387,6 +403,7 @@
         or deduce the encryption key, rather than analyzing ciphertext for patterns.
       % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
+      % Rsh is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
       % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
       % Implementation attacks rely on flaws in the cryptographic algorithm.
@@ -404,7 +421,8 @@
       - Class A(wood), Class B(oil), Class C(data center), Class D (industrial), Class K(Kitchen)
       * Be able to identify the classes of fire extinguishers on the exam.
     4) Power control - Blackouts, Sags, Brownouts, Spikes, Surges
-      % Line conditioners are devices designed to regulate voltage and clean the power supply by filtering out noise, spikes, and other electrical disturbances, ensuring a steady and consistent voltage level to protect sensitive equipment.
+      % Line conditioners are devices designed to regulate voltage and clean the power supply by filtering out noise, spikes, and other electrical disturbances,
+        ensuring a steady and consistent voltage level to protect sensitive equipment.
       % A UPS (Uninterruptible Power Supply) is a device that provides backup power to electronic equipment during power outages or voltage drops.
     5) Physical access control - Locks
       % Shimming involves using a thin piece of metal or plastic, called a shim, to bypass the locking mechanism of a lock, especially padlocks or door locks.
@@ -415,6 +433,7 @@
   M. Software Security Architecture
     1) SOAP and REST 
       - API(Application Programming Interface, AWS, Twitter)
+        % ODBC (Open Database Connectivity) is a standard API that enables applications to access data from various database management systems (DBMS) using SQL as the standard language.
       - SOAP(Simple Object Access Protocol) = XML
       - REST(Representational State Transfer) = HTTPS
     2) SOA and microservices
@@ -431,7 +450,9 @@
       % Data-link layer has flow control, error notification, and physical addressing.
       % Flow control in Data and transport layers manages the rate of data transmission between two devices to ensure that a fast sender does not overwhelm a slow receiver.
       % The Network layer (Layer 3) is responsible for ensuring that data is properly directed through the network to reach its intended endpoint such as path selection and logical addressing.
+      % The Application layer provides the interface between the application software and the network, enabling various services such as file transfers, printing, messaging, and email.
     2) IP addresses and DHCP - IPv4, IPv6
+      % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
     5) Network ports
@@ -479,6 +500,7 @@
       * You need to understand the default/implicit deny principle of firewalls.
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
       % Stateful inspection firewalls are able to grant a broader range of access for authorized users and activities and actively watch for and block unauthorized users and activities.
+      % SOCKS is a circuit-level proxy firewall that provides a secure channel between two computers.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
@@ -492,6 +514,8 @@
       % Snort is an open-source Intrusion Detection System (IDS) that monitors network traffic in real-time to detect suspicious activities and possible attacks.
       % The primary functional components of an IDS include information sources (such as logs or network traffic), event report analysis (to analyze data for potential intrusions), and response mechanisms (to act on detected threats).
         The other options listed (database component and event report analysis) are more closely related to typical IDS functions.
+      % Heuristic detection identifies potentially malicious code by analyzing the behavior and characteristics of files, even if they do not match known virus signatures.
+      % Proximity detectors create a magnetic field around an object or area, and when this field is disturbed by an intruder, the system triggers an alert.
     9) Protocol analyzers - tcpdump, tcpreplay
     10) Unified threat management
     11) Content distribution networks(CDNs)
@@ -500,6 +524,7 @@
       - Perimeter security, Network Access Control
       - Rule based, role based, time based, location based
       % Rule-based access control (RBAC) uses a set of pre-defined rules that determine access permissions based on conditions such as time of day, IP address, or other criteria.
+      % Role-Based Access Control (RBAC) offers several advantages: Low Security Cost: By grouping permissions into roles, Easier to Implement with well-defined roles and responsibilities.
     2) Network access control - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
     3) Firewall rule management
@@ -541,6 +566,7 @@
   G. Wireless Networking
     1) Understanding wireless networking
       * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
+      % A site survey helps you detect any unauthorized access points (often referred to as "rogue" access points) that might have been set up in your building.
     2) Wireless encryption
       % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange, providing enhanced protection against offline dictionary attacks compared to its predecessors.
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
@@ -583,6 +609,7 @@
       - Viruses, Worms, Trojan Horses, Spyware
       - Protection = Sandboxing(isolates)
       - Spam Filtering
+      % A companion virus, also known as a "spawning" virus, works by creating a new file with the same name as a legitimate file but with a different extension.
     3) Application management
       * While the terms whitelisting and blacklisting are problematic, you should still know them for the exam.
       % BitLocker is a full disk encryption feature designed to protect data by providing encryption for entire volumes.
@@ -624,12 +651,14 @@
     5) Single sign-on and federation
       % Federated Identity Management (FIM) is best to implement when you have accounts across multiple service providers with whom you would like to share identity information.
         With FIM, you can use one login to access resources you've been authorized throughout the federation.
-    6) RADIUS - Centralized approach
+      % To implement a single sign-on (SSO) system, the organization could use the following technologies: RADIUS, Kerberos, SESAME (Secure European System for Applications in a Multi-vendor Environment), Active Directory
+    6) RADIUS (Remote Authentication Dial-In User Service)- Centralized approach
       * Remember that a RADIUS client is usually an application server!
       % RADIUS typically uses UDP, which is less reliable than TCP, and does not fully encrypt the authentication session, only the password.
       % Diameter supports more complex network access scenarios and is commonly used in modern telecommunications
       % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
       % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
+      % The protocol that uses port 1812 to communicate with dial-up users is RADIUS.
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88
       - LDAP = port 389, Port 636
@@ -660,6 +689,7 @@
       % Using a domain group policy allows you to centrally manage and enforce the restriction across all computers in the domain.
     4) Password policies
       * Current NIST guidance says that passwords should not expire.
+      % A passphrase is a sequence of words or a sentence that is easier to remember than a random combination of characters
     5) Manage roles
       % A security group assigns users to roles within his Windows enterprise, as it allows for the grouping of user accounts, computer accounts,
         and other security groups into manageable units for assigning permissions and access rights.
@@ -675,6 +705,7 @@
     3) Discretionary access controls (DAC)
       % In a discretionary access control system, individual users have the ability to alter access permissions.
     4) Access control lists
+      % An access control matrix is a table used to specify the access rights of various capability (e.g., users, processes) to different objects (e.g., files, resources) in a system.
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
       % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
       % Detective controls are designed to identify and alert the organization to unauthorized activities, including when authorized users are involved in such actions.
@@ -761,7 +792,7 @@
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
     5) Control management - Every Rule Has An Exception
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
-      $ Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
+      % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -781,6 +812,7 @@
       - Digital Forensics, Volatility(Permanence)
     4) System and file forensics - Hashes Protect Evidence(Unique file signature)
       * Never try to perform forensics yourself unless you've received appropriate training.
+      % In the preservation phase, the goal is to ensure that all evidence is captured and documented accurately without altering the original state of the data.
     5) Network forensics - Wireshark Monitors Networks, NetFlow Summarizes Traffic
     6) Software forensics - Intellectual Property, Malware Origins
     7) Mobile device forensics
@@ -800,6 +832,7 @@
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
   C. Incident Management
     1) Bild an incident response program - Incident Response Plan
+      % The computer security incident response team(CSIRT) has IT department member, Legal department member, public relations department member, and management team member
     2) Creating an incident response team - IR Service Provider
     3) Incident communications plan - Involving Law Enforcement, Secure Communication
       % While you may believe a law has been violated, you do not typically have an obligation to report this to law enforcement.
@@ -849,26 +882,56 @@
         An interpreter directly executes instructions written in a programming or scripting language without previously converting them into machine code,
         differing from decompilers which work with already compiled code.
     7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
+      % The phase of the software acquisition process in which the product is actually deployed is the Monitoring phase.
   B. Application Attacks
     1) OWASP top ten 
       - Broken Access Control, Cryptographic failures, Injection, Insecure Design, Security misconfiguration, Vulnerabile and outdated components, Identification and authentication failures, software and data integrity failures
         security logging and monitoring failures, server-side request forgery
     2) Application Security - Prompt Patching is critical
+      % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
+      % Validating user input is a critical security practice that helps prevent malicious data from causing harm or unauthorized actions within an application.
+      % Encrypting sensitive information protects it from unauthorized access and ensures data confidentiality, a fundamental aspect of application hardening.
     3) Preventing SQL injection
       * You won't need to write SQL on the exam, but you should know how SQL injection works.
+      % Single quotes are essential in input for a SQL injection attack because they allow the attacker to escape the built-in SQL query.
     4) Understanding cross-site scripting - Use input validation
     5) Request forgery
       * Cross-site request forgery, CSRF, XSRF, and "sea surf" all refer to the same attack.
       - XSRF secretly sends requests, Server-side Request Forgery(SSRF)
+      % Cross-site request forgery vulnerabilities trick users into executing actions on a web application in which they are authenticated, without their knowledge, but do not allow arbitrary command execution on the system.
+      % Client-side XSRF attacks are on-path browser-based attacks on individual hosts with multiple browser tabs opened and logged into and with authentications crossing over browser tabs.
+        Preventing the use of HTTP GET requests make it difficult for client-side XSRFs to take place.
+      % network segmentation is not an effective defense against client-side XSRF attacks which are on-path browser-based attacks on individual hosts with multiple browser tabs opened and logged into and with authentications crossing over browser tabs.
     6) Defending against directory traversal
     7) Overflow attacks - Buffer Overflow Attacks
+      % Buffer overflow attacks seek to write data to areas of memory reserved for other purposes.
     8) Explaining cookies and attachments
-    9) Session hijacking
+    9) Session hijacking - Guessable cookies
     10) Code execution attacks
+      % Code execution attacks occur when an attacker exploits a vulnerability in a system that allows the attacker to run commands on that system.
     11) Privilege escalation
-    12) Driver manipulation
-    13) Memory vulnerabilities
-    14) Race condition vulnerabilities
+    12) Driver manipulation - Refactoring, Shimming
+      % Driver refactoring involves modifying and improving the internal structure of existing driver code without changing its external behavior, not for malicious purposes.
+      % Driver shimming is a technique that involves wrapping malicious code around a legitimate driver to bypass security measures or inject malicious code into a system.
+    13) Memory vulnerabilities - Memory Overflow, Memory Leak, Memory Pointers, DLL Injection
+      % Memory dumps capture the state of the system's memory at a specific point in time and can contain valuable information such as running processes, active network connections, and data in memory,
+        including potentially sensitive information like encryption keys or cached data.
+    14) Race condition vulnerabilities - Time of Check/Time of Use
   C. Secure Coding Practices
+    1) Input validation - whitelisting, blacklisting
+      * Input validation should always be performed on the server.
+    2) Parameterized queries - Stored Procedures
+      % A stored procedure is an example of a parameterized query.
+    3) Authentication/session management issues - Hashing, Salting, Transport layer security
+    4) Output encoding - HTML encoding, URL encoding
+    5) Error and exception handling
+    6) Code signing
+    7) Database Security - 1NF
+      * You don't need to know the details of the normal forms on the exam.
+      - Database Activity Monitoring, Stored Procedures
+      % There is an active and healthy debate in the database community about how closely database designers should follow the normal forms.
+    8) Data de-identification - Anonymization
+      % You can often combine seemingly innocuous fields to uniquely identify an individual.
+    9) Data obfuscation - Rainbow Table attack, Tokenization, Masking
 
 
