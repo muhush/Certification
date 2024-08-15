@@ -299,7 +299,7 @@
        % Using AES (Advanced Encryption Standard) in conjunction with the one-time pad is not critical to the security of one-time pad operations,
          as the one-time pad's security is already absolute if implemented correctly.
        % The XOR operation is used to combine the plaintext with the one-time pad key to produce the ciphertext.
-       % The Message Authentication Code (MAC) ensures b. message integrity.
+       % The Message Authentication Code (MAC) ensures message integrity.
     8) The cryptographic lifecycle
   G. Symmetric Cryptography
     1) Data encryption standard(DES) - 64bit blocks, 54bit length
