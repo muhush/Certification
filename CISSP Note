@@ -1,5 +1,6 @@
 1. Security and Risk Management
   A. Security Fundamentals
+    % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
     1) The five pillars of information security
     2) Confidentiality - sensitive information, encryption, steganography
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
@@ -26,6 +27,8 @@
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
       % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
     6) Computer crimes - CFAA (Access), ECPA (network communication), ITADA (Identity)
+      % The Computer Fraud and Abuse Act (CFAA) primarily focuses on unauthorized access to computer systems,
+        especially those related to financial institutions, federal government systems, and the misuse of passwords for fraudulent purposes.
     7) Software Licensing - SLA, ELAs (Enterprise), EULAs(End User License Agreements)
       - Contractual agreements(high value)
     8) Intellectual Property - Copyrights, Trademarks, Patents(protect inventions)
@@ -34,6 +37,8 @@
       % U.S. patent law provides for an exclusivity period of 20 years beginning at the time a utility patent application is submitted to the Patent and Trademark Office.
       % A trade secret is a type of intellectual property that includes formulas, practices, designs, instruments, or processes that are not generally known or reasonably ascertainable by others,
         and protects confidential information which provide a business with a competitive advantage.
+      % Downstream liability refers to the legal responsibility that one party may have for the actions of another party downstream in a distribution chain,
+        typically relating to intellectual property rights, defamation, or other legal issues.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
       % The Safe Harbor requirements were a framework established between the United States and the European Union
     10) Data breaches
@@ -48,7 +53,7 @@
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
   E. Business Continuity
-    1) Business continuity planning - BIA (Business Impact Assessment, identifies and prioritizes)    
+    1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes)    
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers.
       % BCP includes strategies to prevent or minimize the impact of a disaster on the organization, ensuring that critical operations remain available or can be quickly restored.
       % People should always be your highest priority in business continuity planning.
@@ -81,12 +86,15 @@
       * Be prepared to work through a quantitative risk assessment calculation on the exam
       % The annualized loss expectancy (ALE) is the best metric to compare relative risks because it incorporates both the likelihood and the impact of those risks.
       - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
+      % maximum tolerable downtime (MTD) represents the maximum amount of time that a business function or resource can be unavailable before it causes significant harm to the organization.
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
     4) Security control selection and implementation - Defense in Depth    
       * Technical controls are implemented by technology while operational controls are implemented by people!
     5) Continuous monitoring, measurement, and tuning
     6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
     7) Risk visibility and reporting
+      % Risk mitigation procedures are usually developed by security or risk management teams within the organization.
+        Senior management is responsible for setting the overall risk acceptance level, allocating resources, and approving monetary budgets for risk management.
   H. Threat Modeling
     1) Threat intelligence - Open-source intelligence, Email Address Harvesting
     2) Managing threat indicators - CybOX, STIX, TAXII, OpenIOC
@@ -128,6 +136,7 @@
       * System ownership and data ownership are two different concepts
     4) Limiting data collection
       - Minimize information collected, Monitor Third Parties
+      % A data haven either has no laws or poorly enforced laws for information protection.
     5) The data lifecycle
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
@@ -144,13 +153,17 @@
       - Data Classification Policy, Labeling Requirement
       % The term synonymous with security label is sensitivity label.
       % Information is compartmentalized in the information flow model are classification(Assigns a security level) and need to know(Ensures that only individuals).
+      % The information flow model is concerned with the transfer of information between different security levels.
+        It typically allows information to flow within the same security level and restricts the flow of information from lower to higher security levels to prevent unauthorized access or information leakage.
     6) Digital rights management
       - IRM(information rights management), DRM(Digital Right)
       % Persistent online authentication, automatic expiration, and a continuous audit trail are all methods used with digital rights management (DRM) technologies.
     7) Data loss prevention
       - DLP(Data Loss Prevention), Host-based, Network-based, Pattern Matching, Watermarking, Cloud-based
       % A network-based data loss prevention (DLP) system monitors outgoing traffic (egress monitoring, outbound) and can thwart data exfiltration attempts.
-      % Pseudonymization replaces data with a pseudonym or alias to protect the privacy of individuals identified in the original dataset. 
+      % Pseudonymization replaces data with a pseudonym or alias to protect the privacy of individuals identified in the original dataset.
+      % Drive encryption (also known as full disk encryption) protects the entire contents of a storage device, ensuring that the data cannot be accessed by unauthorized users,
+        even if the physical device is stolen or accessed without permission.
   C. Change and Configuration Management
     1) Change management
       - RFC(Request for change)
@@ -161,6 +174,7 @@
       - Baselines, Versioning
     3) Physical asset management
       - Media management(tracks highly sensitive data)
+      % The capability aspect is crucial as it determines how much data the medium can hold, which is directly related to your organization's storage needs.
     4) Supply chain risks and mitigations
       - End of Sale(no longer be offered for purchase), End of Support(reduce or eliminate support), End of Life(no longer provide any support)
 
@@ -179,6 +193,8 @@
       * The Bell-LaPadula model is rarely implemented outside of military applications
       * The Bell-LaPadula model and Biba models are important for the exam but rarely used in the real world
       % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
+      % The Take-Grant model is an access control model that uses states and state transitions to define how rights can be transferred between subjects and objects.
+      % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
       - TCSEC, Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
       % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products. It ranges from EAL1 to EAL7:
@@ -303,6 +319,7 @@
     8) The cryptographic lifecycle
   G. Symmetric Cryptography
     1) Data encryption standard(DES) - 64bit blocks, 54bit length
+      % DES uses 16 rounds of computation
     2) 3DES
       * Double DES is no more secure than standard DES, due to the meet-in-the-middle attack
       - 64-bit block, 112-bit length
@@ -317,6 +334,7 @@
         ensuring that identical plaintext blocks encrypt to different ciphertext blocks when the preceding ciphertext block is different.
       % Counter mode (CTR) encrypts successive values of a "counter" and uses this to encrypt the plaintext, 
         meaning it does not depend on the previous encrypted block for the next block's encryption.
+      % The Feistel cipher structure is a symmetric encryption design model used in many block ciphers such as Blowfish, CAST-128, and Skipjack.
     6) Steganography
   H. Asymmetric Cryptography
     1) Rivest-Shamir-Adelman(RSA)
@@ -352,6 +370,7 @@
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
       % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
+      % Message digests (or hashes) are used to prove the integrity of the original image.
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       % Authentication verifies the identity of the sender
@@ -418,7 +437,7 @@
     3) Data center environment protection
       - Class A(wood), Class B(oil), Class C(data center), Class D (industrial), Class K(Kitchen)
       * Be able to identify the classes of fire extinguishers on the exam.
-    4) Power control - Blackouts, Sags, Brownouts, Spikes, Surges
+    4) Power control - Blackouts, Sags, Brownouts, Spikes, Surges(a prolonged high voltage)
       % Line conditioners are devices designed to regulate voltage and clean the power supply by filtering out noise, spikes, and other electrical disturbances,
         ensuring a steady and consistent voltage level to protect sensitive equipment.
       % A UPS (Uninterruptible Power Supply) is a device that provides backup power to electronic equipment during power outages or voltage drops.
@@ -448,6 +467,7 @@
       % Flow control in Data and transport layers manages the rate of data transmission between two devices to ensure that a fast sender does not overwhelm a slow receiver.
       % The Network layer (Layer 3) is responsible for ensuring that data is properly directed through the network to reach its intended endpoint such as path selection and logical addressing.
       % The Application layer provides the interface between the application software and the network, enabling various services such as file transfers, printing, messaging, and email.
+      % An active hub functions at the Physical layer (Layer 1) of the OSI model.
     2) IP addresses and DHCP - IPv4, IPv6
       % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
@@ -464,7 +484,7 @@
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
     2) Subnetting - Subnet Masks
-    3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary)
+    3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary, "for this specific purpose")
       % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
       % A screened subnet is a type of security zone that can be positioned so that it operates as a buffer network between the secured private network and the internet and can host publicly accessible services.
     4) Isolating sensitive systems 
@@ -486,6 +506,8 @@
       % A router operates mainly at layer 3, routing data packets between different networks based on IP addresses.
       % A router is the correct location to deploy Access Control Lists (ACLs) for confining sensitive internal data traffic to specific subnets
       % IPsec operates at the Network layer (layer 3).
+      % Cut-through switching is a method used in network switches where the switch starts forwarding a data frame to the destination as soon as it reads the destination address from the frame's header,
+        without waiting for the entire frame to be received.
     2) Network topologies
       % A Multistation Access Unit (MAU) is a central connecting device used in Token Ring networks
     3) Transport architecture
@@ -633,7 +655,10 @@
     3) Biometrics - Low false, crossover error rate (CER)
       % FAR measures the frequency at which unauthorized users are inadvertently admitted.
       % FRR measures the frequency at which legitimate users are denied access to a system or facility.
+      % By using multiple fingerprints, the system has more data to work with, which can reduce the chances of false rejections (Type 1 errors).
       % A lower CER indicates a higher-quality biometric device and a higher CER indicates a less accurate device.
+      % Signature dynamics, also known as dynamic signature verification, analyzes both the physical motions involved in signing (such as speed, pressure, and rhythm)
+        and the static features of the signature itself (such as the shape and style).
     4) Registration and identity proofing
       - Request, Approval, Identity proofing, Issuance
   B. Authentication
@@ -729,6 +754,7 @@
       - Asset Inventory
       - Impact, Likelihood, Criticality
     3) Scan configuration
+      % Vulnerability scanning tools are specifically designed to identify security weaknesses, vulnerabilities, and potential exploits in networks, systems, or applications.
     4) Scan perspective
       - Agent-based scanning, Credential-based scanning
     5) Analyzing scan reports
@@ -740,6 +766,7 @@
       % If the vulnerability scanner is in the screened subnet, the scanner has unrestricted access to the web server because it doesn't need to pass through the firewall on the way to the web server.
   B. Penetration Testing
     1) Penetration testing
+      % It is a proactive security assessment method used to identify and exploit vulnerabilities in a system, network, or application.
     2) Ethical disclosure - Responsible Disclosure
     3) Bug bounty
     4) Cybersecurity exercises
@@ -797,6 +824,7 @@
     1) Conducting investigations
       - Operational Investigation(technology issue), Criminal Investigation(possible crimes), Civil Investigation(Disputes), Regulatory Investigation(government regulators)
       * Cybersecurity investigators should leave interrogation to law enforcement!
+      % Computer-assisted crimes generally involve using technology to commit or facilitate a crime, rather than directly harming computer systems themselves.
     2) Evidence types
       - Real(tangible objects), Documentary(written information), Testimonial(Witness)
       - Documentary = Authentication rule, Best evidence (Original documents are superior), Parol evidence(Written contract agreement)
@@ -848,6 +876,7 @@
     1) Personnel safety
       * Watch for tricky questions that ask you to prioritize other actions over personal safety
     2) Emergency management
+      % Exigent circumstances are used in situations where immediate action is necessary to prevent the imminent destruction of evidence, escape of a suspect, or harm to individuals or law enforcement officers.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -877,6 +906,7 @@
       % Interpreters translate source code into machine language when the software runs.
         An interpreter directly executes instructions written in a programming or scripting language without previously converting them into machine code,
         differing from decompilers which work with already compiled code.
+      % Reverse engineering involves examining and analyzing the components, structure, and functionality of an application or system to understand how it works typically involving decompiling or disassembling object code (which is compiled code).
     7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
       % The phase of the software acquisition process in which the product is actually deployed is the Monitoring phase.
   B. Application Attacks
