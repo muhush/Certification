@@ -252,8 +252,8 @@
   D. ServerSecurity Issues
     1) Server and database security
       - Aggregation(Combing), Inference
-      % Open Database Connectivity(ODBC) is a database feature that allows applications to communicate with different types of databases
-        without having to be directly programmed for interaction with each type.
+      % Open Database Connectivity(ODBC) is a database feature that allows applications to communicate with different types of databases without having to be directly programmed for interaction with each type.
+      % ODBC (Open Database Connectivity) is a standard API that enables applications to access data from various database management systems (DBMS) using SQL as the standard language.
     2) NoSQL databases
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
@@ -346,9 +346,6 @@
     1) Trust models - Asymmetric Cryptography, Web of Trust(WOT)
     2) PKI and digital certificates
       % X.509 defines the format of public key certificates, which are used within PKI to authenticate and secure communications over networks, particularly the Internet.
-      - CA(Certificate Authority)
-      % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
-      % The certificate authority(CA) digitally signs applicant certificates with the CA's digital signature.
       % In PKI, the revocation request grace period refers to the time it may take for a Certificate Authority (CA) to process and update the revocation status of a certificate.
       % A trust anchor refers to a public key that can be used to verify the certificate used in a digital signature
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
@@ -373,9 +370,10 @@
         but does not indicate that a certificate is unlikely to change over time.
     9) Certificate authorities
       - Self-Signed certificates, Offline CAs
+      % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
+      % The certificate authority(CA) digitally signs applicant certificates with the CA's digital signature.
       % The root CA is an offline CA that is used only to sign the certificates of intermediate CAs belonging to the same organization.
-      % Internal CA refers to a certificate authority within an organization, which could be online or offline depending on its role,
-        but is not specifically categorized as typically offline.
+      % Internal CA refers to a certificate authority within an organization, which could be online or offline depending on its role, but is not specifically categorized as typically offline.
     10) Certificate subjects
       * You may find exam questions that discuss certificate object identifiers (OIDs).
       - Servers(SSH), Devices, Individuals, Developers(code signing)
@@ -403,7 +401,7 @@
         or deduce the encryption key, rather than analyzing ciphertext for patterns.
       % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
-      % Rsh is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
+      % RSH is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
       % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
       % Implementation attacks rely on flaws in the cryptographic algorithm.
@@ -433,7 +431,6 @@
   M. Software Security Architecture
     1) SOAP and REST 
       - API(Application Programming Interface, AWS, Twitter)
-        % ODBC (Open Database Connectivity) is a standard API that enables applications to access data from various database management systems (DBMS) using SQL as the standard language.
       - SOAP(Simple Object Access Protocol) = XML
       - REST(Representational State Transfer) = HTTPS
     2) SOA and microservices
@@ -477,8 +474,7 @@
       - Jump Server
       * Jump servers, jump boxes, and jump hosts are all the same thing.
     5) VLANs and logical segmentation - VRF(Virtual Routing and Forwarding), Virtual Domain, Network Overlays, Encapsulation
-      % LiFi (Light Fidelity) uses light to transmit data wirelessly,
-        employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
+      % LiFi (Light Fidelity) uses light to transmit data wirelessly, employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
     6) Security device placement
     7) Software defined networking(SDN)
     8) Transmission media - VPC, SDV
@@ -489,6 +485,7 @@
       % A switch operates primarily at layer 2 of the OSI model, handling data frames between devices on the same local area network (LAN).
       % A router operates mainly at layer 3, routing data packets between different networks based on IP addresses.
       % A router is the correct location to deploy Access Control Lists (ACLs) for confining sensitive internal data traffic to specific subnets
+      % IPsec operates at the Network layer (layer 3).
     2) Network topologies
       % A Multistation Access Unit (MAU) is a central connecting device used in Token Ring networks
     3) Transport architecture
@@ -506,7 +503,6 @@
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
       % L2TP (Layer 2 Tunneling Protocol) over IPSec (Internet Protocol Security) uses encryption to protect transmitted traffic and supports the transmission of multiple protocols.
       * Split-tunnel VPNs provide users with a false sense of security
-      % IPsec operates at the Network layer (layer 3).
     8) Network intrusion detection and prevention
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
@@ -831,7 +827,7 @@
       - Privilege Aggregation
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
   C. Incident Management
-    1) Bild an incident response program - Incident Response Plan
+    1) Build an incident response program - Incident Response Plan
       % The computer security incident response team(CSIRT) has IT department member, Legal department member, public relations department member, and management team member
     2) Creating an incident response team - IR Service Provider
     3) Incident communications plan - Involving Law Enforcement, Secure Communication
