@@ -887,7 +887,6 @@
     2) Development methodologies - Integrated product team(IPT)
       % The spiral model has four stages: requirements gathering/identification, design, build, and evaluation/risk analysis
       % The manifesto for agile development talks about valuing individuals and interactions, working software, customer collaboration, and responding to change.
-      % DevOps combines Development and Operations to rapidly release code and meet customer demands.
     3) Scaled agile framework
       % The Large Solution SAFe configuration focuses on coordinating multiple Agile Release Trains (ARTs) and suppliers, which is necessary for building large, complex solutions but does not encompass the full breadth of SAFe.
       % The Full SAFe configuration incorporates all aspects of SAFe, including essential, large solution, and portfolio levels, to support enterprises with large and complex solutions.
@@ -900,6 +899,7 @@
     5) Automation and DevOps - Infrastructure as Code
       * DevSecOps applies DevOps techniques to a cybersecurity program.
       % The DevOps model prioritizes operational tasks over development efforts.
+      % DevOps combines Development and Operations to rapidly release code and meet customer demands.
     6) Programming Languages - Reverse Engineering
       % An assembler converts assembly language, a low-level programming language, into executable machine code, not the reverse.
       % A compiler translates source code written in a high-level programming language into machine code or bytecode, but it does not perform the reverse process of generating source code from executable code.
