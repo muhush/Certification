@@ -904,8 +904,7 @@
       % An assembler converts assembly language, a low-level programming language, into executable machine code, not the reverse.
       % A compiler translates source code written in a high-level programming language into machine code or bytecode, but it does not perform the reverse process of generating source code from executable code.
       % Interpreters translate source code into machine language when the software runs.
-        An interpreter directly executes instructions written in a programming or scripting language without previously converting them into machine code,
-        differing from decompilers which work with already compiled code.
+        An interpreter directly executes instructions written in a programming or scripting language without previously converting them into machine code, differing from decompilers which work with already compiled code.
       % Reverse engineering involves examining and analyzing the components, structure, and functionality of an application or system to understand how it works typically involving decompiling or disassembling object code (which is compiled code).
     7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
       % The phase of the software acquisition process in which the product is actually deployed is the Monitoring phase.
@@ -914,13 +913,13 @@
       - Broken Access Control, Cryptographic failures, Injection, Insecure Design, Security misconfiguration, Vulnerabile and outdated components, Identification and authentication failures, software and data integrity failures
         security logging and monitoring failures, server-side request forgery
     2) Application Security - Prompt Patching is critical
-      % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
       % Validating user input is a critical security practice that helps prevent malicious data from causing harm or unauthorized actions within an application.
       % Encrypting sensitive information protects it from unauthorized access and ensures data confidentiality, a fundamental aspect of application hardening.
     3) Preventing SQL injection
       * You won't need to write SQL on the exam, but you should know how SQL injection works.
       % Single quotes are essential in input for a SQL injection attack because they allow the attacker to escape the built-in SQL query.
     4) Understanding cross-site scripting - Use input validation
+      % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
     5) Request forgery
       * Cross-site request forgery, CSRF, XSRF, and "sea surf" all refer to the same attack.
       - XSRF secretly sends requests, Server-side Request Forgery(SSRF)
