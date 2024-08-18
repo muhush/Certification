@@ -320,7 +320,6 @@
     6) Communications for embedded devices
   F. Encryption
     1) Understanding encryption
-      % Cryptanalysis is primarily concerned with studying and analyzing cryptographic systems to find weaknesses and vulnerabilities.
       % A trapdoor function is a type of cryptographic function that is easy to compute in one direction but difficult to reverse without special information.
     2) Symmetric and asymmetric cryptography
       - Symmetric(same key), Asymmetric(different key, public, private)
@@ -330,6 +329,7 @@
     4) Codes and ciphers
       * Codes and ciphers are related concepts, but you should know the difference when you take the exam
       - Stream Ciphers, Block Ciphers
+      % The Feistel cipher structure is a symmetric encryption design model used in many block ciphers such as Blowfish, CAST-128, and Skipjack.
     5) Cryptographic math
       - Exclusive Or(XOR), 
       - Confusion, Defusion, Obfuscation
@@ -337,10 +337,8 @@
        * Don't try to build your own encryption algorithm unless you really know what you're doing
     7) The perfect encryption algorithm
        - One-Time pad
-       % Securely exchanging the pads is essential for the security of one-time pad operations, 
-         as interception by a third party could compromise the security of the encrypted messages.
-       % Using AES (Advanced Encryption Standard) in conjunction with the one-time pad is not critical to the security of one-time pad operations,
-         as the one-time pad's security is already absolute if implemented correctly.
+       % Securely exchanging the pads is essential for the security of one-time pad operations, as interception by a third party could compromise the security of the encrypted messages.
+       % Using AES (Advanced Encryption Standard) in conjunction with the one-time pad is not critical to the security of one-time pad operations, as the one-time pad's security is already absolute if implemented correctly.
        % The XOR operation is used to combine the plaintext with the one-time pad key to produce the ciphertext.
        % The Message Authentication Code (MAC) ensures message integrity.
     8) The cryptographic lifecycle
@@ -359,9 +357,7 @@
       * Counter mode allows block ciphers to act more like stream ciphers
       % CBC(Cipher Block Chaining) mode feeds the ciphertext of the previous block into the encryption of the next block, 
         ensuring that identical plaintext blocks encrypt to different ciphertext blocks when the preceding ciphertext block is different.
-      % Counter mode (CTR) encrypts successive values of a "counter" and uses this to encrypt the plaintext, 
-        meaning it does not depend on the previous encrypted block for the next block's encryption.
-      % The Feistel cipher structure is a symmetric encryption design model used in many block ciphers such as Blowfish, CAST-128, and Skipjack.
+      % Counter mode (CTR) encrypts successive values of a "counter" and uses this to encrypt the plaintext, meaning it does not depend on the previous encrypted block for the next block's encryption.
     6) Steganography
   H. Asymmetric Cryptography
     1) Rivest-Shamir-Adelman(RSA)
@@ -370,11 +366,10 @@
     2) PGP and GnuPG
       - Pretty Good Privacy, Open PGP, Combine Sym and Asym
       % A randomly generated symmetric key is used to encrypt the contents of a message when using PGP.
-      - GPG
+      - GPG = alternative to PGP
     3) Elliptic curve and quantum cryptography
       * You won't need to know the details of ECC. Remember that it doesn't use prime factorization.
-      % Elliptic curve cryptography relies on the difficulty of the elliptic curve discrete logarithm problem,
-        which quantum algorithms can solve more efficiently than classical algorithms.
+      % Elliptic curve cryptography relies on the difficulty of the elliptic curve discrete logarithm problem, which quantum algorithms can solve more efficiently than classical algorithms.
       % Elliptic Curve Cryptography (ECC) is more efficient than RSA because it provides equivalent security with much smaller key sizes.
   I. Key management
     1) Key management practices
@@ -383,8 +378,7 @@
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
       % The Diffie-Hellman algorithm is used to securely exchange cryptographic keys over a public, nonsecure medium.
     4) Key escrow - Recovery Agents
-      % The clipper chip performed encryption, but it included a special law enforcement access field, or LEAF, value
-        that allowed government agents to access the content of the communication.
+      % The clipper chip performed encryption, but it included a special law enforcement access field, or LEAF, value that allowed government agents to access the content of the communication.
     5) Key stretching - Salting, Hashing, PBKDF2 (Password-based key Derivation Function v2), bcryypt(blowfish)
     6) Hardware security modules(HSM)
   J. Public Key Infrastructure
@@ -413,8 +407,7 @@
       % A Certificate Revocation List (CRL) is a list of digital certificates that have been revoked by the issuing Certificate Authority (CA) before their scheduled expiration date.
     8) Certificate stapling
       - Helping future visits for 24 hours
-      % Certificate stapling involves a server sending a timestamped OCSP response to prove a certificate's validity
-        but does not indicate that a certificate is unlikely to change over time.
+      % Certificate stapling involves a server sending a timestamped OCSP response to prove a certificate's validity but does not indicate that a certificate is unlikely to change over time.
     9) Certificate authorities
       - Self-Signed certificates, Offline CAs
       % The certificate owner can self-sign their own certificate. However, self-signed certificates may be used only internally and are not considered valid on the Internet.
@@ -441,6 +434,7 @@
     2) Knowledge-based attacks
       - Frequency Analysis
       * You won't need to perform cryptanalysis on the exam. You just need to know the different techniques.
+      % Cryptanalysis is primarily concerned with studying and analyzing cryptographic systems to find weaknesses and vulnerabilities.
       % Frequency analysis attack involves statistical analysis of ciphertext to detect patterns that might reveal the underlying plaintext,
         exploiting the fact that certain letters or combinations appear more frequently in a language.
       - Chosen Plaintext Attack
@@ -448,7 +442,7 @@
         or deduce the encryption key, rather than analyzing ciphertext for patterns.
       % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
-      % RSH is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
+      % RSH(Remote Shell) is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
       % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
       % Implementation attacks rely on flaws in the cryptographic algorithm.
