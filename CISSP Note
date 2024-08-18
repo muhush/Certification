@@ -12,8 +12,10 @@
     1) Aligning security with the business - security leader, business leader, security professionals  
       * unbalanced decisions
     2) Organizational processes
-    3) Security roles and responsibilities - Due Care(legal responsibilities), Due Diligence(reasonable measures)
+    3) Security roles and responsibilities - Due Care, Due Diligence
       % Due care is practicing the individual activities that maintain the security effort.
+      % Due Care involves implementing necessary safeguards and policies to protect sensitive information and ensure safety.
+      % Due Diligence ensures that a company is aware of potential issues and takes appropriate measures to address them.
     4) Control and risk frameworks 
       - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
       % While COBIT focuses more on aligning IT management with business objectives and governance,
@@ -60,6 +62,18 @@
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
       % Risk mitigation controls to address acceptable risks would not be in the BCP.
       % An executive succession plan is designed to identify and prepare individuals to fill key leadership roles within an organization in the event that they become vacant, whether due to a disaster or other circumstances.
+      % Project Initiation: Establish the continuity planning policy statement, define objectives, scope, and obtain management support.
+        Business Impact Analysis (BIA): Identify critical business functions, determine the impact of disruptions, and prioritize recovery efforts.
+        Identify Preventative Controls: Implement measures to reduce the likelihood of disruptions.
+        Develop Recovery Strategies: Create strategies for the recovery of critical operations.
+        Plan Development: Document the plan, including roles, responsibilities, and procedures.
+        Testing and Maintenance: Regularly test the plan, update it as needed, and ensure that personnel are trained.
+      % In a Business Impact Analysis (BIA), systems are categorized based on how long the organization can tolerate them being down. Typically:
+        Urgent: Systems with MTD of minutes to a few hours.
+        Critical: Systems with MTD up to 24 hours.
+        Normal: Systems with MTD between 24 and 72 hours.
+        Nonessential: Systems with MTD of several days or more.
+        Important: Can vary but generally falls between critical and normal.
     2) Business continuity controls - Single Point of Failure Analysis, Contingency Plan
       % Restoration team, damage assessment team, and salvage team execute the final plan.
     3) High availability (Multi-system, minimal interrupt) and fault tolerance (Single system) - load balancing (work evenly)
@@ -90,7 +104,9 @@
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
     4) Security control selection and implementation - Defense in Depth    
       * Technical controls are implemented by technology while operational controls are implemented by people!
+      % Operational controls are practices and procedures implemented to ensure the ongoing security and functionality of systems during regular operations such as backup.
     5) Continuous monitoring, measurement, and tuning
+      % In reality, automated tools are often more thorough because they can continuously monitor and analyze large amounts of data in real-time, detecting patterns and anomalies that might be missed by manual monitoring.
     6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
     7) Risk visibility and reporting
       % Risk mitigation procedures are usually developed by security or risk management teams within the organization.
@@ -108,7 +124,9 @@
     2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
     3) Vendor information management
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
+      % SOC 2 reports focus on a business's controls relevant to security, availability, processing integrity, confidentiality, and privacy of data.
       % SOC 3 engagements assess the organization’s controls that affect the security and privacy of information stored in a system.
+      % The information regarding the backup and restoration of data in SOC 2 and SOC 3 reports applies to the d. availability tenet.
   J. Awareness and Training
     1) Security awareness training
     2) Compliance training
@@ -128,7 +146,7 @@
       - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
       % A data controller decides what data to process and how it is processed.
       % The data controller identifies what data to pass to the data processor and how that data should be processed.
-      % The data custodian is responsible for day-to-day tasks to protect data, such as backing up data.
+      % The data custodian is responsible for day-to-day tasks maintaining and protecting data, such as backing up data.
       % Data custodians might have a role, but the overall responsibility often lies with security professionals and other relevant departments.
       % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
       - Data Subject(collected data), Data processors(third parties)
@@ -137,6 +155,7 @@
     4) Limiting data collection
       - Minimize information collected, Monitor Third Parties
       % A data haven either has no laws or poorly enforced laws for information protection.
+      % Tripwire is a security and data integrity tool that helps detect and report changes to files and configurations in a system.
     5) The data lifecycle
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
@@ -145,6 +164,8 @@
     1) Developing security baselines
       - Baselines are generic, Monitoring is critical
       % Security baselines often require hundreds or thousands of individual security settings on a particular device.
+      % Data Control Language (DCL) includes commands like GRANT and REVOKE that control access to data within the database by assigning and removing privileges to users.
+        This enables granular control over who can access specific data or perform certain actions on the data.
     2) Leveraging industry standards
     3) Customizing security standards
     4) Cloud storage security
@@ -155,6 +176,7 @@
       % Information is compartmentalized in the information flow model are classification(Assigns a security level) and need to know(Ensures that only individuals).
       % The information flow model is concerned with the transfer of information between different security levels.
         It typically allows information to flow within the same security level and restricts the flow of information from lower to higher security levels to prevent unauthorized access or information leakage.
+      % The noninterference model is designed to prevent actions at a higher security level from affecting or influencing those at a lower level, ensuring that information does not flow between different security levels in a way.
     6) Digital rights management
       - IRM(information rights management), DRM(Digital Right)
       % Persistent online authentication, automatic expiration, and a continuous audit trail are all methods used with digital rights management (DRM) technologies.
@@ -196,7 +218,8 @@
       % The Take-Grant model is an access control model that uses states and state transitions to define how rights can be transferred between subjects and objects.
       % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
-      - TCSEC, Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
+      - TCSEC(Structured), Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
+      % Trusted Computer System Evaluation Criteria (TCSEC), focuses on the security functionality and assurance of systems, ensuring they meet certain standards for protecting classified or sensitive information.
       % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products. It ranges from EAL1 to EAL7:
         EAL1: Functionally Tested. EAL2: Structurally Tested. EAL3: Methodically Tested and Checked. EAL4: Methodically Designed, Tested, and Reviewed (common benchmark for commercial products).
         EAL5: Semi-Formally Designed and Tested. EAL6: Semi-Formally Verified Design and Tested. EAL7: Formally Verified Design and Tested (highest level of assurance).
@@ -219,6 +242,8 @@
     6) Secure defaults
       - Keep It Simple and Small
     7) Information system lifecycle
+      % In the operate and maintain phase of the security management life cycle, ongoing security activities such as performing audits, monitoring systems,
+        and ensuring that security settings meet established baselines are carried out.
   B. Virtualization and Cloud Computing
     1) What is the cloud?
     2) Cloud computing roles
@@ -234,8 +259,10 @@
       - Type 1, Type 2(Operating system, personal device), VM Sprawl
       % Type 1 hypervisor is known as bare metal and runs on top of bare hardware.
       % Type 2 hypervisor is known as hosted and runs on top of an operating system.
+      % RedPill and Scooby Doo attacks specifically target virtual machines.
     7) Desktop and application virtualization
       - VDI(Virtual Desktop Infrastructure), Application Virtualization
+      % Browsing the internet on a virtualization host can expose the host to unnecessary security risks, such as malware infections or unauthorized access, which could compromise the entire virtualization environment.
     8) Cloud compute resources
     9) Containerization
       - Applications are what containerized computing environments are created for.
@@ -267,9 +294,10 @@
       - BIOS, UEFI(Unified Extensible Firmware Interface), Measured Boot, Attestation, Hardware Root of Trust, EMI(Electromagnetic Interference, EMP)
   D. ServerSecurity Issues
     1) Server and database security
-      - Aggregation(Combing), Inference
+      - Aggregation(cluster), Inference
       % Open Database Connectivity(ODBC) is a database feature that allows applications to communicate with different types of databases without having to be directly programmed for interaction with each type.
       % ODBC (Open Database Connectivity) is a standard API that enables applications to access data from various database management systems (DBMS) using SQL as the standard language.
+      % In the relational model, data is organized into tables (relations), where each row is a tuple (a record or instance of the relation), and each column is an attribute (a property or characteristic of the relation)
     2) NoSQL databases
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
@@ -383,6 +411,7 @@
     7) Revoke a digital certificate - CRL(Certificate Revocation List), OCSP(Online Certificate Status Protocol)
       % The most effective method of revoking digital certificates is through the interactive OCSP responder.
       % Utilizing certificate revocation lists for revoking digital certificates is a manual process with inherent delays.
+      % A Certificate Revocation List (CRL) is a list of digital certificates that have been revoked by the issuing Certificate Authority (CA) before their scheduled expiration date.
     8) Certificate stapling
       - Helping future visits for 24 hours
       % Certificate stapling involves a server sending a timestamped OCSP response to prove a certificate's validity
@@ -444,6 +473,7 @@
     5) Physical access control - Locks
       % Shimming involves using a thin piece of metal or plastic, called a shim, to bypass the locking mechanism of a lock, especially padlocks or door locks.
       % Raking is a lockpicking technique used to manipulate the pins inside a lock to align them with the shear line, allowing the lock to open.
+      % The main types of mechanical locks are warded locks and tumbler locks
     6) Visitor management
       % Cameras should always be disclosed to visitors when used as part of physical security controls to ensure compliance with privacy laws and regulations.
     7) Physical security personnel - Two-Person Integrity
@@ -452,6 +482,8 @@
       - API(Application Programming Interface, AWS, Twitter)
       - SOAP(Simple Object Access Protocol) = XML
       - REST(Representational State Transfer) = HTTPS
+      % S-HTTP provides encryption specifically for individual documents or messages, making it suitable for your requirement to encrypt a single document.
+      % HTTPS encrypts the entire communication session between the client and the server.
     2) SOA and microservices
       - Service-Oriented Architecture
       - Microservices
@@ -498,6 +530,8 @@
     6) Security device placement
     7) Software defined networking(SDN)
     8) Transmission media - VPC, SDV
+      % Overt Storage Channel: A legitimate and intended method of communication where data is stored and accessed by authorized processes.
+      % Covert Storage Channel: An unauthorized and unintended method of communication that exploits the storage medium to transfer information between processes in a way that bypasses normal security controls.
     9) Cloud networking
     10) Zero trust and SASE
   C. Network Security Design
@@ -543,8 +577,9 @@
       - Rule based, role based, time based, location based
       % Rule-based access control (RBAC) uses a set of pre-defined rules that determine access permissions based on conditions such as time of day, IP address, or other criteria.
       % Role-Based Access Control (RBAC) offers several advantages: Low Security Cost: By grouping permissions into roles, Easier to Implement with well-defined roles and responsibilities.
-    2) Network access control - EAP(Supplicant), RADIUS (Authentication Server)
+    2) Network access control(NAC) - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
+      % NAC enforces security policies by evaluating devices before allowing them access to the network. 
     3) Firewall rule management
       % A shadowed rule happens when an earlier rule in the firewall's rule set matches traffic that a later rule was intended to match, rendering the later rule ineffective.
       % An orphaned rule occurs when a service is decommissioned but the related firewall rules are not removed, leaving unused or unnecessary rules.
@@ -628,6 +663,7 @@
       - Protection = Sandboxing(isolates)
       - Spam Filtering
       % A companion virus, also known as a "spawning" virus, works by creating a new file with the same name as a legitimate file but with a different extension.
+      % Retroviruses are designed specifically to target and disable security software, including antivirus programs, making it more difficult for the system to detect and remove the malicious code.
     3) Application management
       * While the terms whitelisting and blacklisting are problematic, you should still know them for the exam.
       % BitLocker is a full disk encryption feature designed to protect data by providing encryption for entire volumes.
@@ -795,6 +831,7 @@
       * Disaster recovery efforts end only when the business is operating normally in its primary environment.
       % The recovery time objective (RTO) is the targeted amount of time to restore a service after a failure during a disaster recovery.
       % The recovery service level (RSL) is the percentage of a service that must be available during a disaster.
+      % The disaster recovery plan (DRP) includes procedures and measures to respond to emergencies, protect people and property, and ensure the safety of employees and assets during and after a disaster.
     2) Backups - Full backups, Differential, Incremental
       % Any backup strategy must include full backups at some point in the process.
         Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
@@ -802,6 +839,7 @@
     3) Restoring backups
     4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
       % Contracts typically focus on ensuring that the vendor provides a functional offsite facility that meets the agreed-upon criteria, such as availability, cost, testing access, and general site availability.
+      % A redundant site is fully equipped and operational, allowing it to take over functions almost immediately in the event of a failure at the primary site.
     5) Testing BC/DR plans - Business Continuity (BC) and Disaster Recovery (DR) plans
     6) After action reports
   F. Assessing Security Processes
@@ -825,6 +863,7 @@
       - Operational Investigation(technology issue), Criminal Investigation(possible crimes), Civil Investigation(Disputes), Regulatory Investigation(government regulators)
       * Cybersecurity investigators should leave interrogation to law enforcement!
       % Computer-assisted crimes generally involve using technology to commit or facilitate a crime, rather than directly harming computer systems themselves.
+      % A bit-level copy (also known as a forensic image) creates an exact replica of the entire disk, including all files, free space, and hidden areas, ensuring that no data is overlooked.
     2) Evidence types
       - Real(tangible objects), Documentary(written information), Testimonial(Witness)
       - Documentary = Authentication rule, Best evidence (Original documents are superior), Parol evidence(Written contract agreement)
@@ -853,6 +892,7 @@
     1) Need to know and least privilege
       - need to know(information access), least privilege(system permissions)
       - Privilege Aggregation
+      % Aggregation occurs when a user combines information from multiple sources or queries to deduce or infer data that they are not explicitly authorized to access.
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
   C. Incident Management
     1) Build an incident response program - Incident Response Plan
@@ -920,6 +960,7 @@
       % Single quotes are essential in input for a SQL injection attack because they allow the attacker to escape the built-in SQL query.
     4) Understanding cross-site scripting - Use input validation
       % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
+      % Cross-site scripting (XSS) is a type of security vulnerability typically found in web applications.
     5) Request forgery
       * Cross-site request forgery, CSRF, XSRF, and "sea surf" all refer to the same attack.
       - XSRF secretly sends requests, Server-side Request Forgery(SSRF)
