@@ -126,7 +126,7 @@
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
       % SOC 2 reports focus on a business's controls relevant to security, availability, processing integrity, confidentiality, and privacy of data.
       % SOC 3 engagements assess the organization’s controls that affect the security and privacy of information stored in a system.
-      % The information regarding the backup and restoration of data in SOC 2 and SOC 3 reports applies to the d. availability tenet.
+      % The information regarding the backup and restoration of data in SOC 2 and SOC 3 reports applies to the availability tenet.
   J. Awareness and Training
     1) Security awareness training
     2) Compliance training
