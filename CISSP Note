@@ -505,6 +505,7 @@
       % Data-link layer has flow control, error notification, and physical addressing.
       % Flow control in Data and transport layers manages the rate of data transmission between two devices to ensure that a fast sender does not overwhelm a slow receiver.
       % The Network layer (Layer 3) is responsible for ensuring that data is properly directed through the network to reach its intended endpoint such as path selection and logical addressing.
+      % Transport layer has flow control, reliable communication, error detection and recovery
       % The Application layer provides the interface between the application software and the network, enabling various services such as file transfers, printing, messaging, and email.
       % An active hub functions at the Physical layer (Layer 1) of the OSI model.
     2) IP addresses and DHCP - IPv4, IPv6
