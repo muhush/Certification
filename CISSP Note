@@ -1,6 +1,5 @@
 1. Security and Risk Management
   A. Security Fundamentals
-    % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
     1) The five pillars of information security
     2) Confidentiality - sensitive information, encryption, steganography
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
@@ -23,6 +22,7 @@
       - SABSA (Sherwood Applied Business Security Architecture)
   C. Compliance and Ethics
     1) Legal and compliance risks - GDPR, PCI DSS
+      % The Fifth Amendment primarily protects individuals from self-incrimination, meaning that suspects cannot be compelled to provide evidence against themselves.
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
     3) GDPR - E.U regulations, anyone in E.U geolocation
     4) California privacy law - CPRA (SPI = Sensitive)
@@ -55,8 +55,9 @@
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
   E. Business Continuity
-    1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes)    
+    1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes)
       * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers.
+      % BCP is not operational control. Operational controls are more focused on day-to-day activities
       % BCP includes strategies to prevent or minimize the impact of a disaster on the organization, ensuring that critical operations remain available or can be quickly restored.
       % People should always be your highest priority in business continuity planning.
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
@@ -104,13 +105,16 @@
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
     4) Security control selection and implementation - Defense in Depth    
       * Technical controls are implemented by technology while operational controls are implemented by people!
+      % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
       % Operational controls are practices and procedures implemented to ensure the ongoing security and functionality of systems during regular operations such as backup.
+      % Technical controls include system auditing, monitoring, access controls, encryption, and network security devices like firewalls and intrusion detection systems.
     5) Continuous monitoring, measurement, and tuning
       % In reality, automated tools are often more thorough because they can continuously monitor and analyze large amounts of data in real-time, detecting patterns and anomalies that might be missed by manual monitoring.
     6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
     7) Risk visibility and reporting
       % Risk mitigation procedures are usually developed by security or risk management teams within the organization.
         Senior management is responsible for setting the overall risk acceptance level, allocating resources, and approving monetary budgets for risk management.
+      % The visibility considerations include types of neighbors and building markings and signs
   H. Threat Modeling
     1) Threat intelligence - Open-source intelligence, Email Address Harvesting
     2) Managing threat indicators - CybOX, STIX, TAXII, OpenIOC
@@ -216,10 +220,14 @@
       * The Bell-LaPadula model and Biba models are important for the exam but rarely used in the real world
       % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
       % The Take-Grant model is an access control model that uses states and state transitions to define how rights can be transferred between subjects and objects.
+      % The Clark-Wilson model is designed to enforce well-formed transactions and separation of duties, ensuring integrity through the implementation of integrity-monitoring rules and integrity-preserving rules.
       % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
       - TCSEC(Structured), Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
       % Trusted Computer System Evaluation Criteria (TCSEC), focuses on the security functionality and assurance of systems, ensuring they meet certain standards for protecting classified or sensitive information.
+      % The Trusted Computer System Evaluation Criteria (TCSEC), defines the following security levels: D - Minimal Protection, C1 - Discretionary Security Protection, C2 - Controlled Access Protection
+        B1 - Labeled Security Protection, B2 - Structured Protection(covert channel analysis), B3 - Security Domains, A1 - Verified Design
+      % The Common Criteria (CC) framework includes components such as Protection Profile (PP), Security Target (ST), and Target of Evaluation (TOE).
       % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products. It ranges from EAL1 to EAL7:
         EAL1: Functionally Tested. EAL2: Structurally Tested. EAL3: Methodically Tested and Checked. EAL4: Methodically Designed, Tested, and Reviewed (common benchmark for commercial products).
         EAL5: Semi-Formally Designed and Tested. EAL6: Semi-Formally Verified Design and Tested. EAL7: Formally Verified Design and Tested (highest level of assurance).
@@ -302,6 +310,7 @@
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
       % Grid computing utilizes the unused processing power of multiple computers across different locations, combining them to form a virtual supercomputer that is managed by a centralized controller.
+      % For an office performing highly sensitive tasks, especially for a governmental entity, maintaining a low profile choosing a location with low visibility helps minimize the attention drawn to the facility
   E. Embedded Systems Security
     1) Industrial control systems and operational technology
       - SCADA(Remote Central), DCS(Controlling processes), PLC
@@ -330,6 +339,7 @@
       * Codes and ciphers are related concepts, but you should know the difference when you take the exam
       - Stream Ciphers, Block Ciphers
       % The Feistel cipher structure is a symmetric encryption design model used in many block ciphers such as Blowfish, CAST-128, and Skipjack.
+      % Concealment ciphers hide the message within the physical environment or use techniques such as steganography, where the presence of the message is obscured.
     5) Cryptographic math
       - Exclusive Or(XOR), 
       - Confusion, Defusion, Obfuscation
@@ -373,6 +383,7 @@
       % Elliptic Curve Cryptography (ECC) is more efficient than RSA because it provides equivalent security with much smaller key sizes.
   I. Key management
     1) Key management practices
+      % Key clustering refers to the phenomenon where two different cryptographic keys generate the same ciphertext from the same plaintext.
     2) Key exchange - Out-of-band key exchange, in-band key exchange(Diffie-Hellman)
     3) Diffie-hellman - Asymmetric
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
@@ -386,7 +397,12 @@
     2) PKI and digital certificates
       % X.509 defines the format of public key certificates, which are used within PKI to authenticate and secure communications over networks, particularly the Internet.
       % In PKI, the revocation request grace period refers to the time it may take for a Certificate Authority (CA) to process and update the revocation status of a certificate.
-      % A trust anchor refers to a public key that can be used to verify the certificate used in a digital signature
+      % A trust anchor refers to a public key that can be used to verify the certificate used in a digital signature.
+      % Digital certificates typically have different assurance levels,
+        Level 1 (Basic Assurance): Requires minimal identity verification, often just an email address.
+        Level 2 (Medium Assurance): Involves verifying the user's name and email address, and sometimes additional identity details.
+        Level 3 (High Assurance): Requires thorough identity verification, such as government-issued IDs.
+        Level 4 (Very High Assurance): Involves in-person verification and is used for very sensitive transactions.
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
@@ -459,7 +475,7 @@
     3) Data center environment protection
       - Class A(wood), Class B(oil), Class C(data center), Class D (industrial), Class K(Kitchen)
       * Be able to identify the classes of fire extinguishers on the exam.
-    4) Power control - Blackouts, Sags, Brownouts, Spikes, Surges(a prolonged high voltage)
+    4) Power control - Blackouts, Sags(dim), Brownouts, Spikes, Surges(a prolonged high voltage)
       % Line conditioners are devices designed to regulate voltage and clean the power supply by filtering out noise, spikes, and other electrical disturbances,
         ensuring a steady and consistent voltage level to protect sensitive equipment.
       % A UPS (Uninterruptible Power Supply) is a device that provides backup power to electronic equipment during power outages or voltage drops.
@@ -496,6 +512,7 @@
     2) IP addresses and DHCP - IPv4, IPv6
       % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
+      % A dual backbone configuration typically involves having two separate network backbones, which ensures that if one backbone fails, the other can take over, maintaining network availability and minimizing downtime.
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
     5) Network ports
       * Memorize the list of common ports before taking the exam.
@@ -600,6 +617,7 @@
     2) Multimedia collaboration - XMPP
     3) Storage networks
       % Fibre Channel requires the use of dedicated connections and is known for its high speed and reliability in connecting computer data storage to servers.
+      % NFS (Network File System), CIFS (Common Internet File System), and SMB (Server Message Block) are protocols used by NAS devices for file sharing over a network.
   F. Transport Encryption
     1) TLS and SSL
       * TLS depends upon pairings of encryption and hash functions known as cipher suites.
@@ -618,7 +636,9 @@
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
       % CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) is an encryption protocol 
         used in Wi-Fi security for data confidentiality and is not specifically a key exchange mechanism.
+      % SET (Secure Electronic Transaction) protocol is developed to secure online credit card transactions, using digital signatures to authenticate parties involved and digital certificates to verify identities.
     3) Wireless authentication - Captive portals, EAP (Extensible Authentication Protocol)
+      % EAP (Extensible Authentication Protocol) is commonly used in secure environments where strong authentication methods, such as smart cards.
       - EAP-TLS (Transport Layer Security): Uses public key infrastructure (PKI) for mutual authentication via digital certificates. It’s highly secure but requires a complex setup.
       - EAP-TTLS (Tunneled TLS): Extends EAP-TLS by allowing the use of other authentication methods within a secure tunnel, reducing the need for client certificates.
       - PEAP (Protected EAP): Similar to EAP-TTLS, it uses a TLS tunnel to protect other authentication methods, often combined with MS-CHAPv2.
@@ -754,8 +774,11 @@
       % Hybrid environments combine both hierarchical and compartmentalized environments so that security levels have subcompartments.
     3) Discretionary access controls (DAC)
       % In a discretionary access control system, individual users have the ability to alter access permissions.
+      % In a Discretionary Access Control model, the owner of a resource (such as a file or folder) has the discretion to determine who can access it and what level of access they have. 
     4) Access control lists
+      % An ACL specifies which users or system processes (subjects) are allowed to access objects (like files, directories, or devices) and what operations (read, write, execute) they are permitted to perform on those objects. 
       % An access control matrix is a table used to specify the access rights of various capability (e.g., users, processes) to different objects (e.g., files, resources) in a system.
+      % A capability table lists the access rights that a specific subject (such as a user or process) has to various objects (such as files or devices).
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
       % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
       % Detective controls are designed to identify and alert the organization to unauthorized activities, including when authorized users are involved in such actions.
@@ -830,6 +853,7 @@
         Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
       % Incremental backs up all the new files that have changed since the last full or incremental backup and resets the archive bit.
     3) Restoring backups
+      % Retention time refers to the duration for which backup media, such as tapes, are kept before their data is considered outdated and can be overwritten with new data.
     4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
       % Contracts typically focus on ensuring that the vendor provides a functional offsite facility that meets the agreed-upon criteria, such as availability, cost, testing access, and general site availability.
       % A redundant site is fully equipped and operational, allowing it to take over functions almost immediately in the event of a failure at the primary site.
@@ -844,6 +868,7 @@
     4) Audits and assessments - User Access Reviews
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
+      % An audit-reduction tool is designed to process and filter audit logs, removing extraneous information and reducing the volume of data, which makes it easier to analyze and focus on relevant security events.
     5) Control management - Every Rule Has An Exception
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
       % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
