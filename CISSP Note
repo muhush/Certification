@@ -1,6 +1,7 @@
 1. Security and Risk Management
   A. Security Fundamentals
     1) The five pillars of information security
+      % Information security involves ongoing efforts like a continuous process.
     2) Confidentiality - sensitive information, encryption, steganography
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
     4) Availability - patching
@@ -10,6 +11,7 @@
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
     1) Aligning security with the business - security leader, business leader, security professionals  
       * unbalanced decisions
+      % The business or mission owner is responsible for defining the strategic direction of the organization and ensuring that all operations, processes, and initiatives align with the overall business objectives.
     2) Organizational processes
     3) Security roles and responsibilities - Due Care, Due Diligence
       % Due care is practicing the individual activities that maintain the security effort.
@@ -143,6 +145,7 @@
   A. Data Security
     1) Understanding data security
       - Data at Rest, Data in Transit, Data in Use
+      % In asynchronous communication, data is transmitted one byte at a time, with start and stop bits used to signal the beginning and end of each byte.
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
@@ -327,6 +330,7 @@
   F. Encryption
     1) Understanding encryption
       % A trapdoor function is a type of cryptographic function that is easy to compute in one direction but difficult to reverse without special information.
+      % Another term for cryptographic strength is work factor which refers to the amount of effort, time, and computational resources required to break a cryptographic algorithm or system.
     2) Symmetric and asymmetric cryptography
       - Symmetric(same key), Asymmetric(different key, public, private)
       * Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pair
@@ -381,6 +385,7 @@
   I. Key management
     1) Key management practices
       % Key clustering refers to the phenomenon where two different cryptographic keys generate the same ciphertext from the same plaintext.
+      % Key Generation, Key Initialization, Key Distribution, Key Activation, Key Usage, Key Rotation/Update, Key Deactivation, Key Termination, Key Archival
     2) Key exchange - Out-of-band key exchange, in-band key exchange(Diffie-Hellman)
     3) Diffie-hellman - Asymmetric
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
@@ -562,11 +567,14 @@
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
       % Stateful inspection firewalls are able to grant a broader range of access for authorized users and activities and actively watch for and block unauthorized users and activities.
       % SOCKS is a circuit-level proxy firewall that provides a secure channel between two computers.
+      % Application-level proxy firewalls inspect detrimentally the contents of packets at the application layer to ntroduce significant latency and overhead, leading to a more noticeable impact on network performance.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
       % L2TP (Layer 2 Tunneling Protocol) over IPSec (Internet Protocol Security) uses encryption to protect transmitted traffic and supports the transmission of multiple protocols.
       * Split-tunnel VPNs provide users with a false sense of security
+      % The external firewall shields the VPN gateway from direct exposure to the internet, filtering out unauthorized traffic.
+      % If traffic is decrypted at the VPN gateway, the firewall can inspect the plaintext before it enters the internal network, allowing for additional security checks.
     8) Network intrusion detection and prevention
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
@@ -659,6 +667,7 @@
       % The concept of corporate-owned, personally enabled (COPE) means the organization purchases devices and provides them to employees.
         Each user is then able to customize the device and use it for both work activities and personal activities.
       % A corporate-owned mobile strategy is when the company purchases mobile devices that can support compliance with the security policy.
+      % To protect cell phones owned by an organization, you should employ Maintain physical control, Enable user authentication, and Disable unneeded features
     4) Mobile device tracking
     5) Mobile application security
     6) Mobile security enforcement
@@ -677,7 +686,7 @@
       % Retroviruses are designed specifically to target and disable security software, including antivirus programs, making it more difficult for the system to detect and remove the malicious code.
     3) Application management
       * While the terms whitelisting and blacklisting are problematic, you should still know them for the exam.
-      % BitLocker is a full disk encryption feature designed to protect data by providing encryption for entire volumes.
+      % BitLocker is a full disk encryption feature designed to protect data by providing encryption for entire volumes so that data cannot be stolen.
       % BitControl does not exist as an application control technology in Microsoft Windows.
       % App control is a general term for technologies that manage or restrict application usage, but it is not a specific built-in feature of Windows.
       % AppLocker is the application control technology built-in to Microsoft Windows
@@ -715,6 +724,8 @@
     3) Something you have
       % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP (HMAC-based One-Time Password).
     4) Password authentication protocols(PAP) - CHAP(Challenge-Handshake Authentication Protocol)
+      % CHAP provides encrypted authentication by periodically verifying the identity of the client using a three-way handshake.
+      % PAP (Password Authentication Protocol) sends credentials in plaintext.
     5) Single sign-on and federation
       % Federated Identity Management (FIM) is best to implement when you have accounts across multiple service providers with whom you would like to share identity information.
         With FIM, you can use one login to access resources you've been authorized throughout the federation.
@@ -726,8 +737,10 @@
       % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
       % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
       % The protocol that uses port 1812 to communicate with dial-up users is RADIUS.
+      % Callback ensures that only users from specific locations (those with authorized phone numbers) can access the network, adding an additional layer of security.
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88
+      % Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. 
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
       - TGS (Ticket Granting Server), AS (Authentication Server), TGT (Ticket Granting Ticket)
@@ -736,6 +749,7 @@
       % The AS looks up the user in its database and retrieves the user's password. It performs authentication of the end user.
     8) SAML - Security Assertion Markup Langauge
     9) Identity as a service (IDaaS) - Directory Integration, Application Integration
+      % IDaaS provides single sign-on, provisioning, password management, and access governance
     10) OAuth and OpenID Connect
       % OAuth is an authorization protocol, but not an authentication protocol.
     11) Certificate-based authentication
@@ -763,6 +777,8 @@
       % A Distribution group is used primarily in email applications to send messages to groups of users and is not designed for assigning roles or managing permissions.
     6) Account monitoring - Inaccurate Permissions, Attestation, Unauthorized Use, Geotagging, Geofencing
     7) Provisioning and de-provisioning - Privilege Creep
+      % Authorization creep occurs when a user is granted new permissions as they change roles or responsibilities within an organization, but their old permissions are not removed.
+      % Capability creep refers to the gradual expansion of an individual's capabilities or roles within an organization.
   E. Authorization
     1) Understand authorization - Least Privilege, Account Review
       * Be able to identify least privilege and segregation of duties issues in a scenario
@@ -816,6 +832,9 @@
   B. Penetration Testing
     1) Penetration testing
       % It is a proactive security assessment method used to identify and exploit vulnerabilities in a system, network, or application.
+      % In a double-blind test, both the security team and the testers (often external penetration testers) are unaware of each other's identity or intentions.
+        This type of assessment is more likely to demonstrate the success or failure of a possible attack because it simulates a real-world scenario.
+      % A blind test involves a scenario where the security team is unaware that an assessment is being conducted, but the testers are informed. 
     2) Ethical disclosure - Responsible Disclosure
     3) Bug bounty
     4) Cybersecurity exercises
@@ -899,6 +918,7 @@
       % Each piece of evidence should be accompanied by an evidence log that records important events that happen in the lifecycle of the evidence.
       % Hashing is used to protect evidence by providing a unique file signature, demonstrating that a file hasn't been altered.
     9) Chain of custody - A paper trail of evidence
+      % One copy is used for analysis, and the other is preserved as a "golden copy" to maintain the integrity of the evidence.
     10) Reporting and documenting incidents - Formal Incident Report
       % Federal law does not require all U.S. businesses to report verified security incidents to US-CERT; reporting requirements vary by industry and specific regulations.
     11) Electronic discovery (eDiscovery)
