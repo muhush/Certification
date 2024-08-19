@@ -210,10 +210,8 @@
   A. Secure Design
     1) Secure design principles
       - Fail open, Fail secure
-      % Network segmentation involves dividing a network into smaller parts to improve security and manageability, 
-        but it doesn't directly prevent programs from accessing each other.
-      % Process isolation is a security measure that ensures different programs run separately,
-        preventing them from accessing or interfering with each other.
+      % Network segmentation involves dividing a network into smaller parts to improve security and manageability, but it doesn't directly prevent programs from accessing each other.
+      % Process isolation is a security measure that ensures different programs run separately, preventing them from accessing or interfering with each other.
     2) Security models
       - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up)
       * The Bell-LaPadula model is rarely implemented outside of military applications
