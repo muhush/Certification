@@ -159,7 +159,6 @@
     4) Limiting data collection
       - Minimize information collected, Monitor Third Parties
       % A data haven either has no laws or poorly enforced laws for information protection.
-      % Tripwire is a security and data integrity tool that helps detect and report changes to files and configurations in a system.
     5) The data lifecycle
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
@@ -686,9 +685,8 @@
       * Granting network access requires configuring both network and host firewalls.
       % Host firewall is a built-in feature of Microsoft Windows designed to block unauthorized access to or from private networks.
     5) File integrity monitoring(FIM)
-      % Tripwire is a file integrity monitoring tool
-      % Microsoft Endpoint Configuration Manager (MECM), formerly known as SCCM, is used for managing large groups of computers,
-        focusing on configuration management rather than file integrity monitoring.
+      % Tripwire is a file and data integrity monitoring tool that helps detect and report changes to files and configurations in a system.
+      % Microsoft Endpoint Configuration Manager (MECM), formerly known as SCCM, is used for managing large groups of computers, focusing on configuration management rather than file integrity monitoring.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -732,7 +730,7 @@
       - Kerberos = core protocols for MS Active directory, Port 88
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
-      - TGS (Ticket Granting Server), AS (Authentication Server),TGT (Ticket Granting Ticket)
+      - TGS (Ticket Granting Server), AS (Authentication Server), TGT (Ticket Granting Ticket)
       % TGT includes information about the client and a copy of the client TGS session key.
       % When a client wishes to access a service, the client contacts the TGS.
       % The AS looks up the user in its database and retrieves the user's password. It performs authentication of the end user.
@@ -823,7 +821,7 @@
     4) Cybersecurity exercises
   C. Log Reviews
     1) Logging security information - Log and Data sources, Syslog(Linux), Tags, NXLog(Centralize)
-    2) Security information and event management(SIEM) - SOAR
+    2) Security information and event management(SIEM) - SOAR (Security Orchestration, Automation, and Response)
     3) Continuous security monitoring
       - Monitoring Process (Define, Establish, Implement, Analyze/Report, Respond, Review/Update)
       - Anomaly Analysis, Trend Analysis, Behavioral Analysis, Availability Analysis
