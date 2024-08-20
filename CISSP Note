@@ -166,6 +166,8 @@
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
       % Purging writes a series of 1s and 0s over media multiple times, and it removes all data remnants.
+      % Object reuse refers to the practice of reusing storage media, memory, or other data storage objects after ensuring that any residual data from previous use is securely removed or overwritten,
+        preventing unauthorized access to potentially sensitive information.
   B. Data Security Controls
     1) Developing security baselines
       - Baselines are generic, Monitoring is critical
@@ -192,6 +194,7 @@
       % Pseudonymization replaces data with a pseudonym or alias to protect the privacy of individuals identified in the original dataset.
       % Drive encryption (also known as full disk encryption) protects the entire contents of a storage device, ensuring that the data cannot be accessed by unauthorized users,
         even if the physical device is stolen or accessed without permission.
+      % HIDS focuses on data specific to the host, such as logs and audit trails, rather than network traffic or OS alarms.
   C. Change and Configuration Management
     1) Change management
       - RFC(Request for change)
@@ -214,6 +217,7 @@
       - Fail open, Fail secure
       % Network segmentation involves dividing a network into smaller parts to improve security and manageability, but it doesn't directly prevent programs from accessing each other.
       % Process isolation is a security measure that ensures different programs run separately, preventing them from accessing or interfering with each other.
+      % An execution domain provides a secure environment where processes with elevated privileges can operate, isolated from other processes to maintain security and prevent unauthorized access to critical resources.
     2) Security models
       - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up)
       * The Bell-LaPadula model is rarely implemented outside of military applications
@@ -223,7 +227,7 @@
       % The Clark-Wilson model is designed to enforce well-formed transactions and separation of duties, ensuring integrity through the implementation of integrity-monitoring rules and integrity-preserving rules.
       % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
-      - TCSEC(Structured), Common Criteria, Certification and Accreditation(ATO, IATO, IATT, DATO)
+      - TCSEC(Structured), Common Criteria(ISO 15408), Certification and Accreditation(ATO, IATO, IATT, DATO)
       % Trusted Computer System Evaluation Criteria (TCSEC), focuses on the security functionality and assurance of systems, ensuring they meet certain standards for protecting classified or sensitive information.
       % The Trusted Computer System Evaluation Criteria (TCSEC), defines the following security levels: D - Minimal Protection, C1 - Discretionary Security Protection, C2 - Controlled Access Protection
         B1 - Labeled Security Protection, B2 - Structured Protection(covert channel analysis), B3 - Security Domains, A1 - Verified Design
@@ -353,6 +357,7 @@
        % The XOR operation is used to combine the plaintext with the one-time pad key to produce the ciphertext.
        % The Message Authentication Code (MAC) ensures message integrity.
     8) The cryptographic lifecycle
+       % A key revocation system is responsible for invalidating cryptographic keys that should no longer be used, either because they have been compromised, expired, or are no longer needed.
   G. Symmetric Cryptography
     1) Data encryption standard(DES) - 64bit blocks, 54bit length
       % DES uses 16 rounds of computation
@@ -387,7 +392,7 @@
       % Key clustering refers to the phenomenon where two different cryptographic keys generate the same ciphertext from the same plaintext.
       % Key Generation, Key Initialization, Key Distribution, Key Activation, Key Usage, Key Rotation/Update, Key Deactivation, Key Termination, Key Archival
     2) Key exchange - Out-of-band key exchange, in-band key exchange(Diffie-Hellman)
-    3) Diffie-hellman - Asymmetric
+    3) Diffie-hellman - Asymmetric, authentication
       % The difficulty of solving the discrete logarithm problem provides the security underlying the Diffie-Hellman algorithm.
       % The Diffie-Hellman algorithm is used to securely exchange cryptographic keys over a public, nonsecure medium.
     4) Key escrow - Recovery Agents
@@ -535,7 +540,6 @@
     4) Isolating sensitive systems 
       - Network Segmentation
       * Physically isolated systems are called "air-gapped" systems.
-      % A VPN is a secure tunnel used to establish connections across a potentially insecure intermediary network. Intranet, subnet, extranet, and VLAN are examples of network segmentation.
       - Jump Server
       * Jump servers, jump boxes, and jump hosts are all the same thing.
     5) VLANs and logical segmentation - VRF(Virtual Routing and Forwarding), Virtual Domain, Network Overlays, Encapsulation
@@ -555,13 +559,13 @@
       % IPsec operates at the Network layer (layer 3).
       % Cut-through switching is a method used in network switches where the switch starts forwarding a data frame to the destination as soon as it reads the destination address from the frame's header,
         without waiting for the entire frame to be received.
+      % RIP uses hop count as a simple metric to determine the best path to a destination network.
+      % a hop refers to the journey a data packet takes from one router or intermediate device to another
     2) Network topologies
       % A Multistation Access Unit (MAU) is a central connecting device used in Token Ring networks
     3) Transport architecture
-      % Configuring devices, monitoring performance, and troubleshooting problems are tasks associated with the management plane,
-        which oversees and manages the network.
-      % The control plane is responsible for making decisions about where data should flow through the network,
-        using protocols to determine the best path for data packets.
+      % Configuring devices, monitoring performance, and troubleshooting problems are tasks associated with the management plane, which oversees and manages the network.
+      % The control plane is responsible for making decisions about where data should flow through the network, using protocols to determine the best path for data packets.
     4) Firewalls - Stateful Inspection, Implicit Deny
       * You need to understand the default/implicit deny principle of firewalls.
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
@@ -571,19 +575,22 @@
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
+      % A VPN is a secure tunnel used to establish connections across a potentially insecure intermediary network. Intranet, subnet, extranet, and VLAN are examples of network segmentation.
       % L2TP (Layer 2 Tunneling Protocol) over IPSec (Internet Protocol Security) uses encryption to protect transmitted traffic and supports the transmission of multiple protocols.
       * Split-tunnel VPNs provide users with a false sense of security
       % The external firewall shields the VPN gateway from direct exposure to the internet, filtering out unauthorized traffic.
       % If traffic is decrypted at the VPN gateway, the firewall can inspect the plaintext before it enters the internal network, allowing for additional security checks.
+      % In a VPN, trust is not as much of a primary concern because the communication is encrypted and secured over a public network like the internet.
     8) Network intrusion detection and prevention
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
-      % Signature detection relies on a database of known threat signatures and requires frequent updates from the vendor to recognize new threats.
+      % Signature detection relies on a database of known threat signatures (misused) and requires frequent updates from the vendor to recognize new threats.
       % Snort is an open-source Intrusion Detection System (IDS) that monitors network traffic in real-time to detect suspicious activities and possible attacks.
       % The primary functional components of an IDS include information sources (such as logs or network traffic), event report analysis (to analyze data for potential intrusions), and response mechanisms (to act on detected threats).
         The other options listed (database component and event report analysis) are more closely related to typical IDS functions.
       % Heuristic detection identifies potentially malicious code by analyzing the behavior and characteristics of files, even if they do not match known virus signatures.
       % Proximity detectors create a magnetic field around an object or area, and when this field is disturbed by an intruder, the system triggers an alert.
+      % An IPS not only detects potential security breaches (like an IDS) but also takes proactive steps to block or prevent the intrusion.
     9) Protocol analyzers - tcpdump, tcpreplay
     10) Unified threat management
     11) Content distribution networks(CDNs)
@@ -592,7 +599,7 @@
       - Perimeter security, Network Access Control
       - Rule based, role based, time based, location based
       % Rule-based access control (RBAC) uses a set of pre-defined rules that determine access permissions based on conditions such as time of day, IP address, or other criteria.
-      % Role-Based Access Control (RBAC) offers several advantages: Low Security Cost: By grouping permissions into roles, Easier to Implement with well-defined roles and responsibilities.
+      % Role-Based Access Control (RBAC) offers several advantages: Low-Security Cost, By grouping permissions into roles, and Easier to Implement with well-defined roles and responsibilities.
     2) Network access control(NAC) - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
       % NAC enforces security policies by evaluating devices before allowing them access to the network. 
@@ -616,7 +623,8 @@
       % Trap can an SNMP agent send to a network management system to report an unusual event
     11) Deception technologies - Darknets, DNS Sinkhole
       % Using a DNS sinkhole, an admin can forward malicious DNS requests to another IP address to keep from harm.
-    12) Network support - SLA
+    12) Network support - SLA (service level agreement)
+      % Message Security Protocol (MSP) is a U.S. military standard designed to protect email communications
   E. Specialized Networking
     1) Telephony - VoIP
       % Another term used for Plain Old Telephone Service (POTS) is PSTN (Public Switched Telephone Network).
@@ -630,13 +638,14 @@
       * Session keys are also known as ephemeral keys.
     2) IPsec
       - ESP(Encapsulating Security Payload, Confidentiality), Authentication Header(AH, Integrity)
+      % Tunnel mode encapsulates the original IP packet within a new packet
+      % Transport is typically used for end-to-end communication between two hosts within the same network or securing communication between client-server applications
       - SA(Security Association)
       - Older Linux systems used telnet for remote access
     3) Remote network access
   G. Wireless Networking
     1) Understanding wireless networking
       * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
-      % A site survey helps you detect any unauthorized access points (often referred to as "rogue" access points) that might have been set up in your building.
     2) Wireless encryption
       % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange, providing enhanced protection against offline dictionary attacks compared to its predecessors.
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
@@ -656,6 +665,7 @@
     4) Wireless signal propagation - Omnidirectional, Directional, Site survey
       % Beam forming uses multiple antennas to detect the location of a device connecting to the wireless access point and then steers the signal in the direction of that device.
       % Pulse modulation refers to a method of encoding information in a signal, rather than focusing wireless signals towards devices.
+      % A site survey helps you detect any unauthorized access points (often referred to as "rogue" access points) that might have been set up in your building.
     5) Wireless networking equipment - Fat Access Points, Wi-Fi Analyzer
       % A wireless controller manages configurations, optimizes performance, and reduces interference among APs in wireless networks.
       % Fat AP refers to an access point with built-in intelligence for handling data processing but does not manage or optimize multiple APs.
@@ -818,6 +828,7 @@
     2) Identify scan targets 
       - Asset Inventory
       - Impact, Likelihood, Criticality
+      % Open Vulnerability and Assessment Language(OVAL)
     3) Scan configuration
       % Vulnerability scanning tools are specifically designed to identify security weaknesses, vulnerabilities, and potential exploits in networks, systems, or applications.
     4) Scan perspective
@@ -885,6 +896,7 @@
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
       % An audit-reduction tool is designed to process and filter audit logs, removing extraneous information and reducing the volume of data, which makes it easier to analyze and focus on relevant security events.
+      % Audit Privilege Use will log events whenever a user or process attempts to exercise a user right or privilege, such as accessing the system remotely.
     5) Control management - Every Rule Has An Exception
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
       % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
@@ -898,6 +910,9 @@
       * Cybersecurity investigators should leave interrogation to law enforcement!
       % Computer-assisted crimes generally involve using technology to commit or facilitate a crime, rather than directly harming computer systems themselves.
       % A bit-level copy (also known as a forensic image) creates an exact replica of the entire disk, including all files, free space, and hidden areas, ensuring that no data is overlooked.
+      % Opportunity specifically refers to the time and place where a crime could be committed.
+      % Motive refers to the reasons for committing the crime.
+      % Means refer to the ability to commit it(how).
     2) Evidence types
       - Real(tangible objects), Documentary(written information), Testimonial(Witness)
       - Documentary = Authentication rule, Best evidence (Original documents are superior), Parol evidence(Written contract agreement)
