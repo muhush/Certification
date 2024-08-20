@@ -302,6 +302,7 @@
       % Direct Memory Access (DMA) allows devices to transfer data directly to or from memory without involving the CPU in each step of the transfer process.
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
+      % TPM provides secure generation, storage, and management of encryption keys, passwords, and other sensitive data to enhance the security of various cryptographic operations, such as drive encryption and digital rights management.
     3) Hardware and firmware security
       - BIOS, UEFI(Unified Extensible Firmware Interface), Measured Boot, Attestation, Hardware Root of Trust, EMI(Electromagnetic Interference, EMP)
   D. ServerSecurity Issues
@@ -490,6 +491,7 @@
       % Shimming involves using a thin piece of metal or plastic, called a shim, to bypass the locking mechanism of a lock, especially padlocks or door locks.
       % Raking is a lockpicking technique used to manipulate the pins inside a lock to align them with the shear line, allowing the lock to open.
       % The main types of mechanical locks are warded locks and tumbler locks
+      % A cipher lock is a programmable lock that allows entry based on a code entered into a keypad. 
     6) Visitor management
       % Cameras should always be disclosed to visitors when used as part of physical security controls to ensure compliance with privacy laws and regulations.
     7) Physical security personnel - Two-Person Integrity
@@ -500,6 +502,7 @@
       - REST(Representational State Transfer) = HTTPS
       % S-HTTP provides encryption specifically for individual documents or messages, making it suitable for your requirement to encrypt a single document.
       % HTTPS encrypts the entire communication session between the client and the server.
+      % Software upgrade deployment is typically a responsibility of the network administrator, as it involves managing the overall infrastructure and ensuring that systems are up to date.
     2) SOA and microservices
       - Service-Oriented Architecture
       - Microservices
@@ -592,6 +595,7 @@
       % Proximity detectors create a magnetic field around an object or area, and when this field is disturbed by an intruder, the system triggers an alert.
       % An IPS not only detects potential security breaches (like an IDS) but also takes proactive steps to block or prevent the intrusion.
     9) Protocol analyzers - tcpdump, tcpreplay
+      % A protocol analyzer (also known as a packet sniffer) captures and analyzes network traffic to inspect the data being transmitted over the network, including whether passwords are being sent in plain text or encrypted.
     10) Unified threat management
     11) Content distribution networks(CDNs)
   D. Network Security Techniques
@@ -646,6 +650,7 @@
   G. Wireless Networking
     1) Understanding wireless networking
       * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
+      % Capturing electromagnetic signals (emanations) that can be intercepted from wireless networks.
     2) Wireless encryption
       % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange, providing enhanced protection against offline dictionary attacks compared to its predecessors.
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
@@ -706,6 +711,7 @@
     5) File integrity monitoring(FIM)
       % Tripwire is a file and data integrity monitoring tool that helps detect and report changes to files and configurations in a system.
       % Microsoft Endpoint Configuration Manager (MECM), formerly known as SCCM, is used for managing large groups of computers, focusing on configuration management rather than file integrity monitoring.
+      % The two-phase commit protocol ensures that an entire transaction is executed in a coordinated manner across multiple databases.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -747,6 +753,7 @@
       % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
       % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
       % The protocol that uses port 1812 to communicate with dial-up users is RADIUS.
+      % SESAME (Secure European System for Applications in a Multi-vendor Environment) is an authentication protocol that was designed to address some of the known vulnerabilities in Kerberos, such as the risk associated with the transmission of session keys. 
       % Callback ensures that only users from specific locations (those with authorized phone numbers) can access the network, adding an additional layer of security.
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88
