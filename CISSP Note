@@ -23,9 +23,11 @@
         ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
       - SABSA (Sherwood Applied Business Security Architecture)
   C. Compliance and Ethics
+    % A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies.
     1) Legal and compliance risks - GDPR, PCI DSS
       % The Fifth Amendment primarily protects individuals from self-incrimination, meaning that suspects cannot be compelled to provide evidence against themselves.
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
+      % The Children’s Online Privacy Protection Act (COPPA) provides severe penalties for companies that collect information from young children without parental consent (younger than the age of 13).
     3) GDPR - E.U regulations, anyone in E.U geolocation
     4) California privacy law - CPRA (SPI = Sensitive)
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
@@ -49,6 +51,7 @@
       * Encryption is easy to protect data breach
     11) Ethics
       * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
+      % The second canon of the (ISC) 2 Code of Ethics states how a CISSP should act, which is honorably, honestly, justly, responsibly, and legally.
       % The Internet Architecture Board(IAB) developed an ethics-related statement concerning the use of the internet, particularly through their "Ethics and the Internet" document
   D. Security Policy
     1) Security policy framework - policies > standard(details) > guidelines(advice) / procedures    
@@ -65,6 +68,7 @@
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
       % Risk mitigation controls to address acceptable risks would not be in the BCP.
       % An executive succession plan is designed to identify and prepare individuals to fill key leadership roles within an organization in the event that they become vacant, whether due to a disaster or other circumstances.
+      % The qualitative analysis portion of the business impact analysis (BIA) allows you to introduce intangible concerns, such as loss of customer goodwill, into the BIA planning process.
       % Project Initiation: Establish the continuity planning policy statement, define objectives, scope, and obtain management support.
         Business Impact Analysis (BIA): Identify critical business functions, determine the impact of disruptions, and prioritize recovery efforts.
         Identify Preventative Controls: Implement measures to reduce the likelihood of disruptions.
@@ -90,6 +94,7 @@
     1) Personnel security - strong security policy, insider threat
     2) Security in the hiring process - Employment Agreements, NDAs(Non-Disclosure Agreements)
     3) Employee termination process - Exit interview, Revoke Access Promptly
+      % If the user’s account remains enabled, the user may log on later and cause damage. Disabling the account is to prevent sabotage.
     4) Employee privacy - minimization, limit access, encryption, masking (hiding)
     5) Social networking - multi-factoring
   G. Risk Management
@@ -102,6 +107,7 @@
       - SLE * ARO = ALE
       * Be prepared to work through a quantitative risk assessment calculation on the exam
       % The annualized loss expectancy (ALE) is the best metric to compare relative risks because it incorporates both the likelihood and the impact of those risks.
+      % A countermeasure primary affects the annualized rate of occurrence (ARO), because the countermeasure is designed to prevent (or mitigate or reduce) the occurrence of the risk, thus reducing its frequency per year.
       - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
       % maximum tolerable downtime (MTD) represents the maximum amount of time that a business function or resource can be unavailable before it causes significant harm to the organization.
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
@@ -149,15 +155,17 @@
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
+      % Data remanence is data remnants on media, and data destruction methods remove data remnants.
+      % Slack space is the unused space in a cluster.
     3) Data security roles
       - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
       % A data controller decides what data to process and how it is processed.
       % The data controller identifies what data to pass to the data processor and how that data should be processed.
-      % The data custodian is responsible for day-to-day tasks maintaining and protecting data, such as backing up data.
+      % The data custodian is responsible for day-to-day tasks(data protection tasks) maintaining and protecting data, such as backing up data.
       % Data custodians might have a role, but the overall responsibility often lies with security professionals and other relevant departments.
       % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
       - Data Subject(collected data), Data processors(third parties)
-      * GDPR uses the term data controller instead of data owner
+      * GDPR(General Data Protection Regulation) uses the term data controller instead of data owner
       * System ownership and data ownership are two different concepts
     4) Limiting data collection
       - Minimize information collected, Monitor Third Parties
@@ -168,6 +176,8 @@
       % Purging writes a series of 1s and 0s over media multiple times, and it removes all data remnants.
       % Object reuse refers to the practice of reusing storage media, memory, or other data storage objects after ensuring that any residual data from previous use is securely removed or overwritten,
         preventing unauthorized access to potentially sensitive information.
+      % Degaussing the disks often damages the electronics.
+      % Defragmenting a disk optimizes it
   B. Data Security Controls
     1) Developing security baselines
       - Baselines are generic, Monitoring is critical
@@ -175,6 +185,7 @@
       % Data Control Language (DCL) includes commands like GRANT and REVOKE that control access to data within the database by assigning and removing privileges to users.
         This enables granular control over who can access specific data or perform certain actions on the data.
     2) Leveraging industry standards
+      % A primary consideration for this mirrored site is the location. Some financial guidelines require a mirrored site to be a minimum distance away, such as at least 20 miles away.
     3) Customizing security standards
     4) Cloud storage security
       - Encryption, Access control
@@ -185,6 +196,7 @@
       % The information flow model is concerned with the transfer of information between different security levels.
         It typically allows information to flow within the same security level and restricts the flow of information from lower to higher security levels to prevent unauthorized access or information leakage.
       % The noninterference model is designed to prevent actions at a higher security level from affecting or influencing those at a lower level, ensuring that information does not flow between different security levels in a way.
+      % Declassification is the process of moving an object into a lower level of classification once it is determined that it no longer justifies being placed at a higher level.
     6) Digital rights management
       - IRM(information rights management), DRM(Digital Right)
       % Persistent online authentication, automatic expiration, and a continuous audit trail are all methods used with digital rights management (DRM) technologies.
@@ -202,9 +214,14 @@
       % Change management processes include requesting a change, creating a rollback plan for the change, and documenting the change.
     2) Configuration and asset management
       - Baselines, Versioning
+      % Configuration management includes supporting rollback of changes, maintaining detailed documentation, and running configuration audits.
+      % The primary security concern of a distributed computing environment (DCE) is the interconnectedness of the components.
+        This configuration could allow for error or malware propagation as well.
     3) Physical asset management
       - Media management(tracks highly sensitive data)
       % The capability aspect is crucial as it determines how much data the medium can hold, which is directly related to your organization's storage needs.
+      % The three media management or control modes are simplex (one-direction), half-duplex (two-way, but only one direction can send data at a time),
+        and full-duplex (two-way, in which data can be sent in both directions simultaneously) communications.
     4) Supply chain risks and mitigations
       - End of Sale(no longer be offered for purchase), End of Support(reduce or eliminate support), End of Life(no longer provide any support)
 
@@ -224,6 +241,7 @@
       % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
       % The Take-Grant model is an access control model that uses states and state transitions to define how rights can be transferred between subjects and objects.
       % The Clark-Wilson model is designed to enforce well-formed transactions and separation of duties, ensuring integrity through the implementation of integrity-monitoring rules and integrity-preserving rules.
+      % The trusted computing base (TCB) has a component known as the reference monitor in theory, which becomes the security kernel in implementation.
       % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
       - TCSEC(Structured), Common Criteria(ISO 15408), Certification and Accreditation(ATO, IATO, IATT, DATO)
@@ -237,6 +255,7 @@
       * Certification and accreditation are different. Accreditation and authorization are the same.
       % Certification is the process of evaluating and verifying that security controls are correctly implemented and functioning as intended within an information system.
       % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
+      % When the vendor is not meeting minimal security requirements which are necessary to the protection of the service and its customers, they should void the authorization to operate (ATO) of this vendor.
     4) Segregation of duties
       % Segregation of duties is the principle that ensures no individual has access to multiple permissions
         that would allow them to perform a highly sensitive action alone, preventing fraud and errors.
@@ -300,6 +319,9 @@
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
       % TPM provides secure generation, storage, and management of encryption keys, passwords, and other sensitive data to enhance the security of various cryptographic operations, such as drive encryption and digital rights management.
+      % High cohesion (united) refers to how closely related and focused the responsibilities of a single module are.
+      % Low coupling specifically refers to the independence of modules.
+      % High coupling is highly dependent on each other.
     3) Hardware and firmware security
       - BIOS, UEFI(Unified Extensible Firmware Interface), Measured Boot, Attestation, Hardware Root of Trust, EMI(Electromagnetic Interference, EMP)
   D. ServerSecurity Issues
@@ -317,6 +339,7 @@
     1) Industrial control systems and operational technology
       - SCADA(Remote Central), DCS(Controlling processes), PLC
       % SCADA is used to gather information from remote sensors via telemetry.
+      % A large utility company is very likely to be using supervisory control and data acquisition (SCADA) to manage and operate their equipment
       % Distributed Control System (DCS) is used to control industrial processes.
       % Programmable Logic Controller (PLCs) is a device used to monitor and control industrial equipment.
     2) Internet of things
@@ -326,7 +349,7 @@
       * Network segmentation is the most important control for embedded devices
       * Embedded device security controls are effective for mainframes as well
     5) Embedded systems
-      - RTOSs(Real-time), CAN bus
+      - RTOSs(a real-time operating system), CAN bus
       % The embedded system is typically designed around a limited set of specific functions in relation to the larger product of which it’s a component.
     6) Communications for embedded devices
   F. Encryption
@@ -336,6 +359,7 @@
     2) Symmetric and asymmetric cryptography
       - Symmetric(same key), Asymmetric(different key, public, private)
       * Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pair
+      % In symmetric encryption, the same key (the private key) is used for both encryption and decryption of data. This key must be securely shared between the sender and the receiver to enable secure communication.
     3) Goals and cryptography
       - Confidentiality, Integrity, Authentication, Obfuscation(hiding), Non-Repudiation
     4) Codes and ciphers
@@ -411,7 +435,6 @@
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
-      % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
       % Message digests (or hashes) are used to prove the integrity of the original image.
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
@@ -421,6 +444,8 @@
     5) Digital signature standard
       - RSA, ECDSA, EdDSA
       % DSA is no longer an acceptable implementation of digital signatures in the federal government under FIPS 186-5.
+      % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
+      % The Digital Signature Standard allows federal government use of the Digital Signature Algorithm, RSA, or the Elliptic Curve DSA in conjunction with the SHA-1 hashing function to produce secure digital signatures.
     6) Created a digital certificate
     7) Revoke a digital certificate - CRL(Certificate Revocation List), OCSP(Online Certificate Status Protocol)
       % The most effective method of revoking digital certificates is through the interactive OCSP responder.
@@ -471,8 +496,10 @@
     6) Ransomware - Mimikatz, Countermeasure(Backups, Antimalware)
       * Ransomware is specifically called out in the exam objectives
   L. Physical Security
+    % Crime Prevention Through Environmental Design (CPTED) has three main strategies: natural access control, natural surveillance, and natural territorial reinforcement.
     1) Site and facility design
       % Lighting is often claimed to be the most commonly deployed physical security mechanism.
+      % Key locks are the most common and inexpensive form of physical access control device for both interior and exterior use.
       % An access control vestibule is a double set of doors that is often protected by a guard and used to contain a subject until their identity and authentication is verified.
       % Security guards have the ability to make real-time decisions and discriminating judgments based on context, assess situations dynamically, and respond accordingly.
     2) Data center environmental controls - Expanded Envelope(64.5~80.6), Dew Point Range(15.8~59)
@@ -488,7 +515,7 @@
       % Shimming involves using a thin piece of metal or plastic, called a shim, to bypass the locking mechanism of a lock, especially padlocks or door locks.
       % Raking is a lockpicking technique used to manipulate the pins inside a lock to align them with the shear line, allowing the lock to open.
       % The main types of mechanical locks are warded locks and tumbler locks
-      % A cipher lock is a programmable lock that allows entry based on a code entered into a keypad. 
+      % A cipher lock is a programmable lock that allows entry based on a code entered into a keypad and can be programmed with more than one code for duress. 
     6) Visitor management
       % Cameras should always be disclosed to visitors when used as part of physical security controls to ensure compliance with privacy laws and regulations.
     7) Physical security personnel - Two-Person Integrity
@@ -582,6 +609,7 @@
       % If traffic is decrypted at the VPN gateway, the firewall can inspect the plaintext before it enters the internal network, allowing for additional security checks.
       % In a VPN, trust is not as much of a primary concern because the communication is encrypted and secured over a public network like the internet.
     8) Network intrusion detection and prevention
+      % An IDS is most likely to connect to a switch port configured as a mirrored port.
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
       % Anomaly detection identifies unusual patterns that may indicate a security incident, based on statistical analysis, without frequent specific threat updates.
       % Signature detection relies on a database of known threat signatures (misused) and requires frequent updates from the vendor to recognize new threats.
@@ -630,6 +658,7 @@
   E. Specialized Networking
     1) Telephony - VoIP
       % Another term used for Plain Old Telephone Service (POTS) is PSTN (Public Switched Telephone Network).
+      % VLAN hopping is a switch security issue, not a VoIP security issue.
     2) Multimedia collaboration - XMPP
     3) Storage networks
       % Fibre Channel requires the use of dedicated connections and is known for its high speed and reliability in connecting computer data storage to servers.
@@ -644,6 +673,8 @@
       % Transport mode is typically used for end-to-end communication between two hosts within the same network or securing communication between client-server applications
       - SA(Security Association)
       - Older Linux systems used telnet for remote access
+      % Internet Security Association and Key Management Protocol (ISAKMP), an element of Internet Key Exchange (IKE), is used to organize and manage the encryption keys that have been generated and exchanged by OAKLEY and SKEME
+        to support multiple simultaneous VPNs from each host.
     3) Remote network access
   G. Wireless Networking
     1) Understanding wireless networking
@@ -651,6 +682,7 @@
       % Capturing electromagnetic signals (emanations) that can be intercepted from wireless networks.
     2) Wireless encryption
       % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange, providing enhanced protection against offline dictionary attacks compared to its predecessors.
+      % WPA3, 802.11i, SAE, and WPS are all technologies that are specifically defined as part of wireless networking. 
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
       % CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) is an encryption protocol 
         used in Wi-Fi security for data confidentiality and is not specifically a key exchange mechanism.
@@ -735,6 +767,7 @@
       - Something you know, Something you are, Something you have
       - False Acceptance, False Rejection
     2) Multifactor authentication
+      % Two-factor authentication is the strongest method of those listed.
     3) Something you have
       % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP (HMAC-based One-Time Password).
     4) Password authentication protocols(PAP) - CHAP(Challenge-Handshake Authentication Protocol)
@@ -764,6 +797,7 @@
       % When a client wishes to access a service, the client contacts the TGS.
       % The AS looks up the user in its database and retrieves the user's password. It performs authentication of the end user.
     8) SAML - Security Assertion Markup Langauge
+      % Federated organizations use the Security Assertion Markup Language (SAML) to support single sign-on (SSO) capabilities on the internet.
     9) Identity as a service (IDaaS) - Directory Integration, Application Integration
       % IDaaS provides single sign-on, provisioning, password management, and access governance
     10) OAuth and OpenID Connect
@@ -807,6 +841,7 @@
     4) Access control lists
       % An ACL specifies which users or system processes (subjects) are allowed to access objects (like files, directories, or devices) and what operations (read, write, execute) they are permitted to perform on those objects. 
       % An access control matrix is a (capability) table used to specify the access rights of various subjects (e.g., users, processes) to different objects (e.g., files, resources) in a system.
+      % The subject is active and is always the entity that receives information about, or data from, the object.
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
       % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
       % Detective controls are designed to identify and alert the organization to unauthorized activities, including when authorized users are involved in such actions.
@@ -834,8 +869,10 @@
       - Asset Inventory
       - Impact, Likelihood, Criticality
       % Open Vulnerability and Assessment Language(OVAL)
+      % A vulnerability scan will list or enumerate all security risks within a system.
     3) Scan configuration
       % Vulnerability scanning tools are specifically designed to identify security weaknesses, vulnerabilities, and potential exploits in networks, systems, or applications.
+      % Vulnerability scanners can check systems to ensure they are up-to-date with current patches (along with other checks)
     4) Scan perspective
       - Agent-based scanning, Credential-based scanning
     5) Analyzing scan reports
@@ -860,13 +897,21 @@
     3) Continuous security monitoring
       - Monitoring Process (Define, Establish, Implement, Analyze/Report, Respond, Review/Update)
       - Anomaly Analysis, Trend Analysis, Behavioral Analysis, Availability Analysis
-    4) Endpoint monitoring - IEBA (User and Entity Behavior Analytics)
+    4) Endpoint monitoring - UEBA (User and Entity Behavior Analytics)
+      % UEBA tools develop profiles of individual behavior and then monitor users for deviations from those profiles that may indicate malicious activity and/or compromised accounts.
   D. Code Testing
     1) Code review
+      % Branch coverage evaluates whether every if statement has been executed under all if and else conditions.
+      % Condition coverage tests whether every logical test in the code has been executed under all sets of input.
     2) Code tests 
       - Code Security Tests(SAST[Static] = SCA[Software Composition Analysis], DAST[Dynamic] = Synthetic transaction, IAST[Interactive])
       * Different test types are complementary, rather than competitors!
       % Static code testing software analyzes code without executing it, checking for syntax errors, coding standards, and other issues.
+      % A white box test is fully knowledgeable about the software code and its operations and functions.
+      % Integration testing is performed when a new product is deployed or integrated into a real or simulated production environment to ensure that all previously function work tasks still work
+        and all newly added or expected work tasks work as well.
+      % Synthetic transactions are scripted transactions with known expected results.
+      % In misuse case testing the testers first enumerate known misuse/abuse cases.
     3) Fuzz testing - Avoid Looking Like a Hacker
     4) Interface testing - APIs(Application Programming Interface)
     5) Misuse case testing
@@ -902,6 +947,7 @@
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
       % An audit-reduction tool is designed to process and filter audit logs, removing extraneous information and reducing the volume of data, which makes it easier to analyze and focus on relevant security events.
       % Audit Privilege Use will log events whenever a user or process attempts to exercise a user right or privilege, such as accessing the system remotely.
+      % An on-site assessment is a third-party assessment tool where auditors visit the site of the organization to interview personnel and observe their operating habits.
     5) Control management - Every Rule Has An Exception
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
       % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
@@ -925,6 +971,7 @@
       % Testimonial direct evidence is provided based on a witness's own observations. Testimonial expert evidence is conclusions based upon other evidence.
       % Documentary evidence consists of written information, such as server logs.
       % Corroborative evidence helps to establish the validity of a point or an idea by providing additional information or testimony that is consistent with the primary evidence.
+      % The parol evidence rule states that when an agreement between parties is put into written form, the written document is assumed to contain all the terms of the agreement, and no verbal agreements may modify the written agreement.
     3) Introduction to forensics
       - Digital Forensics, Volatility(Permanence)
     4) System and file forensics - Hashes Protect Evidence(Unique file signature)
@@ -946,6 +993,7 @@
   B. Privilege Management
     1) Need to know and least privilege
       - need to know(information access), least privilege(system permissions)
+      % Need to know is the requirement to have access to, knowledge about, or possession of data to perform specific work tasks, but no more.
       - Privilege Aggregation
       % Aggregation occurs when a user combines information from multiple sources or queries to deduce or infer data that they are not explicitly authorized to access.
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
@@ -962,6 +1010,7 @@
     7) Containment techniques
       % When we divide networks into logical segments, grouped by types of users or systems, we have performed segmentation.
       % When we move compromised systems to a network that is completely disconnected from the rest of the network, we have performed isolation. That is not the case in this scenario.
+      % Microsegmentation can be implemented using internal segmentation firewalls (ISFWs), transactions between zones are filtered, and it can be implemented with virtual systems and virtual networks.
     8) Incident eradication and recovery - Eradication(Remove all traces), Recovery, Attackers Compromise Systems
     9) Validation
     10) Post-incident activities - Incident Summary Report
@@ -995,6 +1044,7 @@
       * DevSecOps applies DevOps techniques to a cybersecurity program.
       % The DevOps model prioritizes operational tasks over development efforts.
       % DevOps combines Development and Operations to rapidly release code and meet customer demands.
+      % The JVM is the runtime virtual machine that allows the execution of Java code on a device.
     6) Programming Languages - Reverse Engineering
       % An assembler converts assembly language, a low-level programming language, into executable machine code, not the reverse.
       % A compiler translates source code written in a high-level programming language into machine code or bytecode, but it does not perform the reverse process of generating source code from executable code.
@@ -1003,6 +1053,7 @@
       % Reverse engineering involves examining and analyzing the components, structure, and functionality of an application or system to understand how it works typically involving decompiling or disassembling object code (which is compiled code).
     7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
       % The phase of the software acquisition process in which the product is actually deployed is the Monitoring phase.
+      % The use of Open-source libraries should be tracked and subject to regular security testing, as should any other closed-source library use.
   B. Application Attacks
     1) OWASP top ten 
       - Broken Access Control, Cryptographic failures, Injection, Insecure Design, Security misconfiguration, Vulnerabile and outdated components, Identification and authentication failures, software and data integrity failures
@@ -1013,6 +1064,7 @@
     3) Preventing SQL injection
       * You won't need to write SQL on the exam, but you should know how SQL injection works.
       % Single quotes are essential in input for a SQL injection attack because they allow the attacker to escape the built-in SQL query.
+      % SQL injection attacks allow attackers to include their own SQL commands in the commands issued by a web application to a database.
     4) Understanding cross-site scripting - Use input validation
       % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
       % Cross-site scripting (XSS) is a type of security vulnerability typically found in web applications.
@@ -1053,6 +1105,7 @@
       % There is an active and healthy debate in the database community about how closely database designers should follow the normal forms.
     8) Data de-identification - Anonymization
       % You can often combine seemingly innocuous fields to uniquely identify an individual.
+      % Anonymization techniques remove all data so that it is difficult to identify the original identities.
     9) Data obfuscation - Rainbow Table attack, Tokenization, Masking
 
 
