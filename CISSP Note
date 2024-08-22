@@ -26,12 +26,12 @@
     % A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies.
     1) Legal and compliance risks - GDPR, PCI DSS
       % The Fifth Amendment primarily protects individuals from self-incrimination, meaning that suspects cannot be compelled to provide evidence against themselves.
+      % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
       % The Children’s Online Privacy Protection Act (COPPA) provides severe penalties for companies that collect information from young children without parental consent (younger than the age of 13).
     3) GDPR - E.U regulations, anyone in E.U geolocation
     4) California privacy law - CPRA (SPI = Sensitive)
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
-      % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
     6) Computer crimes - CFAA (Access), ECPA (network communication), ITADA (Identity)
       % The Computer Fraud and Abuse Act (CFAA) primarily focuses on unauthorized access to computer systems,
         especially those related to financial institutions, federal government systems, and the misuse of passwords for fraudulent purposes.
@@ -61,8 +61,7 @@
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
   E. Business Continuity
     1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes)
-      * BCP is also known as continuity of operations planning (COOP), BCP in the cloud is a partnership between providers and customers.
-      % BCP is not operational control. Operational controls are more focused on day-to-day activities
+      * BCP is also known as continuity of operations planning (COOP) and is not operational control, BCP in the cloud is a partnership between providers and customers.
       % BCP includes strategies to prevent or minimize the impact of a disaster on the organization, ensuring that critical operations remain available or can be quickly restored.
       % People should always be your highest priority in business continuity planning.
       % In the provisions and processes phase, the BCP team designs the procedures and mechanisms to mitigate risks that were deemed unacceptable during the strategy development phase.
@@ -107,7 +106,7 @@
       - SLE * ARO = ALE
       * Be prepared to work through a quantitative risk assessment calculation on the exam
       % The annualized loss expectancy (ALE) is the best metric to compare relative risks because it incorporates both the likelihood and the impact of those risks.
-      % A countermeasure primary affects the annualized rate of occurrence (ARO), because the countermeasure is designed to prevent (or mitigate or reduce) the occurrence of the risk, thus reducing its frequency per year.
+      % A countermeasure primary affects ARO because the countermeasure is designed to prevent (or mitigate or reduce) the occurrence of the risk, thus reducing its frequency per year.
       - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
       % maximum tolerable downtime (MTD) represents the maximum amount of time that a business function or resource can be unavailable before it causes significant harm to the organization.
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
@@ -159,10 +158,9 @@
       % Slack space is the unused space in a cluster.
     3) Data security roles
       - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
-      % A data controller decides what data to process and how it is processed.
-      % The data controller identifies what data to pass to the data processor and how that data should be processed.
-      % The data custodian is responsible for day-to-day tasks(data protection tasks) maintaining and protecting data, such as backing up data.
-      % Data custodians might have a role, but the overall responsibility often lies with security professionals and other relevant departments.
+      % A data controller identifies what data to pass and process to the data processor and how that data should be processed.
+      % The data custodian is responsible for day-to-day tasks(data protection tasks) maintaining and protecting data, such as backing up data,
+        but the overall responsibility often lies with security professionals and other relevant departments.
       % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
       - Data Subject(collected data), Data processors(third parties)
       * GDPR(General Data Protection Regulation) uses the term data controller instead of data owner
@@ -185,7 +183,6 @@
       % Data Control Language (DCL) includes commands like GRANT and REVOKE that control access to data within the database by assigning and removing privileges to users.
         This enables granular control over who can access specific data or perform certain actions on the data.
     2) Leveraging industry standards
-      % A primary consideration for this mirrored site is the location. Some financial guidelines require a mirrored site to be a minimum distance away, such as at least 20 miles away.
     3) Customizing security standards
     4) Cloud storage security
       - Encryption, Access control
@@ -246,10 +243,11 @@
     3) Security evaluation models
       - TCSEC(Structured), Common Criteria(ISO 15408), Certification and Accreditation(ATO, IATO, IATT, DATO)
       % Trusted Computer System Evaluation Criteria (TCSEC), focuses on the security functionality and assurance of systems, ensuring they meet certain standards for protecting classified or sensitive information.
-      % The Trusted Computer System Evaluation Criteria (TCSEC), defines the following security levels: D - Minimal Protection, C1 - Discretionary Security Protection, C2 - Controlled Access Protection
+      % The Trusted Computer System Evaluation Criteria (TCSEC), defines the following security levels:
+        D - Minimal Protection, C1 - Discretionary Security Protection, C2 - Controlled Access Protection
         B1 - Labeled Security Protection, B2 - Structured Protection(covert channel analysis), B3 - Security Domains, A1 - Verified Design
       % The Common Criteria (CC) framework includes components such as Protection Profile (PP), Security Target (ST), and Target of Evaluation (TOE).
-      % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products. It ranges from EAL1 to EAL7:
+      % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products.
         EAL1: Functionally Tested. EAL2: Structurally Tested. EAL3: Methodically Tested and Checked. EAL4: Methodically Designed, Tested, and Reviewed (common benchmark for commercial products).
         EAL5: Semi-Formally Designed and Tested. EAL6: Semi-Formally Verified Design and Tested. EAL7: Formally Verified Design and Tested (highest level of assurance).
       * Certification and accreditation are different. Accreditation and authorization are the same.
@@ -327,8 +325,8 @@
   D. ServerSecurity Issues
     1) Server and database security
       - Aggregation(cluster), Inference
-      % Open Database Connectivity(ODBC) is a database feature that allows applications to communicate with different types of databases without having to be directly programmed for interaction with each type.
-      % ODBC (Open Database Connectivity) is a standard API that enables applications to access data from various database management systems (DBMS) using SQL as the standard language.
+      % Open Database Connectivity(ODBC) is a standard API and a database feature that allows applications to communicate with different types of database management systems(DBMS)
+        without having to be directly programmed for interaction with each type using SQL as the standard language.
       % In the relational model, data is organized into tables (relations), where each row is a tuple (a record or instance of the relation), and each column is an attribute (a property or characteristic of the relation)
     2) NoSQL databases
     3) Distributed and high-performance computing
@@ -337,9 +335,8 @@
       % For an office performing highly sensitive tasks, especially for a governmental entity, maintaining a low profile choosing a location with low visibility helps minimize the attention drawn to the facility
   E. Embedded Systems Security
     1) Industrial control systems and operational technology
-      - SCADA(Remote Central), DCS(Controlling processes), PLC
-      % SCADA is used to gather information from remote sensors via telemetry.
-      % A large utility company is very likely to be using supervisory control and data acquisition (SCADA) to manage and operate their equipment
+      - SCADA(supervisory control and data acquisition, Remote Central), DCS(Controlling processes), PLC
+      % SCADA is used to gather information from remote sensors via telemetry and operate in a large utility company to manage and operate their equipment.
       % Distributed Control System (DCS) is used to control industrial processes.
       % Programmable Logic Controller (PLCs) is a device used to monitor and control industrial equipment.
     2) Internet of things
@@ -377,7 +374,6 @@
        % Securely exchanging the pads is essential for the security of one-time pad operations, as interception by a third party could compromise the security of the encrypted messages.
        % Using AES (Advanced Encryption Standard) in conjunction with the one-time pad is not critical to the security of one-time pad operations, as the one-time pad's security is already absolute if implemented correctly.
        % The XOR operation is used to combine the plaintext with the one-time pad key to produce the ciphertext.
-       % The Message Authentication Code (MAC) ensures message integrity.
     8) The cryptographic lifecycle
        % A key revocation system is responsible for invalidating cryptographic keys that should no longer be used, either because they have been compromised, expired, or are no longer needed.
   G. Symmetric Cryptography
@@ -436,6 +432,8 @@
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
       % Message digests (or hashes) are used to prove the integrity of the original image.
+      % The Message Authentication Code (MAC) ensures message integrity.
+      % Message Security Protocol (MSP) is a U.S. military standard designed to protect email communications
     4) Digital signatures 
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       % Authentication verifies the identity of the sender
@@ -538,12 +536,12 @@
   A. TCP/IP Networking
     1) Introducing TCP/IP - TCP / UDP, OSI Model
       * Know the seven layers of the OSI model and the four layers of the TCP model.
+      % An active hub functions at the Physical layer (Layer 1) of the OSI model.
       % Data-link layer has flow control, error notification, and physical addressing.
       % Flow control in Data and transport layers manages the rate of data transmission between two devices to ensure that a fast sender does not overwhelm a slow receiver.
       % The Network layer (Layer 3) is responsible for ensuring that data is properly directed through the network to reach its intended endpoint such as path selection and logical addressing.
       % Transport layer has flow control, reliable communication, error detection and recovery
       % The Application layer provides the interface between the application software and the network, enabling various services such as file transfers, printing, messaging, and email.
-      % An active hub functions at the Physical layer (Layer 1) of the OSI model.
     2) IP addresses and DHCP - IPv4, IPv6
       % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
@@ -583,7 +581,6 @@
       % A switch operates primarily at layer 2 of the OSI model, handling data frames between devices on the same local area network (LAN).
       % A router operates mainly at layer 3, routing data packets between different networks based on IP addresses.
       % A router is the correct location to deploy Access Control Lists (ACLs) for confining sensitive internal data traffic to specific subnets
-      % IPsec operates at the Network layer (layer 3).
       % Cut-through switching is a method used in network switches where the switch starts forwarding a data frame to the destination as soon as it reads the destination address from the frame's header,
         without waiting for the entire frame to be received.
       % RIP uses hop count as a simple metric to determine the best path to a destination network.
@@ -654,7 +651,6 @@
     11) Deception technologies - Darknets, DNS Sinkhole
       % Using a DNS sinkhole, an admin can forward malicious DNS requests to another IP address to keep from harm.
     12) Network support - SLA (service level agreement)
-      % Message Security Protocol (MSP) is a U.S. military standard designed to protect email communications
   E. Specialized Networking
     1) Telephony - VoIP
       % Another term used for Plain Old Telephone Service (POTS) is PSTN (Public Switched Telephone Network).
@@ -662,13 +658,14 @@
     2) Multimedia collaboration - XMPP
     3) Storage networks
       % Fibre Channel requires the use of dedicated connections and is known for its high speed and reliability in connecting computer data storage to servers.
-      % NFS (Network File System), CIFS (Common Internet File System), and SMB (Server Message Block) are protocols used by NAS devices for file sharing over a network.
+      % NFS (Network File System), CIFS (Common Internet File System), and SMB (Server Message Block) are protocols used by NAS(Network-Attached Storage) devices for file sharing over a network.
   F. Transport Encryption
     1) TLS and SSL
       * TLS depends upon pairings of encryption and hash functions known as cipher suites.
       * Session keys are also known as ephemeral keys.
     2) IPsec
       - ESP(Encapsulating Security Payload, Confidentiality), Authentication Header(AH, Integrity)
+      % IPsec operates at the Network layer (layer 3).
       % Tunnel mode encapsulates the original IP packet within a new packet
       % Transport mode is typically used for end-to-end communication between two hosts within the same network or securing communication between client-server applications
       - SA(Security Association)
@@ -767,7 +764,7 @@
       - Something you know, Something you are, Something you have
       - False Acceptance, False Rejection
     2) Multifactor authentication
-      % Two-factor authentication is the strongest method of those listed.
+      % Two-factor authentication is the strongest method.
     3) Something you have
       % An authentication token that requires a button to be pushed each time to receive a token is based on HOTP (HMAC-based One-Time Password).
     4) Password authentication protocols(PAP) - CHAP(Challenge-Handshake Authentication Protocol)
@@ -911,10 +908,10 @@
       % Integration testing is performed when a new product is deployed or integrated into a real or simulated production environment to ensure that all previously function work tasks still work
         and all newly added or expected work tasks work as well.
       % Synthetic transactions are scripted transactions with known expected results.
-      % In misuse case testing the testers first enumerate known misuse/abuse cases.
     3) Fuzz testing - Avoid Looking Like a Hacker
     4) Interface testing - APIs(Application Programming Interface)
     5) Misuse case testing
+      % In misuse case testing the testers first enumerate known misuse/abuse cases.
     6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
     7) Code repositories - Integrity Measurement
     8) Third-party code - Libraries, SDKs(Software Development Kits)
@@ -934,6 +931,7 @@
     4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
       % Contracts typically focus on ensuring that the vendor provides a functional offsite facility that meets the agreed-upon criteria, such as availability, cost, testing access, and general site availability.
       % A redundant site is fully equipped and operational, allowing it to take over functions almost immediately in the event of a failure at the primary site.
+      % A primary consideration for this mirrored site is the location. Some financial guidelines require a mirrored site to be a minimum distance away, such as at least 20 miles away.
     5) Testing BC/DR plans - Business Continuity (BC) and Disaster Recovery (DR) plans
     6) After action reports
   F. Assessing Security Processes
