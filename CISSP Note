@@ -2,7 +2,9 @@
   A. Security Fundamentals
     1) The five pillars of information security
       % Information security involves ongoing efforts like a continuous process.
+      % Vulnerabilities and risks are evaluated based on their threats against one or more of the CIA Triad principles.
     2) Confidentiality - sensitive information, encryption, steganography
+      % Violations of confidentiality are not limited to direct intentional attacks.
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
     4) Availability - patching
       % A patch management process includes evaluating patches, testing patches, and auditing patches.
@@ -14,9 +16,11 @@
       % The business or mission owner is responsible for defining the strategic direction of the organization and ensuring that all operations, processes, and initiatives align with the overall business objectives.
     2) Organizational processes
     3) Security roles and responsibilities - Due Care, Due Diligence
-      % Due care is practicing the individual activities that maintain the security effort.
+      % Due care is practicing the individual activities that maintain the security effort(Due diligence effort).
       % Due Care involves implementing necessary safeguards and policies to protect sensitive information and ensure safety.
+      % Failing to perform periodic security audits can result in the perception that due care is not being maintained.
       % Due Diligence ensures that a company is aware of potential issues and takes appropriate measures to address them.
+      % Due diligence often includes deployment of all necessary security controls as determined by risk management; crafting of policies, standards, guidelines, and procedures; and establishment of a board of directors.
     4) Control and risk frameworks 
       - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
       % While COBIT focuses more on aligning IT management with business objectives and governance,
@@ -25,8 +29,10 @@
   C. Compliance and Ethics
     % A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies.
     1) Legal and compliance risks - GDPR, PCI DSS
+      % The Fourth Amendment to the U.S. Constitution sets the “probable cause” standard that law enforcement officers must follow when conducting searches and/or seizures of private property.
       % The Fifth Amendment primarily protects individuals from self-incrimination, meaning that suspects cannot be compelled to provide evidence against themselves.
       % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
+      % The Family Educational Rights and Privacy Act (FERPA) protects the rights of students and the parents of minor students.
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
       % The Children’s Online Privacy Protection Act (COPPA) provides severe penalties for companies that collect information from young children without parental consent (younger than the age of 13).
     3) GDPR - E.U regulations, anyone in E.U geolocation
@@ -110,11 +116,13 @@
       - Mean Time to Failure(MTTF), Mean Time Between Failure(MTBF), Mean Time to Repair(MTTR)
       % maximum tolerable downtime (MTD) represents the maximum amount of time that a business function or resource can be unavailable before it causes significant harm to the organization.
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
+      % Insurance is a form of risk assignment or transference.
     4) Security control selection and implementation - Defense in Depth    
       * Technical controls are implemented by technology while operational controls are implemented by people!
       % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
       % Operational controls are practices and procedures implemented to ensure the ongoing security and functionality of systems during regular operations such as backup.
       % Technical controls include system auditing, monitoring, access controls, encryption, and network security devices like firewalls and intrusion detection systems.
+      % managed detection and response (MDR) combines antimalware capabilities with a managed service that reduces the burden on the IT team.
     5) Continuous monitoring, measurement, and tuning
       % In reality, automated tools are often more thorough because they can continuously monitor and analyze large amounts of data in real-time, detecting patterns and anomalies that might be missed by manual monitoring.
     6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
@@ -128,6 +136,7 @@
     3) Intelligence sharing - ISACs, ISA(interconnection security agreement)
     4) Threat research
     5) Identifying threats - structured approach
+      % The three common threat modeling approaches from this list of options are focus on attackers, focus on assets, and focus on software.
     6) Automating threat intelligence - Data Enrichment
     7) Threat hunting
   I. Supply Chain Risk Management
@@ -165,6 +174,7 @@
       - Data Subject(collected data), Data processors(third parties)
       * GDPR(General Data Protection Regulation) uses the term data controller instead of data owner
       * System ownership and data ownership are two different concepts
+      % The asset owner is the person who has final corporate responsibility for the protection and storage of data.
     4) Limiting data collection
       - Minimize information collected, Monitor Third Parties
       % A data haven either has no laws or poorly enforced laws for information protection.
@@ -176,6 +186,7 @@
         preventing unauthorized access to potentially sensitive information.
       % Degaussing the disks often damages the electronics.
       % Defragmenting a disk optimizes it
+      % Erasing data on a hard disk drive is likely to leave some data on a hard disk drive, also known as data remanence.
   B. Data Security Controls
     1) Developing security baselines
       - Baselines are generic, Monitoring is critical
@@ -208,12 +219,13 @@
       - RFC(Request for change)
       % Concurrency uses a “lock” feature to allow an authorized user to make changes and then “unlock” the data elements only after the changes are complete.
       % Change management aims to ensure that any change does not result in unintended outages or reduce security.
-      % Change management processes include requesting a change, creating a rollback plan for the change, and documenting the change.
+      % Change management processes include requesting a change, creating a rollback plan for the change, release control, change control, and documenting the change.
     2) Configuration and asset management
       - Baselines, Versioning
       % Configuration management includes supporting rollback of changes, maintaining detailed documentation, and running configuration audits.
       % The primary security concern of a distributed computing environment (DCE) is the interconnectedness of the components.
         This configuration could allow for error or malware propagation as well.
+      % There are numerous examples DCE IDL or frameworks, such as remote procedure calls (RPC), the Common Object Request Broker Architecture (CORBA), and the Distributed Component Object Model (DCOM).
     3) Physical asset management
       - Media management(tracks highly sensitive data)
       % The capability aspect is crucial as it determines how much data the medium can hold, which is directly related to your organization's storage needs.
@@ -254,6 +266,7 @@
       % Certification is the process of evaluating and verifying that security controls are correctly implemented and functioning as intended within an information system.
       % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
       % When the vendor is not meeting minimal security requirements which are necessary to the protection of the service and its customers, they should void the authorization to operate (ATO) of this vendor.
+      % The four types of ATOs(Authorization to Operate) are authorization to operate (not listed as an option), common control authorization, authorization to use, and denial of authorization.
     4) Segregation of duties
       % Segregation of duties is the principle that ensures no individual has access to multiple permissions
         that would allow them to perform a highly sensitive action alone, preventing fraud and errors.
@@ -329,6 +342,7 @@
         without having to be directly programmed for interaction with each type using SQL as the standard language.
       % In the relational model, data is organized into tables (relations), where each row is a tuple (a record or instance of the relation), and each column is an attribute (a property or characteristic of the relation)
     2) NoSQL databases
+      % The cardinality of a table refers to the number of rows in the table, whereas the degree of a table is the number of columns.
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
       % Grid computing utilizes the unused processing power of multiple computers across different locations, combining them to form a virtual supercomputer that is managed by a centralized controller.
@@ -382,13 +396,15 @@
     2) 3DES
       * Double DES is no more secure than standard DES, due to the meet-in-the-middle attack
       - 64-bit block, 112-bit length
+      % The Data Encryption Standard (DES) and Triple DES (3DES) are outdated and no longer considered secure.
     3) AES, Blowfish, and Twofish
       - Rihndael algorithm, 128-bit blocks, 128, 192, 256 bits lengths
       - Blowfish = 64 bit blocks, 32~448 bits key lengths
       - Twofish = 128-bit blocks, 128,192,256 bits lengths
+      % The Advanced Encryption Standard (AES) and Rivest Cipher 6 (RC6) are modern, secure algorithms.
     4) RC4 - WEP, WPA, SSL, TLS
     5) Cipher modes - ECB mode, CBC mode, Counter mode
-      * Counter mode allows block ciphers to act more like stream ciphers
+      * Counter mode allows block ciphers to act more like stream ciphers and allows you to break an encryption or decryption operation into multiple independent steps.
       % Counter mode (CTR) encrypts successive values of a "counter" and uses this to encrypt the plaintext, meaning it does not depend on the previous encrypted block for the next block's encryption.
       % CBC(Cipher Block Chaining) mode feeds the ciphertext of the previous block into the encryption of the next block, 
         ensuring that identical plaintext blocks encrypt to different ciphertext blocks when the preceding ciphertext block is different.
@@ -495,6 +511,7 @@
       * Ransomware is specifically called out in the exam objectives
   L. Physical Security
     % Crime Prevention Through Environmental Design (CPTED) has three main strategies: natural access control, natural surveillance, and natural territorial reinforcement.
+    % The six common physical security control mechanisms is Deter, Deny, Detect, Delay, Determine, Decide.
     1) Site and facility design
       % Lighting is often claimed to be the most commonly deployed physical security mechanism.
       % Key locks are the most common and inexpensive form of physical access control device for both interior and exterior use.
@@ -505,6 +522,7 @@
     3) Data center environment protection
       - Class A(wood), Class B(oil), Class C(data center), Class D (industrial), Class K(Kitchen)
       * Be able to identify the classes of fire extinguishers on the exam.
+      % A preaction system is the best type of water-based fire suppression system for a computer facility because it provides the opportunity to prevent the release of water in the event of a false alarm or false initial trigger.
     4) Power control - Blackouts, Sags(dim), Brownouts, Spikes, Surges(a prolonged high voltage)
       % Line conditioners are devices designed to regulate voltage and clean the power supply by filtering out noise, spikes, and other electrical disturbances,
         ensuring a steady and consistent voltage level to protect sensitive equipment.
@@ -546,7 +564,9 @@
       % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
       % A dual backbone configuration typically involves having two separate network backbones, which ensures that if one backbone fails, the other can take over, maintaining network availability and minimizing downtime.
+      % SPAN ports and network taps are the most reliable mechanisms for gathering network traffic.
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
+      % DNSSEC uses certificates to perform mutual authentication between DNS servers, and thus public key infrastructure (PKI) is needed to provide and support those certificates.
     5) Network ports
       * Memorize the list of common ports before taking the exam.
       - Port 21(FTP), Port 22(SSH), Port 3389(RDP), Port 137, 138, and 139(NetBIOS)
@@ -594,6 +614,7 @@
       * You need to understand the default/implicit deny principle of firewalls.
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
       % Stateful inspection firewalls are able to grant a broader range of access for authorized users and activities and actively watch for and block unauthorized users and activities.
+        It enables the real-time modification of the filtering rules based on traffic content and context. 
       % SOCKS is a circuit-level proxy firewall that provides a secure channel between two computers.
       % Application-level proxy firewalls inspect detrimentally the contents of packets at the application layer to introduce significant latency and overhead, leading to a more noticeable impact on network performance.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
@@ -620,12 +641,14 @@
     9) Protocol analyzers - tcpdump, tcpreplay
       % A protocol analyzer (also known as a packet sniffer) captures and analyzes network traffic to inspect the data being transmitted over the network, including whether passwords are being sent in plain text or encrypted.
     10) Unified threat management
+      % Breach and attack simulation (BAS) systems are designed to inject threat indicators onto systems and networks in an effort to trigger other security controls.
     11) Content distribution networks(CDNs)
   D. Network Security Techniques
     1) Restricting network access 
       - Perimeter security, Network Access Control
       - Rule based, role based, time based, location based
       % Rule-based access control (RBAC) uses a set of pre-defined rules that determine access permissions based on conditions such as time of day, IP address, or other criteria.
+        A rule-based access control model uses global rules applied to all users and other subjects equally.
       % Role-Based Access Control (RBAC) offers several advantages: Low-Security Cost, By grouping permissions into roles, and Easier to Implement with well-defined roles and responsibilities.
     2) Network access control(NAC) - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
@@ -757,6 +780,7 @@
       % A lower CER indicates a higher-quality biometric device and a higher CER indicates a less accurate device.
       % Signature dynamics, also known as dynamic signature verification, analyzes both the physical motions involved in signing (such as speed, pressure, and rhythm)
         and the static features of the signature itself (such as the shape and style).
+      % A capacitance motion detector senses changes in the electrical or magnetic field surrounding a monitored object.
     4) Registration and identity proofing
       - Request, Approval, Identity proofing, Issuance
   B. Authentication
@@ -844,6 +868,10 @@
       % Detective controls are designed to identify and alert the organization to unauthorized activities, including when authorized users are involved in such actions.
     6) Advanced authorization concepts - RBAC, ABAC, location-based control, Time-of-Day Restriction
       * Risk-based access controls apply stronger standards in situations posing greater risk.
+      % A risk-based access control model can require users to authenticate with multifactor authentication.
+      % The ABAC model is commonly used in SDNs.
+      % Corrective access control is deployed to restore systems to normal after an unwanted or unauthorized activity has occurred.
+      % Administrative overhead is high in a decentralized access control model.
   F. Access Control Attacks
     1) Social engineering - Authority and Trust, Intimidation(Sharing), Consensus/Social Proof, Scarcity, Urgency, Familiarity/Liking
     2) Impersonation attacks - Spam, Phishing, Spear Phishing, Whaling, Pharming, Vishing, Smishing and SPIM, Spoofing, Brand Impersonation
@@ -869,7 +897,7 @@
       % A vulnerability scan will list or enumerate all security risks within a system.
     3) Scan configuration
       % Vulnerability scanning tools are specifically designed to identify security weaknesses, vulnerabilities, and potential exploits in networks, systems, or applications.
-      % Vulnerability scanners can check systems to ensure they are up-to-date with current patches (along with other checks)
+      % Vulnerability scanners can check systems to ensure they are up-to-date with current patches (along with other checks).
     4) Scan perspective
       - Agent-based scanning, Credential-based scanning
     5) Analyzing scan reports
@@ -877,6 +905,7 @@
       % Systems with many or risky services installed should be prioritized higher for scanning.
       % The operating system is not necessarily a major factor in deciding whether a device should be scanned.
       - Vulnerability validation
+      % Common Configuration Enumeration (CCE) provides a naming system for system configuration issues.
     6) Correlating scan results
       % If the vulnerability scanner is in the screened subnet, the scanner has unrestricted access to the web server because it doesn't need to pass through the firewall on the way to the web server.
   B. Penetration Testing
@@ -891,6 +920,7 @@
   C. Log Reviews
     1) Logging security information - Log and Data sources, Syslog(Linux), Tags, NXLog(Centralize)
     2) Security information and event management(SIEM) - SOAR (Security Orchestration, Automation, and Response)
+      % Security Orchestration, Automation, and Response (SOAR) technologies provide automated responses to common attacks, reducing an administrator’s workload.
     3) Continuous security monitoring
       - Monitoring Process (Define, Establish, Implement, Analyze/Report, Respond, Review/Update)
       - Anomaly Analysis, Trend Analysis, Behavioral Analysis, Availability Analysis
@@ -911,7 +941,7 @@
     3) Fuzz testing - Avoid Looking Like a Hacker
     4) Interface testing - APIs(Application Programming Interface)
     5) Misuse case testing
-      % In misuse case testing the testers first enumerate known misuse/abuse cases.
+      % In misuse case testing the testers first enumerate known misuse/abuse cases (possible ways).
     6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
     7) Code repositories - Integrity Measurement
     8) Third-party code - Libraries, SDKs(Software Development Kits)
@@ -946,6 +976,7 @@
       % An audit-reduction tool is designed to process and filter audit logs, removing extraneous information and reducing the volume of data, which makes it easier to analyze and focus on relevant security events.
       % Audit Privilege Use will log events whenever a user or process attempts to exercise a user right or privilege, such as accessing the system remotely.
       % An on-site assessment is a third-party assessment tool where auditors visit the site of the organization to interview personnel and observe their operating habits.
+      % a security control assessment (SCA) is the formal evaluation of a security infrastructure’s individual mechanisms against a baseline or reliability expectation.
     5) Control management - Every Rule Has An Exception
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
       % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
@@ -962,6 +993,9 @@
       % Opportunity specifically refers to the time and place where a crime could be committed.
       % Motive refers to the reasons for committing the crime.
       % Means refer to the ability to commit it(how).
+      % Civil investigations typically follow the “preponderance of the evidence” standard.
+      % A search warrant is a legal document authorized by a judge or magistrate that allows law enforcement to search a specific location for evidence related to a crime.
+      % Internal investigations usually operate under the authority of senior managers, who grant access (i.e., voluntary surrender) to all information and resources necessary to conduct the investigation.
     2) Evidence types
       - Real(tangible objects), Documentary(written information), Testimonial(Witness)
       - Documentary = Authentication rule, Best evidence (Original documents are superior), Parol evidence(Written contract agreement)
@@ -970,6 +1004,8 @@
       % Documentary evidence consists of written information, such as server logs.
       % Corroborative evidence helps to establish the validity of a point or an idea by providing additional information or testimony that is consistent with the primary evidence.
       % The parol evidence rule states that when an agreement between parties is put into written form, the written document is assumed to contain all the terms of the agreement, and no verbal agreements may modify the written agreement.
+      % The best evidence rule states that when a document is used as evidence in a court proceeding, the original document must be introduced.
+      % Real evidence must be either uniquely identified by a witness or authenticated through a documented chain of custody.
     3) Introduction to forensics
       - Digital Forensics, Volatility(Permanence)
     4) System and file forensics - Hashes Protect Evidence(Unique file signature)
@@ -1029,6 +1065,8 @@
     2) Development methodologies - Integrated product team(IPT)
       % The spiral model has four stages: requirements gathering/identification, design, build, and evaluation/risk analysis
       % The manifesto for agile development talks about valuing individuals and interactions, working software, customer collaboration, and responding to change.
+      % The iterative waterfall model uses a seven-stage approach to software development and includes a feedback loop that allows development to return to the previous phase to correct defects discovered during the subsequent phase.
+      % OpenID Connect(OIDC) provides SSO and uses a JavaScript Object Notation (JSON) Web Token (JWT).
     3) Scaled agile framework
       % The Large Solution SAFe configuration focuses on coordinating multiple Agile Release Trains (ARTs) and suppliers, which is necessary for building large, complex solutions but does not encompass the full breadth of SAFe.
       % The Full SAFe configuration incorporates all aspects of SAFe, including essential, large solution, and portfolio levels, to support enterprises with large and complex solutions.
@@ -1040,8 +1078,10 @@
         requirements management, and supplier agreement management.
     5) Automation and DevOps - Infrastructure as Code
       * DevSecOps applies DevOps techniques to a cybersecurity program.
+      % The three elements of the DevOps model are software development, quality assurance, and IT operations.
       % The DevOps model prioritizes operational tasks over development efforts.
       % DevOps combines Development and Operations to rapidly release code and meet customer demands.
+      % Before releasing any code into production, the DevOps manager should verify the hashes of the files to be released. 
       % The JVM is the runtime virtual machine that allows the execution of Java code on a device.
     6) Programming Languages - Reverse Engineering
       % An assembler converts assembly language, a low-level programming language, into executable machine code, not the reverse.
@@ -1080,6 +1120,7 @@
     9) Session hijacking - Guessable cookies
     10) Code execution attacks
       % Code execution attacks occur when an attacker exploits a vulnerability in a system that allows the attacker to run commands on that system.
+      % Although an advanced persistent threat (APT) may leverage any of these attacks, they are most closely associated with zero-day attacks due to the cost and complexity of the research required to discover or purchase them.
     11) Privilege escalation
     12) Driver manipulation - Refactoring, Shimming
       % Driver refactoring involves modifying and improving the internal structure of existing driver code without changing its external behavior, not for malicious purposes.
@@ -1101,6 +1142,7 @@
       * You don't need to know the details of the normal forms on the exam.
       - Database Activity Monitoring, Stored Procedures
       % There is an active and healthy debate in the database community about how closely database designers should follow the normal forms.
+      % The atomicity of database transactions requires transaction execution in an all-or-nothing fashion.
     8) Data de-identification - Anonymization
       % You can often combine seemingly innocuous fields to uniquely identify an individual.
       % Anonymization techniques remove all data so that it is difficult to identify the original identities.
