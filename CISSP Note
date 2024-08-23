@@ -11,6 +11,7 @@
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
   B. Security Governance
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
+      % Security governance should include acquisitions, divestitures, and governance committees.
     1) Aligning security with the business - security leader, business leader, security professionals  
       * unbalanced decisions
       % The business or mission owner is responsible for defining the strategic direction of the organization and ensuring that all operations, processes, and initiatives align with the overall business objectives.
@@ -117,6 +118,8 @@
       % maximum tolerable downtime (MTD) represents the maximum amount of time that a business function or resource can be unavailable before it causes significant harm to the organization.
     3) Risk treatment - Inherent Risk => controls applied => residual risk + control risk, Expansionary/Neutral/Conservative
       % Insurance is a form of risk assignment or transference.
+      % Inherent risk is the level of natural, native, or default risk that exists in an environment, system, or product prior to any risk management efforts being performed.
+      % Residual risk is the leftover risk after countermeasures and safeguards are implemented in response to original or total risk.
     4) Security control selection and implementation - Defense in Depth    
       * Technical controls are implemented by technology while operational controls are implemented by people!
       % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
@@ -125,6 +128,7 @@
       % managed detection and response (MDR) combines antimalware capabilities with a managed service that reduces the burden on the IT team.
     5) Continuous monitoring, measurement, and tuning
       % In reality, automated tools are often more thorough because they can continuously monitor and analyze large amounts of data in real-time, detecting patterns and anomalies that might be missed by manual monitoring.
+      % Tailoring refers to modifying a list of security controls to align with the organization’s mission.
     6) Risk management frameworks - NIST 800-37 (categorize, select, implement, assess, authorize, monitor)
     7) Risk visibility and reporting
       % Risk mitigation procedures are usually developed by security or risk management teams within the organization.
@@ -141,14 +145,17 @@
     7) Threat hunting
   I. Supply Chain Risk Management
     1) Managing vendor relationships - VMS(vendor management system)
+      % VMS is a software solution that assists with the management and procurement of staffing services, hardware, software, and other needed products and services.
     2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
     3) Vendor information management
+      % Just-in-time (JIT) provisioning will create the accounts automatically the first time the employee accesses the benefits site.
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
       % SOC 2 reports focus on a business's controls relevant to security, availability, processing integrity, confidentiality, and privacy of data.
       % SOC 3 engagements assess the organization’s controls that affect the security and privacy of information stored in a system.
       % The information regarding the backup and restoration of data in SOC 2 and SOC 3 reports applies to the availability tenet.
   J. Awareness and Training
     1) Security awareness training
+      % Educating users is an important part of preventing virus infections and works with technical controls such as antimalware software.
     2) Compliance training
     3) User habits
     4) Measuring compliance and security
@@ -165,6 +172,7 @@
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
       % Data remanence is data remnants on media, and data destruction methods remove data remnants.
       % Slack space is the unused space in a cluster.
+      % Data classifications provide strong protection against the loss of confidentiality and are the best choice of the available answers.
     3) Data security roles
       - Data Owner(business leaders) > Steward(handling day to day) > Custodian(IT staff members) > User
       % A data controller identifies what data to pass and process to the data processor and how that data should be processed.
@@ -232,7 +240,8 @@
       % The three media management or control modes are simplex (one-direction), half-duplex (two-way, but only one direction can send data at a time),
         and full-duplex (two-way, in which data can be sent in both directions simultaneously) communications.
     4) Supply chain risks and mitigations
-      - End of Sale(no longer be offered for purchase), End of Support(reduce or eliminate support), End of Life(no longer provide any support)
+      - End of Sale(no longer be offered for purchase), End of Support(EOS, reduce or eliminate support), End of Life(no longer provide any support)
+      % Systems with an EOS date that occurs in the following year should be a top priority for replacement.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -250,6 +259,7 @@
       % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
       % The Take-Grant model is an access control model that uses states and state transitions to define how rights can be transferred between subjects and objects.
       % The Clark-Wilson model is designed to enforce well-formed transactions and separation of duties, ensuring integrity through the implementation of integrity-monitoring rules and integrity-preserving rules.
+        The Clark–Wilson model does define the constrained data item, transformation procedures, and integrity verification procedure.
       % The trusted computing base (TCB) has a component known as the reference monitor in theory, which becomes the security kernel in implementation.
       % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
@@ -262,11 +272,11 @@
       % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products.
         EAL1: Functionally Tested. EAL2: Structurally Tested. EAL3: Methodically Tested and Checked. EAL4: Methodically Designed, Tested, and Reviewed (common benchmark for commercial products).
         EAL5: Semi-Formally Designed and Tested. EAL6: Semi-Formally Verified Design and Tested. EAL7: Formally Verified Design and Tested (highest level of assurance).
+      % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
       * Certification and accreditation are different. Accreditation and authorization are the same.
       % Certification is the process of evaluating and verifying that security controls are correctly implemented and functioning as intended within an information system.
-      % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
       % When the vendor is not meeting minimal security requirements which are necessary to the protection of the service and its customers, they should void the authorization to operate (ATO) of this vendor.
-      % The four types of ATOs(Authorization to Operate) are authorization to operate (not listed as an option), common control authorization, authorization to use, and denial of authorization.
+      % The four types of ATOs(Authorization to Operate) are authorization to operate, common control authorization, authorization to use, and denial of authorization.
     4) Segregation of duties
       % Segregation of duties is the principle that ensures no individual has access to multiple permissions
         that would allow them to perform a highly sensitive action alone, preventing fraud and errors.
@@ -347,6 +357,7 @@
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
       % Grid computing utilizes the unused processing power of multiple computers across different locations, combining them to form a virtual supercomputer that is managed by a centralized controller.
       % For an office performing highly sensitive tasks, especially for a governmental entity, maintaining a low profile choosing a location with low visibility helps minimize the attention drawn to the facility
+      % High-performance computing (HPC) systems are used when real-time or near-real-time processing of massive data is necessary for a particular task or application. 
   E. Embedded Systems Security
     1) Industrial control systems and operational technology
       - SCADA(supervisory control and data acquisition, Remote Central), DCS(Controlling processes), PLC
@@ -547,6 +558,7 @@
       - Service-Oriented Architecture
       - Microservices
       % Microservices are fine-grained services that provide small and discrete functions to other services.
+      % Arduino is an open source hardware and software organization that creates single-board 8-bit microcontrollers for building digital devices.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -565,6 +577,7 @@
     3) Network traffic
       % A dual backbone configuration typically involves having two separate network backbones, which ensures that if one backbone fails, the other can take over, maintaining network availability and minimizing downtime.
       % SPAN ports and network taps are the most reliable mechanisms for gathering network traffic.
+      % Quality of service (QoS) controls allow administrators to prioritize different types of network traffic
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
       % DNSSEC uses certificates to perform mutual authentication between DNS servers, and thus public key infrastructure (PKI) is needed to provide and support those certificates.
     5) Network ports
@@ -574,7 +587,7 @@
       - Port 80(HTTP), Port 443(HTTPS)
     6) ICMP -Traceroute
     7) Multilayer protocols -  DNP3(Distributed Network Protocol)
-      % Encapsulation is both a benefit and a potentially harmful implication of multilayer protocols.
+      % Encapsulation is both a benefit and a potentially harmful implication of multilayer protocols(IPv4 with IPv6).
   B. Secure Network Design
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
@@ -626,6 +639,7 @@
       % The external firewall shields the VPN gateway from direct exposure to the internet, filtering out unauthorized traffic.
       % If traffic is decrypted at the VPN gateway, the firewall can inspect the plaintext before it enters the internal network, allowing for additional security checks.
       % In a VPN, trust is not as much of a primary concern because the communication is encrypted and secured over a public network like the internet.
+      % Tunnel mode VPNs are used to connect networks to networks or hosts to networks.
     8) Network intrusion detection and prevention
       % An IDS is most likely to connect to a switch port configured as a mirrored port.
       * Anomaly detection, behavior-based detection, and heuristic detection are the same thing.
@@ -721,6 +735,7 @@
       % Beam forming uses multiple antennas to detect the location of a device connecting to the wireless access point and then steers the signal in the direction of that device.
       % Pulse modulation refers to a method of encoding information in a signal, rather than focusing wireless signals towards devices.
       % A site survey helps you detect any unauthorized access points (often referred to as "rogue" access points) that might have been set up in your building.
+      % Orthogonal Frequency-Division Multiplexing (OFDM) offers high throughput with the least interference.
     5) Wireless networking equipment - Fat Access Points, Wi-Fi Analyzer
       % A wireless controller manages configurations, optimizes performance, and reduces interference among APs in wireless networks.
       % Fat AP refers to an access point with built-in intelligence for handling data processing but does not manage or optimize multiple APs.
@@ -798,6 +813,7 @@
       % Federated Identity Management (FIM) is best to implement when you have accounts across multiple service providers with whom you would like to share identity information.
         With FIM, you can use one login to access resources you've been authorized throughout the federation.
       % To implement a single sign-on (SSO) system, the organization could use the following technologies: RADIUS, Kerberos, SESAME, Active Directory
+      % SSO solutions and centralized administration and make it easier for administrators to manage user accounts.
     6) RADIUS (Remote Authentication Dial-In User Service)- Centralized approach
       * Remember that a RADIUS client is usually an application server!
       % RADIUS typically uses UDP, which is less reliable than TCP, and does not fully encrypt the authentication session, only the password.
@@ -866,6 +882,7 @@
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
       % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
       % Detective controls are designed to identify and alert the organization to unauthorized activities, including when authorized users are involved in such actions.
+      % A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies.
     6) Advanced authorization concepts - RBAC, ABAC, location-based control, Time-of-Day Restriction
       * Risk-based access controls apply stronger standards in situations posing greater risk.
       % A risk-based access control model can require users to authenticate with multifactor authentication.
@@ -900,6 +917,7 @@
       % Vulnerability scanners can check systems to ensure they are up-to-date with current patches (along with other checks).
     4) Scan perspective
       - Agent-based scanning, Credential-based scanning
+      % While all of these tools are capable of detecting database vulnerabilities, only sqlmap is custom-designed for that purpose.
     5) Analyzing scan reports
       - vulnerability severity, system criticality, information sensitivity, remediation difficulty, system exposure
       % Systems with many or risky services installed should be prioritized higher for scanning.
@@ -973,6 +991,7 @@
     4) Audits and assessments - User Access Reviews
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
+      % This type of review, conducted by an independent auditor at the request of the governing body, is best described as an audit.
       % An audit-reduction tool is designed to process and filter audit logs, removing extraneous information and reducing the volume of data, which makes it easier to analyze and focus on relevant security events.
       % Audit Privilege Use will log events whenever a user or process attempts to exercise a user right or privilege, such as accessing the system remotely.
       % An on-site assessment is a third-party assessment tool where auditors visit the site of the organization to interview personnel and observe their operating habits.
@@ -1067,15 +1086,18 @@
       % The manifesto for agile development talks about valuing individuals and interactions, working software, customer collaboration, and responding to change.
       % The iterative waterfall model uses a seven-stage approach to software development and includes a feedback loop that allows development to return to the previous phase to correct defects discovered during the subsequent phase.
       % OpenID Connect(OIDC) provides SSO and uses a JavaScript Object Notation (JSON) Web Token (JWT).
+      % The Fagan inspection model uses the six formal steps of planning, overview, preparation, inspection, rework, and follow-up to conduct a formal code review process.
+      % The daily stand-up meeting is a hallmark of the Scrum methodology.
     3) Scaled agile framework
       % The Large Solution SAFe configuration focuses on coordinating multiple Agile Release Trains (ARTs) and suppliers, which is necessary for building large, complex solutions but does not encompass the full breadth of SAFe.
       % The Full SAFe configuration incorporates all aspects of SAFe, including essential, large solution, and portfolio levels, to support enterprises with large and complex solutions.
       % The Essential SAFe configuration is the basic building block of SAFe, focusing on the team and program levels, but it does not include the large solution and portfolio levels.
-    4) Maturity models - Capability Maturity Model Integration(CMMI), Software Assurance Maturity Model(SAMM)
+    4) Maturity models - Capability Maturity Model Integration(CMMI), Software Assurance Maturity Model(SAMM), Risk Maturity Model(RMM)
       % Level 3 is defined and activities include: decision analysis & resolution, integrated project management, organizational process definition, organizational training,
         organizational process focus, product integration, requirements development, risk management, technical solution, validation, and verification.
       % Level 2 is managed and activities include: configuration management, measurement & analysis, project monitoring & control, project planning, process & product QA,
         requirements management, and supplier agreement management.
+      % The level of RMM named Defined requires that a common or standardized risk framework be adopted organization-wide.
     5) Automation and DevOps - Infrastructure as Code
       * DevSecOps applies DevOps techniques to a cybersecurity program.
       % The three elements of the DevOps model are software development, quality assurance, and IT operations.
@@ -1116,6 +1138,7 @@
     6) Defending against directory traversal
     7) Overflow attacks - Buffer Overflow Attacks
       % Buffer overflow attacks seek to write data to areas of memory reserved for other purposes.
+      % Buffer overflow attacks allow an attacker to modify the contents of a system’s memory by writing beyond the space allocated for a variable.
     8) Explaining cookies and attachments
     9) Session hijacking - Guessable cookies
     10) Code execution attacks
