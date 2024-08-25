@@ -269,10 +269,10 @@
         D - Minimal Protection, C1 - Discretionary Security Protection, C2 - Controlled Access Protection
         B1 - Labeled Security Protection, B2 - Structured Protection(covert channel analysis), B3 - Security Domains, A1 - Verified Design
       % The Common Criteria (CC) framework includes components such as Protection Profile (PP), Security Target (ST), and Target of Evaluation (TOE).
+      % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
       % The Common Criteria Evaluation Assurance Level (EAL) is a scale that measures the depth and rigor of an evaluation for information technology products.
         EAL1: Functionally Tested. EAL2: Structurally Tested. EAL3: Methodically Tested and Checked. EAL4: Methodically Designed, Tested, and Reviewed (common benchmark for commercial products).
         EAL5: Semi-Formally Designed and Tested. EAL6: Semi-Formally Verified Design and Tested. EAL7: Formally Verified Design and Tested (highest level of assurance).
-      % Security targets (STs) specify the claims of security from the vendor that are built into a target of evaluation (TOE).
       * Certification and accreditation are different. Accreditation and authorization are the same.
       % Certification is the process of evaluating and verifying that security controls are correctly implemented and functioning as intended within an information system.
       % When the vendor is not meeting minimal security requirements which are necessary to the protection of the service and its customers, they should void the authorization to operate (ATO) of this vendor.
@@ -917,7 +917,7 @@
       % Vulnerability scanners can check systems to ensure they are up-to-date with current patches (along with other checks).
     4) Scan perspective
       - Agent-based scanning, Credential-based scanning
-      % While all of these tools are capable of detecting database vulnerabilities, only sqlmap is custom-designed for that purpose.
+      % sqlmap is custom-designed for that purpose.
     5) Analyzing scan reports
       - vulnerability severity, system criticality, information sensitivity, remediation difficulty, system exposure
       % Systems with many or risky services installed should be prioritized higher for scanning.
