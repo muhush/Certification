@@ -22,10 +22,13 @@
       % Failing to perform periodic security audits can result in the perception that due care is not being maintained.
       % Due Diligence ensures that a company is aware of potential issues and takes appropriate measures to address them.
       % Due diligence often includes deployment of all necessary security controls as determined by risk management; crafting of policies, standards, guidelines, and procedures; and establishment of a board of directors.
+        Due diligence is establishing a plan, policy, and process to protect the interests of an organization.
+      % Security personnel perform a root cause analysis during the remediation stage during incident management.
     4) Control and risk frameworks 
       - COBIT (Control Objectives for IT, Audit), ISO Standards (IT control), NIST 800-53, NIST RMF (800-37), FedRAMP, SABSA
       % While COBIT focuses more on aligning IT management with business objectives and governance,
         ISO standards provide specific requirements for maintaining information security management quality and consistency across industries globally.
+      % The COBIT key principles are: Provide Stakeholder Value, Holistic Approach, Dynamic Governance System, Governance Distinct From Management, Tailored to Enterprise Needs, and End-to-End Governance System.
       - SABSA (Sherwood Applied Business Security Architecture)
   C. Compliance and Ethics
     % A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies.
@@ -34,6 +37,7 @@
       % The Fifth Amendment primarily protects individuals from self-incrimination, meaning that suspects cannot be compelled to provide evidence against themselves.
       % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
       % The Family Educational Rights and Privacy Act (FERPA) protects the rights of students and the parents of minor students.
+      % The Gramm–Leach–Bliley Act (GLBA) provides, among other things, regulations regarding the way financial institutions can handle private information belonging to their customers.
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
       % The Children’s Online Privacy Protection Act (COPPA) provides severe penalties for companies that collect information from young children without parental consent (younger than the age of 13).
     3) GDPR - E.U regulations, anyone in E.U geolocation
@@ -58,7 +62,10 @@
       * Encryption is easy to protect data breach
     11) Ethics
       * ISC2 members are required to report breaches of the Code of Ethics to ISC2 for investigation
-      % The second canon of the (ISC) 2 Code of Ethics states how a CISSP should act, which is honorably, honestly, justly, responsibly, and legally.
+      % The first canon: Protect Society, the Common Good, Necessary Public Trust, and Confidence
+      % The second canon: act honorably, honestly, justly, responsibly, and legally.
+      % The third canon: Provide Diligent and Competent Service to Principals
+      % The fourth canon: Advance and Protect the Profession
       % The Internet Architecture Board(IAB) developed an ethics-related statement concerning the use of the internet, particularly through their "Ethics and the Internet" document
   D. Security Policy
     1) Security policy framework - policies > standard(details) > guidelines(advice) / procedures    
@@ -75,6 +82,7 @@
       % Risk mitigation controls to address acceptable risks would not be in the BCP.
       % An executive succession plan is designed to identify and prepare individuals to fill key leadership roles within an organization in the event that they become vacant, whether due to a disaster or other circumstances.
       % The qualitative analysis portion of the business impact analysis (BIA) allows you to introduce intangible concerns, such as loss of customer goodwill, into the BIA planning process.
+      % The quantitative portion of the priority identification should assign asset values in monetary units.
       % Project Initiation: Establish the continuity planning policy statement, define objectives, scope, and obtain management support.
         Business Impact Analysis (BIA): Identify critical business functions, determine the impact of disruptions, and prioritize recovery efforts.
         Identify Preventative Controls: Implement measures to reduce the likelihood of disruptions.
@@ -104,6 +112,7 @@
     4) Employee privacy - minimization, limit access, encryption, masking (hiding)
     5) Social networking - multi-factoring
   G. Risk Management
+    % Risk is an assessment of probability, possibility, or chance, threat × vulnerability, and Every instance of exposure
     1) Risk analysis, assessment, and scope    
       * Threat vectors are the specific methods that threats use to exploit a vulnerability
     2) Quantitative risk assessment 
@@ -133,7 +142,8 @@
     7) Risk visibility and reporting
       % Risk mitigation procedures are usually developed by security or risk management teams within the organization.
         Senior management is responsible for setting the overall risk acceptance level, allocating resources, and approving monetary budgets for risk management.
-      % The visibility considerations include types of neighbors and building markings and signs
+      % The visibility considerations include types of neighbors and building markings and signs.
+      % Alternative systems are that redundant communications circuits provide backup links that may be used when the primary circuits are unavailable.
   H. Threat Modeling
     1) Threat intelligence - Open-source intelligence, Email Address Harvesting
     2) Managing threat indicators - CybOX, STIX, TAXII, OpenIOC
@@ -141,6 +151,7 @@
     4) Threat research
     5) Identifying threats - structured approach
       % The three common threat modeling approaches from this list of options are focus on attackers, focus on assets, and focus on software.
+      % a proactive approach to threat modeling, known as the defensive approach is threat hunting takes place after a product has been created and deployed
     6) Automating threat intelligence - Data Enrichment
     7) Threat hunting
   I. Supply Chain Risk Management
@@ -228,6 +239,7 @@
       % Concurrency uses a “lock” feature to allow an authorized user to make changes and then “unlock” the data elements only after the changes are complete.
       % Change management aims to ensure that any change does not result in unintended outages or reduce security.
       % Change management processes include requesting a change, creating a rollback plan for the change, release control, change control, and documenting the change.
+      % Elasticity provides for automatic provisioning and deprovisioning of resources to meet demand.
     2) Configuration and asset management
       - Baselines, Versioning
       % Configuration management includes supporting rollback of changes, maintaining detailed documentation, and running configuration audits.
@@ -392,6 +404,8 @@
     5) Cryptographic math
       - Exclusive Or(XOR), 
       - Confusion, Defusion, Obfuscation
+      % Confusion occurs when the relationship between the plaintext and the key is so complicated that an attacker can’t merely continue altering the plaintext and analyzing the resulting ciphertext to determine the key.
+        Diffusion occurs when a change in the plaintext results in multiple changes spread throughout the ciphertext.
     6) Choosing encryption algorithms
        * Don't try to build your own encryption algorithm unless you really know what you're doing
     7) The perfect encryption algorithm
@@ -458,6 +472,7 @@
     3) Hash functions - MD5, SHA(Federal Computer), RIPEMD(government-sponsored)
       % The SHA-2 hash function produces hashes of 224, 256, or 512 bits.
       % Any change to the contents of a file changes the hash value generated for that file. This would include changing a single character, removing a line, or adding a line (even if that line is blank).
+      % The output of a hash function must be a fixed length, not any length. Hash functions must also be one-way, collision resistant, and relatively easy to compute.
       % Message digests (or hashes) are used to prove the integrity of the original image.
       % The Message Authentication Code (MAC) ensures message integrity.
       % Message Security Protocol (MSP) is a U.S. military standard designed to protect email communications
@@ -471,6 +486,7 @@
       % DSA is no longer an acceptable implementation of digital signatures in the federal government under FIPS 186-5.
       % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
       % The Digital Signature Standard allows federal government use of the Digital Signature Algorithm, RSA, or the Elliptic Curve DSA in conjunction with the SHA-1 hashing function to produce secure digital signatures.
+      % The Bureau of Industry and Security(BIS) within the Department of Commerce sets regulations on the export of encryption products outside of the United States.
     6) Created a digital certificate
     7) Revoke a digital certificate - CRL(Certificate Revocation List), OCSP(Online Certificate Status Protocol)
       % The most effective method of revoking digital certificates is through the interactive OCSP responder.
@@ -517,6 +533,7 @@
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
       % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
       % Implementation attacks rely on flaws in the cryptographic algorithm.
+      % Side-channel attacks use information gathered about a system’s use of resources, timing, or other characteristics to contribute to breaking the security of encryption.
     5) Limitations of encryption algorithms
     6) Ransomware - Mimikatz, Countermeasure(Backups, Antimalware)
       * Ransomware is specifically called out in the exam objectives
@@ -572,12 +589,16 @@
       % The Network layer (Layer 3) is responsible for ensuring that data is properly directed through the network to reach its intended endpoint such as path selection and logical addressing.
       % Transport layer has flow control, reliable communication, error detection and recovery
       % The Application layer provides the interface between the application software and the network, enabling various services such as file transfers, printing, messaging, and email.
+      % Multicasting is the transmission of data to multiple specific recipients.
+        Internet Group Management Protocol (IGMP) is used to register a host’s dynamic multicast group membership in order to receive a copy of the data stream.
+        TFTP systems can be used to host or cache multicast datasets that are to be sent to the multiple recipients.
     2) IP addresses and DHCP - IPv4, IPv6
       % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
       % A dual backbone configuration typically involves having two separate network backbones, which ensures that if one backbone fails, the other can take over, maintaining network availability and minimizing downtime.
       % SPAN ports and network taps are the most reliable mechanisms for gathering network traffic.
-      % Quality of service (QoS) controls allow administrators to prioritize different types of network traffic
+      % Quality of service (QoS) controls allow administrators to prioritize different types of network traffic.
+      % A TCP Wrapper is an application that can serve as a basic firewall by restricting access based on user IDs or system IDs.
     4) Domain name system (DNS) - UDP port 53, DNSSEC(digital signatures)
       % DNSSEC uses certificates to perform mutual authentication between DNS servers, and thus public key infrastructure (PKI) is needed to provide and support those certificates.
     5) Network ports
@@ -585,12 +606,14 @@
       - Port 21(FTP), Port 22(SSH), Port 3389(RDP), Port 137, 138, and 139(NetBIOS)
       - Port 25(SMTP), Port 110(POP), Port 143(IMAP)
       - Port 80(HTTP), Port 443(HTTPS)
+      % Port 1433 is a database port and should never be exposed to an external network
     6) ICMP -Traceroute
     7) Multilayer protocols -  DNP3(Distributed Network Protocol)
       % Encapsulation is both a benefit and a potentially harmful implication of multilayer protocols(IPv4 with IPv6).
   B. Secure Network Design
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
+      % Static NAT is needed to allow an outside entity to initiate communications with an internal system behind a NAT proxy. 
     2) Subnetting - Subnet Masks
     3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary, "for this specific purpose")
       % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
@@ -630,6 +653,7 @@
         It enables the real-time modification of the filtering rules based on traffic content and context. 
       % SOCKS is a circuit-level proxy firewall that provides a secure channel between two computers.
       % Application-level proxy firewalls inspect detrimentally the contents of packets at the application layer to introduce significant latency and overhead, leading to a more noticeable impact on network performance.
+      % Firewalls use a rule-based access control model with rules expressed in an access control list.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
@@ -699,6 +723,8 @@
   F. Transport Encryption
     1) TLS and SSL
       * TLS depends upon pairings of encryption and hash functions known as cipher suites.
+      % TLS allows for use of TCP port 443; prevents tampering, spoofing, and eavesdropping; and can be used as a VPN solution.
+      % TLS and SSL are not interoperable or backward compatible.
       * Session keys are also known as ephemeral keys.
     2) IPsec
       - ESP(Encapsulating Security Payload, Confidentiality), Authentication Header(AH, Integrity)
@@ -741,6 +767,7 @@
       % Fat AP refers to an access point with built-in intelligence for handling data processing but does not manage or optimize multiple APs.
   H. Mobile Device Security
     1) Mobile connection methods - Cellular Networks, Wi-Fi Networks, NFC, Bluetooth(30 feet)
+      % LEO(Low Earth Orbit) offers high-speed communications with minimal latency when compared to other satellite offerings.
     2) Mobile device security
       % Bluejacking involves sending anonymous, unsolicited messages to Bluetooth-enabled devices within range, typically for harmless pranks or marketing purposes.
     3) Mobile device management(MDM)
@@ -764,6 +791,7 @@
       - Spam Filtering
       % A companion virus, also known as a "spawning" virus, works by creating a new file with the same name as a legitimate file but with a different extension.
       % Retroviruses are designed specifically to target and disable security software, including antivirus programs, making it more difficult for the system to detect and remove the malicious code.
+      % Fileless malware is malware that leaves no trace of its presence nor saves itself to a storage device, but is still able to stay resident and active on a computer.
     3) Application management
       * While the terms whitelisting and blacklisting are problematic, you should still know them for the exam.
       % BitLocker is a full disk encryption feature designed to protect data by providing encryption for entire volumes so that data cannot be stolen.
@@ -796,6 +824,7 @@
       % Signature dynamics, also known as dynamic signature verification, analyzes both the physical motions involved in signing (such as speed, pressure, and rhythm)
         and the static features of the signature itself (such as the shape and style).
       % A capacitance motion detector senses changes in the electrical or magnetic field surrounding a monitored object.
+      % Iris scanners are the most accurate, noninvasive biometric control from those listed.
     4) Registration and identity proofing
       - Request, Approval, Identity proofing, Issuance
   B. Authentication
@@ -825,7 +854,7 @@
         such as the risk associated with the transmission of session keys. 
       % Callback ensures that only users from specific locations (those with authorized phone numbers) can access the network, adding an additional layer of security.
     7) Kerberos and LDAP 
-      - Kerberos = core protocols for MS Active directory, Port 88
+      - Kerberos = core protocols for MS Active directory, Port 88, Golden tickets
       % Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. 
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
@@ -852,6 +881,7 @@
       % When elevated privileges are required, the "Run as" command temporarily grants the necessary permissions without exposing the entire session to administrative rights, thereby adhering to the principle of least privilege.
     2) Account types - User Account, Privileged Account, Shared Account, Service Account
       * Avoid the use of shared/generic accounts and credentials.
+      % Service accounts are regular accounts that are used to run applications and services.
     3) Account Policies - Group Policy Object(GPO)
       % Group policies provide centralized management and configuration of all entities to enforce security and compliance standards throughout the organization.
       % Using a domain group policy allows you to centrally manage and enforce the restriction across all computers in the domain.
@@ -887,10 +917,12 @@
       * Risk-based access controls apply stronger standards in situations posing greater risk.
       % A risk-based access control model can require users to authenticate with multifactor authentication.
       % The ABAC model is commonly used in SDNs.
+      % An ABAC model can require user devices to meet specific requirements, such as being up-to-date with a current operating system.
       % Corrective access control is deployed to restore systems to normal after an unwanted or unauthorized activity has occurred.
       % Administrative overhead is high in a decentralized access control model.
   F. Access Control Attacks
     1) Social engineering - Authority and Trust, Intimidation(Sharing), Consensus/Social Proof, Scarcity, Urgency, Familiarity/Liking
+      % A valid goal of a grudge attack is any action that can harm a person or organization, either directly or through embarrassment.
     2) Impersonation attacks - Spam, Phishing, Spear Phishing, Whaling, Pharming, Vishing, Smishing and SPIM, Spoofing, Brand Impersonation
     3) identity fraud and pretexting - Pretexting Attacks
       % In a pretexting attack, the attacker contacts a third-party company pretending to be the consumer and attempts to gain access to that consumer's account.
@@ -985,6 +1017,7 @@
   F. Assessing Security Processes
     1) Collect security process data
     2) Management review and approval
+      % Security processes should be implemented at these times to reduce the risk of data loss and leakage, such as sanitizing assets, remove and destroy storage media, and debrief ex-employees.
     3) Security metrics
       % KRIs(Key Risk Indicators) are measures that seek to quantify the security risk facing an organization.
       % KPIs(Key Performance Indicators) are metrics that demonstrate the success of the security program in achieving its objectives.
@@ -1088,6 +1121,7 @@
       % OpenID Connect(OIDC) provides SSO and uses a JavaScript Object Notation (JSON) Web Token (JWT).
       % The Fagan inspection model uses the six formal steps of planning, overview, preparation, inspection, rework, and follow-up to conduct a formal code review process.
       % The daily stand-up meeting is a hallmark of the Scrum methodology.
+      % Integrated Product Teams (IPTs) were introduced in 1995 by DoD to bring together stakeholders and foster parallel decision-making.
     3) Scaled agile framework
       % The Large Solution SAFe configuration focuses on coordinating multiple Agile Release Trains (ARTs) and suppliers, which is necessary for building large, complex solutions but does not encompass the full breadth of SAFe.
       % The Full SAFe configuration incorporates all aspects of SAFe, including essential, large solution, and portfolio levels, to support enterprises with large and complex solutions.
@@ -1100,6 +1134,7 @@
       % The level of RMM named Defined requires that a common or standardized risk framework be adopted organization-wide.
     5) Automation and DevOps - Infrastructure as Code
       * DevSecOps applies DevOps techniques to a cybersecurity program.
+      % The DevSecOps approach integrates software development, cybersecurity, and operations into a single approach where the teams work closely together.
       % The three elements of the DevOps model are software development, quality assurance, and IT operations.
       % The DevOps model prioritizes operational tasks over development efforts.
       % DevOps combines Development and Operations to rapidly release code and meet customer demands.
@@ -1153,10 +1188,12 @@
         including potentially sensitive information like encryption keys or cached data.
     14) Race condition vulnerabilities - Time of Check/Time of Use
   C. Secure Coding Practices
+    % Secure coding practices include using stored procedures, code signing, and server-side validation.
     1) Input validation - whitelisting, blacklisting
       * Input validation should always be performed on the server.
     2) Parameterized queries - Stored Procedures
       % A stored procedure is an example of a parameterized query.
+      % Developers of web applications should leverage parameterized queries to limit the application’s ability to execute arbitrary code.
     3) Authentication/session management issues - Hashing, Salting, Transport layer security
     4) Output encoding - HTML encoding, URL encoding
     5) Error and exception handling
