@@ -12,6 +12,7 @@
   B. Security Governance
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
       % Security governance should include acquisitions, divestitures, and governance committees.
+      % A divestiture occurs when something is being removed from the organization, whether a device, service, employee, or partnership.
     1) Aligning security with the business - security leader, business leader, security professionals  
       * unbalanced decisions
       % The business or mission owner is responsible for defining the strategic direction of the organization and ensuring that all operations, processes, and initiatives align with the overall business objectives.
@@ -43,6 +44,8 @@
     3) GDPR - E.U regulations, anyone in E.U geolocation
     4) California privacy law - CPRA (SPI = Sensitive)
     5) National data privacy laws - PIPL(China), PPIA (South Africa)
+      % Information Technology Infrastructure Library (ITIL) was initially crafted by the British government for domestic use but is now an international standard,
+        which is a set of recommended best practices for core IT security and operational processes, and is often used as a starting point for the crafting of a customized IT security solution.
     6) Computer crimes - CFAA (Access), ECPA (network communication), ITADA (Identity)
       % The Computer Fraud and Abuse Act (CFAA) primarily focuses on unauthorized access to computer systems,
         especially those related to financial institutions, federal government systems, and the misuse of passwords for fraudulent purposes.
@@ -114,7 +117,8 @@
   G. Risk Management
     % Risk is an assessment of probability, possibility, or chance, threat × vulnerability, and Every instance of exposure
     1) Risk analysis, assessment, and scope    
-      * Threat vectors are the specific methods that threats use to exploit a vulnerability
+      * Threat vectors are the specific methods that threats use to exploit a vulnerability.
+      % The DREAD questions are about Damage potential, Reproducibility, Exploitability, Affected users, and Discoverability.
     2) Quantitative risk assessment 
       - single risk and asset pair, Asset Value(AV), Exposure Factor(EF), Single-Loss Expectancy(SLE)
       - AV * EF = SLE
@@ -167,6 +171,7 @@
   J. Awareness and Training
     1) Security awareness training
       % Educating users is an important part of preventing virus infections and works with technical controls such as antimalware software.
+        Awareness establishes a common baseline or foundation of security understanding across the entire organization and focuses on key or basic topics and issues related to security that all employees must understand.
     2) Compliance training
     3) User habits
     4) Measuring compliance and security
@@ -178,6 +183,7 @@
     1) Understanding data security
       - Data at Rest, Data in Transit, Data in Use
       % In asynchronous communication, data is transmitted one byte at a time, with start and stop bits used to signal the beginning and end of each byte.
+      % Assets are classified based on the data that they hold or process.
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
@@ -189,7 +195,7 @@
       % A data controller identifies what data to pass and process to the data processor and how that data should be processed.
       % The data custodian is responsible for day-to-day tasks(data protection tasks) maintaining and protecting data, such as backing up data,
         but the overall responsibility often lies with security professionals and other relevant departments.
-      % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data.
+      % Data owners have the ultimate responsibility for protecting data, and they identify the classification of data. Also, they have final corporate responsibility for the protection and storage of data.
       - Data Subject(collected data), Data processors(third parties)
       * GDPR(General Data Protection Regulation) uses the term data controller instead of data owner
       * System ownership and data ownership are two different concepts
@@ -327,6 +333,7 @@
       - VDI(Virtual Desktop Infrastructure), Application Virtualization
       % Browsing the internet on a virtualization host can expose the host to unnecessary security risks, such as malware infections or unauthorized access, which could compromise the entire virtualization environment.
     8) Cloud compute resources
+      % Serverless architecture is a cloud computing concept where code is managed by the customer and the platform (i.e., supporting hardware and software) or server is managed by the cloud service provider (CSP).
     9) Containerization
       - Applications are what containerized computing environments are created for.
       % A hypervisor is not part of containerization. A hypervisor is an application where you can create, manage, and run multiple VMs.
@@ -481,6 +488,7 @@
       - Authentication(signed message), Integrity(not alter), Non-reputation(prove third party)
       % Authentication verifies the identity of the sender
       % Digital signatures verify the authenticity and integrity of the driver files, ensuring they come from a trusted source and have not been tampered with since being published. 
+      % The digital signature is authentic, the certificate has not expired, and the certificate has not been revoked.
       - Collision-resistant, Asymmetric                    
     5) Digital signature standard
       - RSA, ECDSA, EdDSA
@@ -488,6 +496,7 @@
       % The hashing algorithm that was designed to be used with the Digital Signature Standard (DSS) is the Secure Hash Algorithm (SHA), specifically SHA-1 developed by the National Security Agency (NSA)
       % The Digital Signature Standard allows federal government use of the Digital Signature Algorithm, RSA, or the Elliptic Curve DSA in conjunction with the SHA-1 hashing function to produce secure digital signatures.
       % The Bureau of Industry and Security(BIS) within the Department of Commerce sets regulations on the export of encryption products outside of the United States.
+      % The Elliptic Curve Digital Signature Algorithm (ECDSA) is the only one of the algorithms listed here that supports true digital signatures, providing integrity verification and nonrepudiation.
     6) Created a digital certificate
     7) Revoke a digital certificate - CRL(Certificate Revocation List), OCSP(Online Certificate Status Protocol)
       % The most effective method of revoking digital certificates is through the interactive OCSP responder.
@@ -546,6 +555,7 @@
       % Key locks are the most common and inexpensive form of physical access control device for both interior and exterior use.
       % An access control vestibule is a double set of doors that is often protected by a guard and used to contain a subject until their identity and authentication is verified.
       % Security guards have the ability to make real-time decisions and discriminating judgments based on context, assess situations dynamically, and respond accordingly.
+      % Layering is the deployment of multiple security mechanisms in a series.
     2) Data center environmental controls - Expanded Envelope(64.5~80.6), Dew Point Range(15.8~59)
       * Watch for exam questions that are indirectly covering the hot aisle/cold aisle strategy
     3) Data center environment protection
@@ -573,9 +583,10 @@
       % HTTPS encrypts the entire communication session between the client and the server.
       % Software upgrade deployment is typically a responsibility of the network administrator, as it involves managing the overall infrastructure and ensuring that systems are up to date.
     2) SOA and microservices
-      - Service-Oriented Architecture
+      - Service-Oriented Architecture(SOA)
       - Microservices
       % Microservices are fine-grained services that provide small and discrete functions to other services.
+      % Microservices are an emerging feature of web-based solutions and are derivative of service-oriented architecture (SOA). 
       % Arduino is an open source hardware and software organization that creates single-board 8-bit microcontrollers for building digital devices.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -614,7 +625,8 @@
   B. Secure Network Design
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
-      % Static NAT is needed to allow an outside entity to initiate communications with an internal system behind a NAT proxy. 
+      % Static NAT is needed to allow an outside entity to initiate communications with an internal system behind a NAT proxy.
+        Static NAT can be appropriately and securely used to grant external entities access to resources positioned in a screened subnet or an extranet, especially when those resource hosts are using private IP addresses.
     2) Subnetting - Subnet Masks
     3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary, "for this specific purpose")
       % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
@@ -717,6 +729,7 @@
     1) Telephony - VoIP
       % Another term used for Plain Old Telephone Service (POTS) is PSTN (Public Switched Telephone Network).
       % VLAN hopping is a switch security issue, not a VoIP security issue.
+      % Implementing Secure Real-time Transport Protocol (SRTP) is the best option to secure VoIP and prevent the reoccurrence of the eavesdropping attack.
     2) Multimedia collaboration - XMPP
     3) Storage networks
       % Fibre Channel requires the use of dedicated connections and is known for its high speed and reliability in connecting computer data storage to servers.
@@ -737,6 +750,7 @@
       % Internet Security Association and Key Management Protocol (ISAKMP), an element of Internet Key Exchange (IKE), is used to organize and manage the encryption keys that have been generated and exchanged by OAKLEY and SKEME
         to support multiple simultaneous VPNs from each host.
     3) Remote network access
+      % The primary examples of remote access techniques are remote node operation, remote control, screen scraping, and service specific. 
   G. Wireless Networking
     1) Understanding wireless networking
       * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
@@ -778,6 +792,7 @@
       % To protect cell phones owned by an organization, you should employ Maintain physical control, Enable user authentication, and Disable unneeded features
     4) Mobile device tracking
     5) Mobile application security
+      % Unified endpoint management(UEM) is type of software tool that provides a single management platform to control mobile, PC, IoT, wearables, ICSs, and other devices. 
     6) Mobile security enforcement
       % Sideloading refers to the process of installing apps on a device from sources other than the official app store.
       % Jailbreaking is the process of removing software restrictions imposed by iOS on devices by Apple, allowing the installation of unauthorized apps,
@@ -856,6 +871,7 @@
       % Callback ensures that only users from specific locations (those with authorized phone numbers) can access the network, adding an additional layer of security.
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88, Golden tickets
+      % he primary purpose of Kerberos is authentication, since it allows users to prove their identity.
       % Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. 
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
@@ -902,6 +918,7 @@
       * Be able to identify least privilege and segregation of duties issues in a scenario
     2) Mandatory access controls (MAC)
       % In a Mandatory Access Control (MAC) system, objects are the resources or data entities that are being protected.
+      % The MAC model assigns access based on a user’s need to know and organization policies.
       % Hybrid environments combine both hierarchical and compartmentalized environments so that security levels have subcompartments.
     3) Discretionary access controls (DAC)
       % In a discretionary access control system, individual users have the ability to alter access permissions.
@@ -990,7 +1007,8 @@
         and all newly added or expected work tasks work as well.
       % Synthetic transactions are scripted transactions with known expected results.
     3) Fuzz testing - Avoid Looking Like a Hacker
-    4) Interface testing - APIs(Application Programming Interface)
+    4) Interface testing - APIs(Application Programming Interface), User, Security, Physical
+      % User interface testing includes assessments of both graphical user interfaces (GUIs) and command-line interfaces (CLIs) for a software program.
     5) Misuse case testing
       % In misuse case testing the testers first enumerate known misuse/abuse cases (possible ways).
     6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
@@ -1047,6 +1065,7 @@
       % Motive refers to the reasons for committing the crime.
       % Means refer to the ability to commit it(how).
       % Civil investigations typically follow the “preponderance of the evidence” standard.
+      % Criminal investigations typically follow the “beyond a reasonable doubt” standard of evidence.
       % A search warrant is a legal document authorized by a judge or magistrate that allows law enforcement to search a specific location for evidence related to a crime.
       % Internal investigations usually operate under the authority of senior managers, who grant access (i.e., voluntary surrender) to all information and resources necessary to conduct the investigation.
     2) Evidence types
