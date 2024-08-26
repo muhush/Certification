@@ -240,6 +240,7 @@
       % Change management aims to ensure that any change does not result in unintended outages or reduce security.
       % Change management processes include requesting a change, creating a rollback plan for the change, release control, change control, and documenting the change.
       % Elasticity provides for automatic provisioning and deprovisioning of resources to meet demand.
+      % Scalability only requires the ability to increase (but not decrease) availableresources.
     2) Configuration and asset management
       - Baselines, Versioning
       % Configuration management includes supporting rollback of changes, maintaining detailed documentation, and running configuration audits.
@@ -392,7 +393,7 @@
       % Another term for cryptographic strength is work factor which refers to the amount of effort, time, and computational resources required to break a cryptographic algorithm or system.
     2) Symmetric and asymmetric cryptography
       - Symmetric(same key), Asymmetric(different key, public, private)
-      * Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pair
+      * Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pair.
       % In symmetric encryption, the same key (the private key) is used for both encryption and decryption of data. This key must be securely shared between the sender and the receiver to enable secure communication.
     3) Goals and cryptography
       - Confidentiality, Integrity, Authentication, Obfuscation(hiding), Non-Repudiation
@@ -407,7 +408,7 @@
       % Confusion occurs when the relationship between the plaintext and the key is so complicated that an attacker can’t merely continue altering the plaintext and analyzing the resulting ciphertext to determine the key.
         Diffusion occurs when a change in the plaintext results in multiple changes spread throughout the ciphertext.
     6) Choosing encryption algorithms
-       * Don't try to build your own encryption algorithm unless you really know what you're doing
+       * Don't try to build your own encryption algorithm unless you really know what you're doing.
     7) The perfect encryption algorithm
        - One-Time pad
        % Securely exchanging the pads is essential for the security of one-time pad operations, as interception by a third party could compromise the security of the encrypted messages.
