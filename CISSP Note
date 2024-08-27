@@ -652,8 +652,8 @@
       % A router is the correct location to deploy Access Control Lists (ACLs) for confining sensitive internal data traffic to specific subnets
       % Cut-through switching is a method used in network switches where the switch starts forwarding a data frame to the destination as soon as it reads the destination address from the frame's header,
         without waiting for the entire frame to be received.
-      % RIP uses hop count as a simple metric to determine the best path to a destination network.
-      % a hop refers to the journey a data packet takes from one router or intermediate device to another
+      % RIP(Routing Information Protocol) uses hop count as a simple metric to determine the best path to a destination network.
+      % A hop(router) refers to the journey a data packet takes from one router or intermediate device to another
     2) Network topologies
       % A Multistation Access Unit (MAU) is a central connecting device used in Token Ring networks
     3) Transport architecture
@@ -871,7 +871,7 @@
       % Callback ensures that only users from specific locations (those with authorized phone numbers) can access the network, adding an additional layer of security.
     7) Kerberos and LDAP 
       - Kerberos = core protocols for MS Active directory, Port 88, Golden tickets
-      % he primary purpose of Kerberos is authentication, since it allows users to prove their identity.
+      % The primary purpose of Kerberos is authentication since it allows users to prove their identity.
       % Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. 
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
@@ -967,7 +967,7 @@
       % Vulnerability scanners can check systems to ensure they are up-to-date with current patches (along with other checks).
     4) Scan perspective
       - Agent-based scanning, Credential-based scanning
-      % sqlmap is custom-designed for that purpose.
+      % sqlmap is custom-designed to identify database vulnerabilities in web applications.
     5) Analyzing scan reports
       - vulnerability severity, system criticality, information sensitivity, remediation difficulty, system exposure
       % Systems with many or risky services installed should be prioritized higher for scanning.
