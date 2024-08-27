@@ -8,11 +8,13 @@
     3) Integrity - Hash, changes in hash values, digital signatures (Authenticity, Non-repudiation), digital certificates
     4) Availability - patching
       % A patch management process includes evaluating patches, testing patches, and auditing patches.
+      % Accessibility of data, objects, and resources is the goal of availability.
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
   B. Security Governance
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
       % Security governance should include acquisitions, divestitures, and governance committees.
       % A divestiture occurs when something is being removed from the organization, whether a device, service, employee, or partnership.
+      % The top-down approach is the aspect of security governance that is based on the idea that senior management is responsible for the success or failure of a security endeavor.
     1) Aligning security with the business - security leader, business leader, security professionals  
       * unbalanced decisions
       % The business or mission owner is responsible for defining the strategic direction of the organization and ensuring that all operations, processes, and initiatives align with the overall business objectives.
@@ -39,6 +41,7 @@
       % The 1991 U.S. Federal Sentencing Guidelines were established to provide a framework for sentencing organizations (including corporations) for criminal conduct, particularly white-collar crimes.
       % The Family Educational Rights and Privacy Act (FERPA) protects the rights of students and the parents of minor students.
       % The Gramm–Leach–Bliley Act (GLBA) provides, among other things, regulations regarding the way financial institutions can handle private information belonging to their customers.
+      % Organizations subject to HIPAA may enter into relationships with service providers as long as the provider’s use of protected health information is regulated under a formal business associate agreement (BAA).
     2) Data privacy - PII (Identifiable), PHI (Health), GAPP(Accept Privacy, AICPA, CICA, ISACA, IIA)
       % The Children’s Online Privacy Protection Act (COPPA) provides severe penalties for companies that collect information from young children without parental consent (younger than the age of 13).
     3) GDPR - E.U regulations, anyone in E.U geolocation
@@ -73,6 +76,7 @@
   D. Security Policy
     1) Security policy framework - policies > standard(details) > guidelines(advice) / procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
+      % The security policy is an overview or generalization of an organization’s security needs.
     2) Security Policies
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
@@ -163,7 +167,6 @@
       % VMS is a software solution that assists with the management and procurement of staffing services, hardware, software, and other needed products and services.
     2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
     3) Vendor information management
-      % Just-in-time (JIT) provisioning will create the accounts automatically the first time the employee accesses the benefits site.
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
       % SOC 2 reports focus on a business's controls relevant to security, availability, processing integrity, confidentiality, and privacy of data.
       % SOC 3 engagements assess the organization’s controls that affect the security and privacy of information stored in a system.
@@ -261,6 +264,7 @@
     4) Supply chain risks and mitigations
       - End of Sale(no longer be offered for purchase), End of Support(EOS, reduce or eliminate support), End of Life(no longer provide any support)
       % Systems with an EOS date that occurs in the following year should be a top priority for replacement.
+      % The end-of-life (EOL) date is the date when the vendor will stop offering a product for sale.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -329,6 +333,7 @@
       % Type 1 hypervisor is known as bare metal and runs on top of bare hardware.
       % Type 2 hypervisor is known as hosted and runs on top of an operating system.
       % RedPill and Scooby Doo attacks specifically target virtual machines.
+      % VM escaping occurs when software within a guest OS is able to breach the isolation protection provided by the hypervisor in order to violate the container of other guest OSs or to infiltrate a host OS.
     7) Desktop and application virtualization
       - VDI(Virtual Desktop Infrastructure), Application Virtualization
       % Browsing the internet on a virtualization host can expose the host to unnecessary security risks, such as malware infections or unauthorized access, which could compromise the entire virtualization environment.
@@ -556,8 +561,10 @@
       % An access control vestibule is a double set of doors that is often protected by a guard and used to contain a subject until their identity and authentication is verified.
       % Security guards have the ability to make real-time decisions and discriminating judgments based on context, assess situations dynamically, and respond accordingly.
       % Layering is the deployment of multiple security mechanisms in a series.
+      % The primary elements of a cable plant management policy should include a mapping of the entrance facility (i.e., demarcation point), equipment room, backbone distribution system, telecommunications room, and horizontal distribution system.
     2) Data center environmental controls - Expanded Envelope(64.5~80.6), Dew Point Range(15.8~59)
       * Watch for exam questions that are indirectly covering the hot aisle/cold aisle strategy
+      % A PIDAS (perimeter intrusion detection and assessment system) is a fence system that has two or three fences used in concert to optimize security.
     3) Data center environment protection
       - Class A(wood), Class B(oil), Class C(data center), Class D (industrial), Class K(Kitchen)
       * Be able to identify the classes of fire extinguishers on the exam.
@@ -638,6 +645,8 @@
       * Jump servers, jump boxes, and jump hosts are all the same thing.
     5) VLANs and logical segmentation - VRF(Virtual Routing and Forwarding), Virtual Domain, Network Overlays, Encapsulation
       % LiFi (Light Fidelity) uses light to transmit data wirelessly, employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
+      % A VLAN (virtual LAN) is a hardware-imposed network segmentation created by switches that requires a routing function to support communication between different segments.
+      % Virtual eXtensible LAN (VXLAN) is an encapsulation protocol that enables switch-created network segments (i.e., VLANs) to be stretched across subnets and geographic distances.
     6) Security device placement
     7) Software defined networking(SDN)
     8) Transmission media - VPC, SDV
@@ -715,7 +724,7 @@
       % station statistics include metrics related to individual network stations, such as traffic patterns, errors, and packet loss
       % packet capture offers detailed packet-level analysis, while station statistics provide a broader view of network activity for specific devices
     8) Firewall and network logs - SIEM
-    9) Network performance metrics - Latency, Jitter
+    9) Network performance metrics - Latency(Concealment), Jitter
     10) SNMP
       * Use SNMPv3. Earlier versions have critical security flaws.
       % GetRequest messages are used by a network management system to request information from an SNMP agent.
@@ -801,6 +810,7 @@
     8) Mobile deployment models
   I. Host Security
     1) Operating system security - System Hardening
+      % Endpoint security is the security concept that encourages administrators to install firewalls, malware scanners, and an IDS on every host.
     2) Malware prevention
       - Viruses, Worms, Trojan Horses, Spyware
       - Protection = Sandboxing(isolates)
@@ -859,6 +869,7 @@
         With FIM, you can use one login to access resources you've been authorized throughout the federation.
       % To implement a single sign-on (SSO) system, the organization could use the following technologies: RADIUS, Kerberos, SESAME, Active Directory
       % SSO solutions and centralized administration and make it easier for administrators to manage user accounts.
+      % A federation can include two or more networks and allow users in each network to share network resources.
     6) RADIUS (Remote Authentication Dial-In User Service)- Centralized approach
       * Remember that a RADIUS client is usually an application server!
       % RADIUS typically uses UDP, which is less reliable than TCP, and does not fully encrypt the authentication session, only the password.
@@ -875,6 +886,7 @@
       % Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. 
       - LDAP = port 389, Port 636
       - NTLM (NT LAN Manager)
+      % NTLM is known to be susceptible to pass-the-hash attacks, and this scenario describes a pass-the-hash attack.
       - TGS (Ticket Granting Server), AS (Authentication Server), TGT (Ticket Granting Ticket)
       % TGT includes information about the client and a copy of the client TGS session key.
       % When a client wishes to access a service, the client contacts the TGS.
@@ -885,13 +897,18 @@
       % IDaaS provides single sign-on, provisioning, password management, and access governance
     10) OAuth and OpenID Connect
       % OAuth is an authorization protocol, but not an authentication protocol.
+      % OpenID Connect(OIDC) provides SSO and uses a JavaScript Object Notation (JSON) Web Token (JWT).
+      % OpenID provides authentication but doesn’t include profile information.
     11) Certificate-based authentication
+      % Mutual authentication ensures that a server provides authentication before the client provides authentication.
     12) Passwordless authentication - Key-Based Authentication
   C. Accountability
     1) Accountability - Logs must be secure
       % Authentication is necessary to ensure a network supports accountability.
       % Accountability is possible by reviewing logs and tracking user activity.
       % Authentication of individuals is also needed to ensure the audit trails provide proof of identities listed in the logs.
+      % Accountability is maintained by monitoring the activities of subjects and objects as well as monitoring core system functions that maintain the operating environment and the security mechanisms.
+      % Accurate identification and authentication are required to support accountability.
     2) Session management - Timeouts, randomized session IDs, Encrypt cookies
   D. Account Management
     1) Understand account and privilege management - Least Privilege, Segregation of Duties, Job Rotation, Mandatory Vacation
@@ -913,6 +930,7 @@
     7) Provisioning and de-provisioning - Privilege Creep
       % Authorization creep occurs when a user is granted new permissions as they change roles or responsibilities within an organization, but their old permissions are not removed.
       % Capability creep refers to the gradual expansion of an individual's capabilities or roles within an organization.
+      % Just-in-time (JIT) provisioning will create the accounts automatically the first time the employee accesses the benefits site.
   E. Authorization
     1) Understand authorization - Least Privilege, Account Review
       * Be able to identify least privilege and segregation of duties issues in a scenario
@@ -944,6 +962,7 @@
     2) Impersonation attacks - Spam, Phishing, Spear Phishing, Whaling, Pharming, Vishing, Smishing and SPIM, Spoofing, Brand Impersonation
     3) identity fraud and pretexting - Pretexting Attacks
       % In a pretexting attack, the attacker contacts a third-party company pretending to be the consumer and attempts to gain access to that consumer's account.
+      % Backdoors are undocumented command sequences that allow individuals with knowledge of the backdoor to bypass normal access restrictions.
     4) Watering hole attacks
       % Watering hole attacks use sneaky techniques to lure unsuspecting users and infect their systems with malware. They use commonly visited sites without the website owner's knowledge.
     5) Physical social engineering - Shoulder surfing, Dumpster Diving, Tailgating
@@ -1007,7 +1026,9 @@
         and all newly added or expected work tasks work as well.
       % Synthetic transactions are scripted transactions with known expected results.
     3) Fuzz testing - Avoid Looking Like a Hacker
+      % zzuf is a tool that automates the process of mutation fuzzing.
     4) Interface testing - APIs(Application Programming Interface), User, Security, Physical
+      % An interface is a point of interaction or communication between two systems, devices, or software components.
       % User interface testing includes assessments of both graphical user interfaces (GUIs) and command-line interfaces (CLIs) for a software program.
     5) Misuse case testing
       % In misuse case testing the testers first enumerate known misuse/abuse cases (possible ways).
@@ -1092,6 +1113,7 @@
       % Hashing is used to protect evidence by providing a unique file signature, demonstrating that a file hasn't been altered.
     9) Chain of custody - A paper trail of evidence
       % One copy is used for analysis, and the other is preserved as a "golden copy" to maintain the integrity of the evidence.
+      % Police investigators, evidence technicians, attorneys, and anyone else involved in the collection, processing, analysis, and production of evidence must maintain the chain of custody.
     10) Reporting and documenting incidents - Formal Incident Report
       % Federal law does not require all U.S. businesses to report verified security incidents to US-CERT; reporting requirements vary by industry and specific regulations.
     11) Electronic discovery (eDiscovery)
@@ -1106,6 +1128,7 @@
   C. Incident Management
     1) Build an incident response program - Incident Response Plan
       % The computer security incident response team(CSIRT) has IT department member, Legal department member, public relations department member, and management team member
+      % Security personnel perform a root cause analysis during the remediation stage  in Incident Response Plan.
     2) Creating an incident response team - IR Service Provider
     3) Incident communications plan - Involving Law Enforcement, Secure Communication
       % While you may believe a law has been violated, you do not typically have an obligation to report this to law enforcement.
@@ -1138,7 +1161,6 @@
       % The spiral model has four stages: requirements gathering/identification, design, build, and evaluation/risk analysis
       % The manifesto for agile development talks about valuing individuals and interactions, working software, customer collaboration, and responding to change.
       % The iterative waterfall model uses a seven-stage approach to software development and includes a feedback loop that allows development to return to the previous phase to correct defects discovered during the subsequent phase.
-      % OpenID Connect(OIDC) provides SSO and uses a JavaScript Object Notation (JSON) Web Token (JWT).
       % The Fagan inspection model uses the six formal steps of planning, overview, preparation, inspection, rework, and follow-up to conduct a formal code review process.
       % The daily stand-up meeting is a hallmark of the Scrum methodology.
       % Integrated Product Teams (IPTs) were introduced in 1995 by DoD to bring together stakeholders and foster parallel decision-making.
