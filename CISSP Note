@@ -113,13 +113,14 @@
           reducing downtime and making repairs more manageable and quicker without the need for data restoration.
   F. Personnel Security
     1) Personnel security - strong security policy, insider threat
+      % The data loss prevention (DLP) alerts and log analysis are the only options that would potentially include useful information in regard to an insider exfiltrating the sensitive documents.
     2) Security in the hiring process - Employment Agreements, NDAs(Non-Disclosure Agreements)
     3) Employee termination process - Exit interview, Revoke Access Promptly
       % If the user’s account remains enabled, the user may log on later and cause damage. Disabling the account is to prevent sabotage.
     4) Employee privacy - minimization, limit access, encryption, masking (hiding)
     5) Social networking - multi-factoring
   G. Risk Management
-    % Risk is an assessment of probability, possibility, or chance, threat × vulnerability, and Every instance of exposure
+    % Risk is an assessment of probability, possibility or chance, threat × vulnerability, and Every instance of exposure
     1) Risk analysis, assessment, and scope    
       * Threat vectors are the specific methods that threats use to exploit a vulnerability.
       % The DREAD questions are about Damage potential, Reproducibility, Exploitability, Affected users, and Discoverability.
@@ -142,7 +143,7 @@
       % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
       % Operational controls are practices and procedures implemented to ensure the ongoing security and functionality of systems during regular operations such as backup.
       % Technical controls include system auditing, monitoring, access controls, encryption, and network security devices like firewalls and intrusion detection systems.
-      % managed detection and response (MDR) combines antimalware capabilities with a managed service that reduces the burden on the IT team.
+      % Managed detection and response (MDR) combines antimalware capabilities with a managed service that reduces the burden on the IT team.
     5) Continuous monitoring, measurement, and tuning
       % In reality, automated tools are often more thorough because they can continuously monitor and analyze large amounts of data in real-time, detecting patterns and anomalies that might be missed by manual monitoring.
       % Tailoring refers to modifying a list of security controls to align with the organization’s mission.
@@ -166,6 +167,7 @@
     1) Managing vendor relationships - VMS(vendor management system)
       % VMS is a software solution that assists with the management and procurement of staffing services, hardware, software, and other needed products and services.
     2) Vendor agreements - SLRs, SLA, MOU, MOA, BPA
+      % A service-level requirement (SLR) is a statement of the expectations of service and performance from the product or service of a vendor. 
     3) Vendor information management
     4) Cloud audits - SOC1(assurance), SOC2(detailed), SOC3 (high-level), Type I report(control), Type II report(testing), SSAE 18, ISAE 3402
       % SOC 2 reports focus on a business's controls relevant to security, availability, processing integrity, confidentiality, and privacy of data.
@@ -249,12 +251,13 @@
       % Change management aims to ensure that any change does not result in unintended outages or reduce security.
       % Change management processes include requesting a change, creating a rollback plan for the change, release control, change control, and documenting the change.
       % Elasticity provides for automatic provisioning and deprovisioning of resources to meet demand.
-      % Scalability only requires the ability to increase (but not decrease) availableresources.
+      % Scalability only requires the ability to increase (but not decrease) available resources.
     2) Configuration and asset management
       - Baselines, Versioning
       % Configuration management includes supporting rollback of changes, maintaining detailed documentation, and running configuration audits.
       % The primary security concern of a distributed computing environment (DCE) is the interconnectedness of the components.
         This configuration could allow for error or malware propagation as well.
+      % DCE IDL (Distributed Computing Environment Interface Definition Language) is a language used to define the interfaces between software components in a networked environment.
       % There are numerous examples DCE IDL or frameworks, such as remote procedure calls (RPC), the Common Object Request Broker Architecture (CORBA), and the Distributed Component Object Model (DCOM).
     3) Physical asset management
       - Media management(tracks highly sensitive data)
@@ -355,6 +358,7 @@
     13) Edge and fog computing
       % In edge computing, the intelligence and processing are contained within each device. Thus, rather than having to send data off to a master processing entity, each device can process its own data locally.
       % Fog computing relies on sensors, IoT devices, or even edge computing devices to collect data and then transfer it back to a central location for processing.
+      % A nonpersistent system or static system is a computer system that does not allow, support, or retain changes.
   C. Hardware Security
     1) Memory protection
       - Segmentation Fault, Memory Leak
@@ -376,6 +380,7 @@
       % Open Database Connectivity(ODBC) is a standard API and a database feature that allows applications to communicate with different types of database management systems(DBMS)
         without having to be directly programmed for interaction with each type using SQL as the standard language.
       % In the relational model, data is organized into tables (relations), where each row is a tuple (a record or instance of the relation), and each column is an attribute (a property or characteristic of the relation)
+      % Contamination is the mixing of data from a higher classification level and/or need-to-know requirement with data from a lower classification level and/or need-to-know requirement.
     2) NoSQL databases
       % The cardinality of a table refers to the number of rows in the table, whereas the degree of a table is the number of columns.
     3) Distributed and high-performance computing
@@ -414,6 +419,7 @@
       - Stream Ciphers, Block Ciphers
       % The Feistel cipher structure is a symmetric encryption design model used in many block ciphers such as Blowfish, CAST-128, and Skipjack.
       % Concealment ciphers hide the message within the physical environment or use techniques such as steganography, where the presence of the message is obscured.
+      % Galois/Counter Mode (GCM) and Counter with Cipher Block Chaining Message Authentication Code mode (CCM) are the only two modes that provide both confidentiality and data authenticity. 
     5) Cryptographic math
       - Exclusive Or(XOR), 
       - Confusion, Defusion, Obfuscation
@@ -545,6 +551,7 @@
       % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
       % RSH(Remote Shell) is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
+      % In a replay attack, the malicious individual intercepts an encrypted message between two parties (often a request for authentication) and then later replays the captured message to open a new session.
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
       % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
       % Implementation attacks rely on flaws in the cryptographic algorithm.
@@ -562,6 +569,8 @@
       % Security guards have the ability to make real-time decisions and discriminating judgments based on context, assess situations dynamically, and respond accordingly.
       % Layering is the deployment of multiple security mechanisms in a series.
       % The primary elements of a cable plant management policy should include a mapping of the entrance facility (i.e., demarcation point), equipment room, backbone distribution system, telecommunications room, and horizontal distribution system.
+      % Changing default passwords on PBX(Private Branch Exchange) systems provides the most effective increase in security. 
+        PBX systems typically do not support encryption, although some VoIP PBX systems may support encryption in specific conditions.
     2) Data center environmental controls - Expanded Envelope(64.5~80.6), Dew Point Range(15.8~59)
       * Watch for exam questions that are indirectly covering the hot aisle/cold aisle strategy
       % A PIDAS (perimeter intrusion detection and assessment system) is a fence system that has two or three fences used in concert to optimize security.
@@ -611,6 +620,7 @@
       % Multicasting is the transmission of data to multiple specific recipients.
         Internet Group Management Protocol (IGMP) is used to register a host’s dynamic multicast group membership in order to receive a copy of the data stream.
         TFTP systems can be used to host or cache multicast datasets that are to be sent to the multiple recipients.
+      % Fraggle is a denial of service (DoS) attack that uses UDP.
     2) IP addresses and DHCP - IPv4, IPv6
       % The "/22" indicates that 22 bits are used for the network portion of the address. Since IPv4 addresses are 32 bits in total, the remaining bits are used for the host portion. 32 - 22 = 10
     3) Network traffic
@@ -634,6 +644,7 @@
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
       % Static NAT is needed to allow an outside entity to initiate communications with an internal system behind a NAT proxy.
         Static NAT can be appropriately and securely used to grant external entities access to resources positioned in a screened subnet or an extranet, especially when those resource hosts are using private IP addresses.
+      % RFC 1918 addresses are not internet routable or accessible because they are reserved for private or internal use only.
     2) Subnetting - Subnet Masks
     3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary, "for this specific purpose")
       % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
@@ -647,6 +658,10 @@
       % LiFi (Light Fidelity) uses light to transmit data wirelessly, employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
       % A VLAN (virtual LAN) is a hardware-imposed network segmentation created by switches that requires a routing function to support communication between different segments.
       % Virtual eXtensible LAN (VXLAN) is an encapsulation protocol that enables switch-created network segments (i.e., VLANs) to be stretched across subnets and geographic distances.
+      % A PVC(permanent virtual circuit) reestablishes a link using the same basic parameters or virtual pathway each time it connects.
+        PVC can be described as a logical circuit that always exists and is waiting for the customer to send data.
+        A switched virtual circuit (SVC) has to be created each time it is needed using the best paths currently available before it can be used and then disassembled after the transmission is complete.
+        SVCs use unique settings each time.
     6) Security device placement
     7) Software defined networking(SDN)
     8) Transmission media - VPC, SDV
@@ -662,7 +677,7 @@
       % Cut-through switching is a method used in network switches where the switch starts forwarding a data frame to the destination as soon as it reads the destination address from the frame's header,
         without waiting for the entire frame to be received.
       % RIP(Routing Information Protocol) uses hop count as a simple metric to determine the best path to a destination network.
-      % A hop(router) refers to the journey a data packet takes from one router or intermediate device to another
+      % A hop(router) refers to the journey a data packet takes from one router or intermediate device to another.
     2) Network topologies
       % A Multistation Access Unit (MAU) is a central connecting device used in Token Ring networks
     3) Transport architecture
@@ -877,6 +892,7 @@
       % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
       % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
       % The protocol that uses port 1812 to communicate with dial-up users is RADIUS.
+      % The port TCP 49 is for TACACS+.
       % SESAME (Secure European System for Applications in a Multi-vendor Environment) is an authentication protocol that was designed to address some of the known vulnerabilities in Kerberos,
         such as the risk associated with the transmission of session keys. 
       % Callback ensures that only users from specific locations (those with authorized phone numbers) can access the network, adding an additional layer of security.
@@ -916,6 +932,8 @@
     2) Account types - User Account, Privileged Account, Shared Account, Service Account
       * Avoid the use of shared/generic accounts and credentials.
       % Service accounts are regular accounts that are used to run applications and services.
+      % a service account assigns the specific privileges to the account needed by the application.
+      % The LocalSystem account and the Administrator account both have full administrative privileges
     3) Account Policies - Group Policy Object(GPO)
       % Group policies provide centralized management and configuration of all entities to enforce security and compliance standards throughout the organization.
       % Using a domain group policy allows you to centrally manage and enforce the restriction across all computers in the domain.
@@ -976,6 +994,7 @@
       - PCI DSS = quarterly, ASV
       - FISMA = regularly
       - Network vulnerability scan, application, web application scans
+      % PCI DSS requires that Badin rescan the application at least annually and after any change in the application.
     2) Identify scan targets 
       - Asset Inventory
       - Impact, Likelihood, Criticality
@@ -1042,6 +1061,7 @@
       % The recovery time objective (RTO) is the targeted amount of time to restore a service after a failure during a disaster recovery.
       % The recovery service level (RSL) is the percentage of a service that must be available during a disaster.
       % The disaster recovery plan (DRP) includes procedures and measures to respond to emergencies, protect people and property, and ensure the safety of employees and assets during and after a disaster.
+      % The recovery point objective (RPO) specifies the maximum amount of data that may be lost during a disaster and should be used to guide backup strategies.
     2) Backups - Full backups, Differential, Incremental
       % Any backup strategy must include full backups at some point in the process.
         Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
@@ -1061,6 +1081,8 @@
     3) Security metrics
       % KRIs(Key Risk Indicators) are measures that seek to quantify the security risk facing an organization.
       % KPIs(Key Performance Indicators) are metrics that demonstrate the success of the security program in achieving its objectives.
+        The ones from this list of options are: number of successful intrusions, number of successful disruptions, number of unsuccessful incidents, time to detect incidents, time to respond to incidents,
+        level of organizational impact of incidents, and number of false positives (i.e., false detection alerts/alarms).
     4) Audits and assessments - User Access Reviews
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
@@ -1122,6 +1144,7 @@
     1) Need to know and least privilege
       - need to know(information access), least privilege(system permissions)
       % Need to know is the requirement to have access to, knowledge about, or possession of data to perform specific work tasks, but no more.
+      % The least privilege principle ensures that users (subjects) are granted only the most restrictive rights they need to perform their work tasks and job functions. 
       - Privilege Aggregation
       % Aggregation occurs when a user combines information from multiple sources or queries to deduce or infer data that they are not explicitly authorized to access.
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
@@ -1164,6 +1187,7 @@
       % The Fagan inspection model uses the six formal steps of planning, overview, preparation, inspection, rework, and follow-up to conduct a formal code review process.
       % The daily stand-up meeting is a hallmark of the Scrum methodology.
       % Integrated Product Teams (IPTs) were introduced in 1995 by DoD to bring together stakeholders and foster parallel decision-making.
+      % Continuous integration/continuous delivery approaches are designed to facilitate the release of code on an extremely frequent basis. 
     3) Scaled agile framework
       % The Large Solution SAFe configuration focuses on coordinating multiple Agile Release Trains (ARTs) and suppliers, which is necessary for building large, complex solutions but does not encompass the full breadth of SAFe.
       % The Full SAFe configuration incorporates all aspects of SAFe, including essential, large solution, and portfolio levels, to support enterprises with large and complex solutions.
