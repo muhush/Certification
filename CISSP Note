@@ -658,15 +658,15 @@
       % LiFi (Light Fidelity) uses light to transmit data wirelessly, employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
       % A VLAN (virtual LAN) is a hardware-imposed network segmentation created by switches that requires a routing function to support communication between different segments.
       % Virtual eXtensible LAN (VXLAN) is an encapsulation protocol that enables switch-created network segments (i.e., VLANs) to be stretched across subnets and geographic distances.
-      % A PVC(permanent virtual circuit) reestablishes a link using the same basic parameters or virtual pathway each time it connects.
-        PVC can be described as a logical circuit that always exists and is waiting for the customer to send data.
-        A switched virtual circuit (SVC) has to be created each time it is needed using the best paths currently available before it can be used and then disassembled after the transmission is complete.
-        SVCs use unique settings each time.
     6) Security device placement
     7) Software defined networking(SDN)
     8) Transmission media - VPC, SDV
       % Overt Storage Channel: A legitimate and intended method of communication where data is stored and accessed by authorized processes.
       % Covert Storage Channel: An unauthorized and unintended method of communication that exploits the storage medium to transfer information between processes in a way that bypasses normal security controls.
+      % A PVC(permanent virtual circuit) reestablishes a link using the same basic parameters or virtual pathway each time it connects.
+        PVC can be described as a logical circuit that always exists and is waiting for the customer to send data.
+        A switched virtual circuit (SVC) has to be created each time it is needed using the best paths currently available before it can be used and then disassembled after the transmission is complete.
+        SVCs use unique settings each time.
     9) Cloud networking
     10) Zero trust and SASE
   C. Network Security Design
