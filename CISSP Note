@@ -63,7 +63,8 @@
       % Downstream liability refers to the legal responsibility that one party may have for the actions of another party downstream in a distribution chain,
         typically relating to intellectual property rights, defamation, or other legal issues.
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
-      % The Safe Harbor requirements were a framework established between the United States and the European Union
+      % The Safe Harbor requirements were a framework established between the United States and the European Union.
+      % Governance, risk, and compliance (GRC) solutions are generally not covered by import/export control regulations.
     10) Data breaches
       * Encryption is easy to protect data breach
     11) Ethics
@@ -158,6 +159,7 @@
     2) Managing threat indicators - CybOX, STIX, TAXII, OpenIOC
     3) Intelligence sharing - ISACs, ISA(interconnection security agreement)
     4) Threat research
+      % Process for Attack Simulation and Threat Analysis (PASTA) is a seven-stage threat modeling methodology.
     5) Identifying threats - structured approach
       % The three common threat modeling approaches from this list of options are focus on attackers, focus on assets, and focus on software.
       % a proactive approach to threat modeling, known as the defensive approach is threat hunting takes place after a product has been created and deployed
@@ -191,6 +193,7 @@
       % Assets are classified based on the data that they hold or process.
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
+      % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
       % Data remanence is data remnants on media, and data destruction methods remove data remnants.
       % Slack space is the unused space in a cluster.
@@ -287,6 +290,7 @@
       % The Clark-Wilson model is designed to enforce well-formed transactions and separation of duties, ensuring integrity through the implementation of integrity-monitoring rules and integrity-preserving rules.
         The Clark–Wilson model does define the constrained data item, transformation procedures, and integrity verification procedure.
       % The trusted computing base (TCB) has a component known as the reference monitor in theory, which becomes the security kernel in implementation.
+        The TCB is the combination of hardware, software, and controls that work together to enforce a security policy.
       % In a dedicated security mode, every user who has access to the system must have the appropriate security clearance and formal approval to access all information processed by that system.
     3) Security evaluation models
       - TCSEC(Structured), Common Criteria(ISO 15408), Certification and Accreditation(ATO, IATO, IATT, DATO)
@@ -320,6 +324,7 @@
     7) Information system lifecycle
       % In the operate and maintain phase of the security management life cycle, ongoing security activities such as performing audits, monitoring systems,
         and ensuring that security settings meet established baselines are carried out.
+      % The five key concepts of decomposition are trust boundaries, dataflow paths, input points, privileged operations, and details about security stance and approach.
   B. Virtualization and Cloud Computing
     1) What is the cloud?
     2) Cloud computing roles
@@ -344,6 +349,7 @@
       % Serverless architecture is a cloud computing concept where code is managed by the customer and the platform (i.e., supporting hardware and software) or server is managed by the cloud service provider (CSP).
     9) Containerization
       - Applications are what containerized computing environments are created for.
+      % Containerization is crafted to host a single application, including only the OS resources needed, and sharing a common binaries and libraries
       % A hypervisor is not part of containerization. A hypervisor is an application where you can create, manage, and run multiple VMs.
     10) Cloud activities and the cloud reference architecture
       - ISO/IEC 17789:2014
@@ -403,6 +409,7 @@
     5) Embedded systems
       - RTOSs(a real-time operating system), CAN bus
       % The embedded system is typically designed around a limited set of specific functions in relation to the larger product of which it’s a component.
+      % An embedded system is a computer implemented as part of a larger system.
     6) Communications for embedded devices
   F. Encryption
     1) Understanding encryption
@@ -913,6 +920,7 @@
       % IDaaS provides single sign-on, provisioning, password management, and access governance
     10) OAuth and OpenID Connect
       % OAuth is an authorization protocol, but not an authentication protocol.
+      % OAuth 2.0, an authorization framework described in Request for Comments (RFC) 6749.
       % OpenID Connect(OIDC) provides SSO and uses a JavaScript Object Notation (JSON) Web Token (JWT).
       % OpenID provides authentication but doesn’t include profile information.
     11) Certificate-based authentication
@@ -959,9 +967,11 @@
     3) Discretionary access controls (DAC)
       % In a discretionary access control system, individual users have the ability to alter access permissions.
       % In a Discretionary Access Control model, the owner of a resource (such as a file or folder) has the discretion to determine who can access it and what level of access they have. 
+      % In the DAC model, the owner assigns access based on the owner’s desires.
     4) Access control lists
       % An ACL specifies which users or system processes (subjects) are allowed to access objects (like files, directories, or devices) and what operations (read, write, execute) they are permitted to perform on those objects. 
       % An access control matrix is a (capability) table used to specify the access rights of various subjects (e.g., users, processes) to different objects (e.g., files, resources) in a system.
+        An access control matrix assembles ACLs from multiple objects into a single table. 
       % The subject is active and is always the entity that receives information about, or data from, the object.
     5) Database access control - SQL Server Authentication, Windows Authentication, Mixed Authentication
       % Polyinstantiation allows the insertion of multiple records that appear to have the same primary key values into a database at different classification levels. 
@@ -1155,6 +1165,7 @@
     2) Creating an incident response team - IR Service Provider
     3) Incident communications plan - Involving Law Enforcement, Secure Communication
       % While you may believe a law has been violated, you do not typically have an obligation to report this to law enforcement.
+      $ Administrative laws do not require an act of the legislative branch to implement at the federal level. 
     4) Incident identification - Security incident and event management(SIEM), First Responders Must Act Quickly
       * The highest priority of a first responder must be containing damage through isolation
     5) Escalation and notification
@@ -1229,6 +1240,7 @@
     4) Understanding cross-site scripting - Use input validation
       % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
       % Cross-site scripting (XSS) is a type of security vulnerability typically found in web applications.
+      % A programmer can implement the most effective way to prevent XSS by validating input, coding defensively, escaping metacharacters, and rejecting all script-like input.
     5) Request forgery
       * Cross-site request forgery, CSRF, XSRF, and "sea surf" all refer to the same attack.
       - XSRF secretly sends requests, Server-side Request Forgery(SSRF)
