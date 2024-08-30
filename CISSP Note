@@ -81,6 +81,7 @@
     2) Security Policies
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
+      % A compensation control is deployed to provide various options to other existing controls to aid in enforcement and support of security policies.
   E. Business Continuity
     1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes)
       * BCP is also known as continuity of operations planning (COOP) and is not operational control, BCP in the cloud is a partnership between providers and customers.
@@ -191,6 +192,7 @@
       - Data at Rest, Data in Transit, Data in Use
       % In asynchronous communication, data is transmitted one byte at a time, with start and stop bits used to signal the beginning and end of each byte.
       % Assets are classified based on the data that they hold or process.
+      % a data in motion use case is specifically concerned about information that users are retrieving.
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
@@ -215,6 +217,7 @@
       - Create, Store, Use, Share, Archive, Destroy
       - Clearing(Casual), Purging(advanced), Destroying
       % Purging writes a series of 1s and 0s over media multiple times, and it removes all data remnants.
+      % Purging memory buffers removes all remnants of data after a program has used it.
       % Object reuse refers to the practice of reusing storage media, memory, or other data storage objects after ensuring that any residual data from previous use is securely removed or overwritten,
         preventing unauthorized access to potentially sensitive information.
       % Degaussing the disks often damages the electronics.
@@ -226,6 +229,7 @@
       % Security baselines often require hundreds or thousands of individual security settings on a particular device.
       % Data Control Language (DCL) includes commands like GRANT and REVOKE that control access to data within the database by assigning and removing privileges to users.
         This enables granular control over who can access specific data or perform certain actions on the data.
+      % The scoping process removes controls from a list of controls from a suggested baseline.
     2) Leveraging industry standards
     3) Customizing security standards
     4) Cloud storage security
@@ -250,6 +254,7 @@
   C. Change and Configuration Management
     1) Change management
       - RFC(Request for change)
+      % Request control provides users with a framework to request changes and developers with the opportunity to prioritize those requests. 
       % Concurrency uses a “lock” feature to allow an authorized user to make changes and then “unlock” the data elements only after the changes are complete.
       % Change management aims to ensure that any change does not result in unintended outages or reduce security.
       % Change management processes include requesting a change, creating a rollback plan for the change, release control, change control, and documenting the change.
@@ -944,6 +949,7 @@
     3) Account Policies - Group Policy Object(GPO)
       % Group policies provide centralized management and configuration of all entities to enforce security and compliance standards throughout the organization.
       % Using a domain group policy allows you to centrally manage and enforce the restriction across all computers in the domain.
+      % Account access reviews can detect security issues for service accounts such as the sa (short for system administrator) account in Microsoft SQL Server systems
     4) Password policies
       * Current NIST guidance says that passwords should not expire.
       % A passphrase is a sequence of words or a sentence that is easier to remember than a random combination of characters
