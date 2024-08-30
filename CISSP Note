@@ -253,7 +253,6 @@
       % Concurrency uses a “lock” feature to allow an authorized user to make changes and then “unlock” the data elements only after the changes are complete.
       % Change management aims to ensure that any change does not result in unintended outages or reduce security.
       % Change management processes include requesting a change, creating a rollback plan for the change, release control, change control, and documenting the change.
-      % Elasticity provides for automatic provisioning and deprovisioning of resources to meet demand.
       % Scalability only requires the ability to increase (but not decrease) available resources.
     2) Configuration and asset management
       - Baselines, Versioning
@@ -954,6 +953,7 @@
       % A Distribution group is used primarily in email applications to send messages to groups of users and is not designed for assigning roles or managing permissions.
     6) Account monitoring - Inaccurate Permissions, Attestation, Unauthorized Use, Geotagging, Geofencing
     7) Provisioning and de-provisioning - Privilege Creep
+      % Elasticity provides for automatic provisioning and deprovisioning of resources to meet demand.
       % Authorization creep occurs when a user is granted new permissions as they change roles or responsibilities within an organization, but their old permissions are not removed.
       % Capability creep refers to the gradual expansion of an individual's capabilities or roles within an organization.
       % Just-in-time (JIT) provisioning will create the accounts automatically the first time the employee accesses the benefits site.
