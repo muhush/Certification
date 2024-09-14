@@ -1,5 +1,5 @@
 1. Security and Risk Management
-  A. Security Fundamentals
+  A. Security Fundamentals
     1) The five pillars of information security
       % Information security involves ongoing efforts like a continuous process.
       % Vulnerabilities and risks are evaluated based on their threats against one or more of the CIA Triad principles.
@@ -65,6 +65,7 @@
     9) Import and export controls - ITAR (defense articles), EAR (dual use), OFAC (Sansation)
       % The Safe Harbor requirements were a framework established between the United States and the European Union.
       % Governance, risk, and compliance (GRC) solutions are generally not covered by import/export control regulations.
+      & Data sovereignty laws, known as data localization laws, are imposed by a country to regulate how data is collected, stored, and flows out of its borders.
     10) Data breaches
       * Encryption is easy to protect data breach
     11) Ethics
@@ -83,7 +84,7 @@
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
       % A compensation control is deployed to provide various options to other existing controls to aid in enforcement and support of security policies.
   E. Business Continuity
-    1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes)
+    1) Business continuity planning(a corrective control) - BIA (Business Impact Assessment, identifies and prioritizes, criticality)
       * BCP is also known as continuity of operations planning (COOP) and is not operational control, BCP in the cloud is a partnership between providers and customers.
       % BCP includes strategies to prevent or minimize the impact of a disaster on the organization, ensuring that critical operations remain available or can be quickly restored.
       % People should always be your highest priority in business continuity planning.
@@ -140,6 +141,9 @@
       % Insurance is a form of risk assignment or transference.
       % Inherent risk is the level of natural, native, or default risk that exists in an environment, system, or product prior to any risk management efforts being performed.
       % Residual risk is the leftover risk after countermeasures and safeguards are implemented in response to original or total risk.
+      & Risk appetite refers to how much risk the organization is willing to accept.
+      & Risk tolerance is essentially the variation or deviation from the risk appetite that an organization is willing to take,
+        depending on how much the organization feels that variation is worth for that particular business effort.
     4) Security control selection and implementation - Defense in Depth    
       * Technical controls are implemented by technology while operational controls are implemented by people!
       % Integral parts of information security administration are Physical controls, Technical controls, and Administrative controls
@@ -184,7 +188,9 @@
     3) User habits
     4) Measuring compliance and security
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 2. Asset Security
   A. Data Security
@@ -209,6 +215,7 @@
       - Data Subject(collected data), Data processors(third parties)
       * GDPR(General Data Protection Regulation) uses the term data controller instead of data owner
       * System ownership and data ownership are two different concepts
+      & The system owner is the manager accountable and responsible for a particular system that processes various types of data.
       % The asset owner is the person who has final corporate responsibility for the protection and storage of data.
     4) Limiting data collection
       - Minimize information collected, Monitor Third Parties
@@ -236,6 +243,7 @@
       - Encryption, Access control
     5) Information classification
       - Data Classification Policy, Labeling Requirement
+      & Statutory requirements set forth in laws and regulations and other statutes must be used as criteria for allowing access to data.
       % The term synonymous with security label is sensitivity label.
       % Information is compartmentalized in the information flow model are classification(Assigns a security level) and need to know(Ensures that only individuals).
       % The information flow model is concerned with the transfer of information between different security levels.
@@ -276,17 +284,23 @@
       % Systems with an EOS date that occurs in the following year should be a top priority for replacement.
       % The end-of-life (EOL) date is the date when the vendor will stop offering a product for sale.
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 3. Security Architecture and Engineering
   A. Secure Design
     1) Secure design principles
-      - Fail open, Fail secure
+      - Fail open, Fail secure, Fail safe
+      & The principle of secure defaults mean that out-of-the-box security controls should be secure rather than open.
+      & A fail-secure state means that the control will fail to a more secure or closed state. This could conceivably interfere with an evacuation and indirectly harm personnel.
+      & Fail open is the state a system fails over to which allows security controls to be turned off, in the vent of a crisis to save lives and prevent harm to persons.
+      & During emergency situations doors and other systems that are designed for personnel evacuation and safety should default to a fail-safe condition.
       % Network segmentation involves dividing a network into smaller parts to improve security and manageability, but it doesn't directly prevent programs from accessing each other.
       % Process isolation is a security measure that ensures different programs run separately, preventing them from accessing or interfering with each other.
       % An execution domain provides a secure environment where processes with elevated privileges can operate, isolated from other processes to maintain security and prevent unauthorized access to critical resources.
     2) Security models
-      - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up)
+      - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up, invocation rule)
       * The Bell-LaPadula model is rarely implemented outside of military applications
       * The Bell-LaPadula model and Biba models are important for the exam but rarely used in the real world
       % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
@@ -333,11 +347,13 @@
     1) What is the cloud?
     2) Cloud computing roles
       - Cloud Access Security Broker(CASB)
+      & CASB can provide access control, auditing, and accountability services to a variety of cloud-based services, including third-party identity management offered by the cloud service provider.
     3) Drivers for cloud computing
       - On-demand self-service, Scalability, Elasticity, Broad Network Access, Measured Service
     4) Security service providers
       * MSSPs(Managed Security Service Providers) may also be referred to as security as a service (SECaaS)
       - Network-based CASB, API-Based CASB
+      & Proxy-based CASB is specially designed for providing cloud-based security between end-user applications and data that resides in the cloud and is configured to intercept traffic.
     5) Multitenant computing
       - Oversubscription, Resource Pooling
     6) Virtualization
@@ -379,6 +395,7 @@
     2) Hardware encryption
       - AES Crypt, FDE(Full-Disk Encryption), HSM(Hardware Security Module), TPM(Trusted Platform Modules), SED(Self-Encrypting Drive)
       % TPM provides secure generation, storage, and management of encryption keys, passwords, and other sensitive data to enhance the security of various cryptographic operations, such as drive encryption and digital rights management.
+      & Sealing is the process of encrypting the data for a system's specific hardware and software configuration and storing it on the TPM.
       % High cohesion (united) refers to how closely related and focused the responsibilities of a single module are.
       % Low coupling specifically refers to the independence of modules.
       % High coupling is highly dependent on each other.
@@ -392,6 +409,7 @@
       % In the relational model, data is organized into tables (relations), where each row is a tuple (a record or instance of the relation), and each column is an attribute (a property or characteristic of the relation)
       % Contamination is the mixing of data from a higher classification level and/or need-to-know requirement with data from a lower classification level and/or need-to-know requirement.
     2) NoSQL databases
+      & NoSQL is used to aggregate databases and data source that are disparate in nature such as structured database combined with instructed (unformatted) data.
       % The cardinality of a table refers to the number of rows in the table, whereas the degree of a table is the number of columns.
     3) Distributed and high-performance computing
       - Large-Scale Parallel Data, Grid Computing, Peer-to-peer Computing(Tor)
@@ -402,7 +420,7 @@
     1) Industrial control systems and operational technology
       - SCADA(supervisory control and data acquisition, Remote Central), DCS(Controlling processes), PLC
       % SCADA is used to gather information from remote sensors via telemetry and operate in a large utility company to manage and operate their equipment.
-      % Distributed Control System (DCS) is used to control industrial processes.
+      % Distributed Control System (DCS) is used to control industrial processes. It is a network of industrial control system devices that are interconnected but may be part of a closed network.
       % Programmable Logic Controller (PLCs) is a device used to monitor and control industrial equipment.
     2) Internet of things
     3) Securing smart devices
@@ -561,7 +579,7 @@
         or deduce the encryption key, rather than analyzing ciphertext for patterns.
       % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
-      % RSH(Remote Shell) is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
+      % RSH(Remote Shell) is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
       % In a replay attack, the malicious individual intercepts an encrypted message between two parties (often a request for authentication) and then later replays the captured message to open a new session.
     4) Implementation attacks - Fault Injection Attack, Side-channel attack, Timing attack
       % Fault injection attacks compromise the integrity of a cryptographic device by causing some type of external fault, such as the application of high-voltage electricity.
@@ -571,7 +589,7 @@
     6) Ransomware - Mimikatz, Countermeasure(Backups, Antimalware)
       * Ransomware is specifically called out in the exam objectives
   L. Physical Security
-    % Crime Prevention Through Environmental Design (CPTED) has three main strategies: natural access control, natural surveillance, and natural territorial reinforcement.
+    % Crime Prevention Through Environmental Design (CPTED) has four main strategies: natural access control, natural surveillance, and natural territorial reinforcement, maintenance.
     % The six common physical security control mechanisms is Deter, Deny, Detect, Delay, Determine, Decide.
     1) Site and facility design
       % Lighting is often claimed to be the most commonly deployed physical security mechanism.
@@ -616,7 +634,9 @@
       % Microservices are an emerging feature of web-based solutions and are derivative of service-oriented architecture (SOA). 
       % Arduino is an open source hardware and software organization that creates single-board 8-bit microcontrollers for building digital devices.
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 4. Communication and Network Security
   A. TCP/IP Networking
@@ -649,7 +669,6 @@
       % Port 1433 is a database port and should never be exposed to an external network
     6) ICMP -Traceroute
     7) Multilayer protocols -  DNP3(Distributed Network Protocol)
-      % Encapsulation is both a benefit and a potentially harmful implication of multilayer protocols(IPv4 with IPv6).
   B. Secure Network Design
     1) Public and private addressing - IP Addresses Scarce, Network Address Translation(NAT), Port Address Translation(PAT)
       % Network Address Translation-Protocol Translation (NAT-PT) (RFC-2766) can be used to convert between IPv4 and IPv6 network segments similar to how NAT converts between internal and external addresses.
@@ -658,6 +677,7 @@
       % RFC 1918 addresses are not internet routable or accessible because they are reserved for private or internal use only.
     2) Subnetting - Subnet Masks
     3) Security zones - Zero Trust, Extranet, Honeynet, Ad Hoc Network(Temporary, "for this specific purpose")
+      & Physical security zones are created to separate untrusted or public areas from restricted areas, such as those that house sensitive equipment and information processing activities.
       % A network firewall is a security solution that can be used to separate a network into three distinct security zones.
       % A screened subnet is a type of security zone that can be positioned so that it operates as a buffer network between the secured private network and the internet and can host publicly accessible services.
     4) Isolating sensitive systems 
@@ -669,8 +689,12 @@
       % LiFi (Light Fidelity) uses light to transmit data wirelessly, employing LED lights to provide high-speed communication in a manner similar to WiFi, but with light waves instead of radio waves.
       % A VLAN (virtual LAN) is a hardware-imposed network segmentation created by switches that requires a routing function to support communication between different segments.
       % Virtual eXtensible LAN (VXLAN) is an encapsulation protocol that enables switch-created network segments (i.e., VLANs) to be stretched across subnets and geographic distances.
+      % Encapsulation is both a benefit and a potentially harmful implication of multilayer protocols(IPv4 with IPv6).
+      & Encapsulation, known as tunneling, is used to place traffic from one protocol into another protocol so that the traffic can be protected and transmitted.
     6) Security device placement
     7) Software defined networking(SDN)
+      & Software-defined networking creates entire networks using only software
+      & Software-defined wide area networking(SD-WAN) is a logical extension of software-defined networking(SDN) that creates software-defined WANs.
     8) Transmission media - VPC, SDV
       % Overt Storage Channel: A legitimate and intended method of communication where data is stored and accessed by authorized processes.
       % Covert Storage Channel: An unauthorized and unintended method of communication that exploits the storage medium to transfer information between processes in a way that bypasses normal security controls.
@@ -696,12 +720,15 @@
       % The control plane is responsible for making decisions about where data should flow through the network, using protocols to determine the best path for data packets.
     4) Firewalls - Stateful Inspection, Implicit Deny
       * You need to understand the default/implicit deny principle of firewalls.
+      & An allow list enables a default-deny method of controlling access, since anything not in the list is denied by default.
+      & A deny list enables a default-allow method of controlling access.
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
       % Stateful inspection firewalls are able to grant a broader range of access for authorized users and activities and actively watch for and block unauthorized users and activities.
         It enables the real-time modification of the filtering rules based on traffic content and context. 
       % SOCKS is a circuit-level proxy firewall that provides a secure channel between two computers.
       % Application-level proxy firewalls inspect detrimentally the contents of packets at the application layer to introduce significant latency and overhead, leading to a more noticeable impact on network performance.
       % Firewalls use a rule-based access control model with rules expressed in an access control list.
+      & A next-generation firewall typically is a multifunction device that incorporates firewall, proxy, and intrusion detection/prevention services.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
     7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
@@ -738,7 +765,7 @@
       % Role-Based Access Control (RBAC) offers several advantages: Low-Security Cost, By grouping permissions into roles, and Easier to Implement with well-defined roles and responsibilities.
     2) Network access control(NAC) - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
-      % NAC enforces security policies by evaluating devices before allowing them access to the network. 
+      % NAC enforces security policies by evaluating devices before allowing them access to the network.
     3) Firewall rule management
       % A shadowed rule happens when an earlier rule in the firewall's rule set matches traffic that a later rule was intended to match, rendering the later rule ineffective.
       % An orphaned rule occurs when a service is decommissioned but the related firewall rules are not removed, leaving unused or unnecessary rules.
@@ -763,6 +790,7 @@
   E. Specialized Networking
     1) Telephony - VoIP
       % Another term used for Plain Old Telephone Service (POTS) is PSTN (Public Switched Telephone Network).
+      & Integrated Services Digital Network (ISDN) uses legacy PSTN with specialized equipment to send digital data over analog lines.
       % VLAN hopping is a switch security issue, not a VoIP security issue.
       % Implementing Secure Real-time Transport Protocol (SRTP) is the best option to secure VoIP and prevent the reoccurrence of the eavesdropping attack.
     2) Multimedia collaboration - XMPP
@@ -778,6 +806,7 @@
     2) IPsec
       - ESP(Encapsulating Security Payload, Confidentiality), Authentication Header(AH, Integrity)
       % IPsec operates at the Network layer (layer 3).
+      & ESP provides encryption services for data payloads in IPSec.
       % Tunnel mode encapsulates the original IP packet within a new packet
       % Transport mode is typically used for end-to-end communication between two hosts within the same network or securing communication between client-server applications
       - SA(Security Association)
@@ -785,12 +814,15 @@
       % Internet Security Association and Key Management Protocol (ISAKMP), an element of Internet Key Exchange (IKE), is used to organize and manage the encryption keys that have been generated and exchanged by OAKLEY and SKEME
         to support multiple simultaneous VPNs from each host.
     3) Remote network access
-      % The primary examples of remote access techniques are remote node operation, remote control, screen scraping, and service specific. 
+      % The primary examples of remote access techniques are remote node operation, remote control, screen scraping, and service specific.
+      & Remote journaling is a real-time process that transmits only changes in files to the backup system or media.
   G. Wireless Networking
     1) Understanding wireless networking
       * Wi-Fi signals travel over open airwaves and are subject to undetectable interception!
       % Capturing electromagnetic signals (emanations) that can be intercepted from wireless networks.
     2) Wireless encryption
+      & The IEEE 802.1X standard is a port-based network access control (NAC) standard that is widely used as an enterprise authentication method in wireless networks,
+        but can also be used extensively in wired networks; allows for multiple authentication and encryption methods
       % WPA3 uses Simultaneous Authentication of Equals (SAE) for key exchange, providing enhanced protection against offline dictionary attacks compared to its predecessors.
       % WPA3, 802.11i, SAE, and WPS are all technologies that are specifically defined as part of wireless networking. 
       % TKIP (Temporal Key Integrity Protocol) was used in WPA for encryption but has been phased out in favor of more secure methods like CCMP and does not involve key exchange.
@@ -858,7 +890,9 @@
       % Microsoft Endpoint Configuration Manager (MECM), formerly known as SCCM, is used for managing large groups of computers, focusing on configuration management rather than file integrity monitoring.
       % The two-phase commit protocol ensures that an entire transaction is executed in a coordinated manner across multiple databases.
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 5. Identity and Access Management (IAM)
   A. Identification
@@ -932,6 +966,7 @@
     12) Passwordless authentication - Key-Based Authentication
   C. Accountability
     1) Accountability - Logs must be secure
+      & Nonrepudiation ensures that someone cannot deny that they took an action, which means they can be held both accountable and responsible for that action.
       % Authentication is necessary to ensure a network supports accountability.
       % Accountability is possible by reviewing logs and tracking user activity.
       % Authentication of individuals is also needed to ensure the audit trails provide proof of identities listed in the logs.
@@ -943,7 +978,7 @@
       % When elevated privileges are required, the "Run as" command temporarily grants the necessary permissions without exposing the entire session to administrative rights, thereby adhering to the principle of least privilege.
     2) Account types - User Account, Privileged Account, Shared Account, Service Account
       * Avoid the use of shared/generic accounts and credentials.
-      % Service accounts are regular accounts that are used to run applications and services.
+      % Service accounts are regular accounts that are used to run applications and services(processes).
       % a service account assigns the specific privileges to the account needed by the application.
       % The LocalSystem account and the Administrator account both have full administrative privileges
     3) Account Policies - Group Policy Object(GPO)
@@ -959,6 +994,8 @@
       % A Distribution group is used primarily in email applications to send messages to groups of users and is not designed for assigning roles or managing permissions.
     6) Account monitoring - Inaccurate Permissions, Attestation, Unauthorized Use, Geotagging, Geofencing
     7) Provisioning and de-provisioning - Privilege Creep
+      & Secure provisioning involves managing authorized access to the asset; assigning the correct authorizations for entities to be able to access the asset.
+      & Privilege creep can happen over time when an employee moves from job to job within an organization or is simply promoted and retains privileges they no longer need.
       % Elasticity provides for automatic provisioning and deprovisioning of resources to meet demand.
       % Authorization creep occurs when a user is granted new permissions as they change roles or responsibilities within an organization, but their old permissions are not removed.
       % Capability creep refers to the gradual expansion of an individual's capabilities or roles within an organization.
@@ -1001,9 +1038,12 @@
       % Watering hole attacks use sneaky techniques to lure unsuspecting users and infect their systems with malware. They use commonly visited sites without the website owner's knowledge.
     5) Physical social engineering - Shoulder surfing, Dumpster Diving, Tailgating
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 6. Security Assessment and Testing
+  % A test is a defined procedure that records the properties, characteristics, and behaviors of the system being tested.
   A. Vulnerability Scanning
     1) What is vulnerability management?
       - Vulnerability Patching, Vulnerability management (detects, remediates, reports)
@@ -1054,6 +1094,8 @@
       % Condition coverage tests whether every logical test in the code has been executed under all sets of input.
     2) Code tests 
       - Code Security Tests(SAST[Static] = SCA[Software Composition Analysis], DAST[Dynamic] = Synthetic transaction, IAST[Interactive])
+      & Dynamic application security testing (DAST) is performed while the application is executing.
+      & Static application security testing (SAST) involves testing application code without executing it.
       * Different test types are complementary, rather than competitors!
       % Static code testing software analyzes code without executing it, checking for syntax errors, coding standards, and other issues.
       % A white box test is fully knowledgeable about the software code and its operations and functions.
@@ -1062,19 +1104,21 @@
       % Synthetic transactions are scripted transactions with known expected results.
     3) Fuzz testing - Avoid Looking Like a Hacker
       % zzuf is a tool that automates the process of mutation fuzzing.
+      & Fuzzing is a part of dynamic testing and involves sending unexpected input to the application while it is executing.
     4) Interface testing - APIs(Application Programming Interface), User, Security, Physical
       % An interface is a point of interaction or communication between two systems, devices, or software components.
       % User interface testing includes assessments of both graphical user interfaces (GUIs) and command-line interfaces (CLIs) for a software program.
     5) Misuse case testing
       % In misuse case testing the testers first enumerate known misuse/abuse cases (possible ways).
     6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
+      & It is the depth and level of detail an assessment must address, including which parts of a system, application, or process will be covered by the assessment, and how much is going to be tested.
     7) Code repositories - Integrity Measurement
     8) Third-party code - Libraries, SDKs(Software Development Kits)
     9) Software risk analysis and mitigation - Sandboxing
   E. Disaster Recovery Planning
     1) Disaster recovery - RTO (Recovery Time Objective), RPO (Recovery Point Objective), RSL (Recovery Service Level)
       * Disaster recovery efforts end only when the business is operating normally in its primary environment.
-      % The recovery time objective (RTO) is the targeted amount of time to restore a service after a failure during a disaster recovery.
+      % The recovery time objective (RTO) is the targeted amount of time to restore a service after a failure during a disaster recovery. It focuses on recovery speed.
       % The recovery service level (RSL) is the percentage of a service that must be available during a disaster.
       % The disaster recovery plan (DRP) includes procedures and measures to respond to emergencies, protect people and property, and ensure the safety of employees and assets during and after a disaster.
       % The recovery point objective (RPO) specifies the maximum amount of data that may be lost during a disaster and should be used to guide backup strategies.
@@ -1082,6 +1126,8 @@
       % Any backup strategy must include full backups at some point in the process.
         Incremental backups are created faster than differential backups because of the number of files it is necessary to back up each time.
       % Incremental backs up all the new files that have changed since the last full or incremental backup and resets the archive bit.
+      & Backup verification data, in the form of written logs or automated transaction logs from systems or applications, indicates whether data backups have been successful.
+        It could contribute to determining if data loss has occurred with backups or normal processing.
     3) Restoring backups
       % Retention time refers to the duration for which backup media, such as tapes, are kept before their data is considered outdated and can be overwritten with new data.
     4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
@@ -1100,6 +1146,9 @@
         The ones from this list of options are: number of successful intrusions, number of successful disruptions, number of unsuccessful incidents, time to detect incidents, time to respond to incidents,
         level of organizational impact of incidents, and number of false positives (i.e., false detection alerts/alarms).
     4) Audits and assessments - User Access Reviews
+      & Auditing is critical to being able to establish accountability, since it records the activities that users perform and the events that occur in the system.
+      & External auditors lack familiarity with the organization's people, internal processes, and infrastructure which is an advantage of using an external auditor; lack of familiarity facilitates a more objective audit.
+      & Logs should be reviewed both before and after a security assessment to ensure the text executed as planned and to discover any anomalies that may have occurred during the test.
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
       % The audit section ensures that all user activities are tracked, logged, and reviewed, providing a mechanism for tracing actions back to individual users, which is essential for maintaining accountability.
       % This type of review, conducted by an independent auditor at the request of the governing body, is best described as an audit.
@@ -1111,7 +1160,9 @@
       % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
       % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 7. Security Operations
   A. Investigations and Forensics
@@ -1137,11 +1188,13 @@
       % The parol evidence rule states that when an agreement between parties is put into written form, the written document is assumed to contain all the terms of the agreement, and no verbal agreements may modify the written agreement.
       % The best evidence rule states that when a document is used as evidence in a court proceeding, the original document must be introduced.
       % Real evidence must be either uniquely identified by a witness or authenticated through a documented chain of custody.
+      & The four major phases of the evidence life cycle are initial response, collection, analysis, and presentation.
     3) Introduction to forensics
       - Digital Forensics, Volatility(Permanence)
     4) System and file forensics - Hashes Protect Evidence(Unique file signature)
       * Never try to perform forensics yourself unless you've received appropriate training.
       % In the preservation phase, the goal is to ensure that all evidence is captured and documented accurately without altering the original state of the data.
+      & Wiping is an effective way to clear sensitive data from media that is intended to be reused.
     5) Network forensics - Wireshark Monitors Networks, NetFlow Summarizes Traffic
     6) Software forensics - Intellectual Property, Malware Origins
     7) Mobile device forensics
@@ -1163,6 +1216,7 @@
       % The least privilege principle ensures that users (subjects) are granted only the most restrictive rights they need to perform their work tasks and job functions. 
       - Privilege Aggregation
       % Aggregation occurs when a user combines information from multiple sources or queries to deduce or infer data that they are not explicitly authorized to access.
+      & M-of-n control is the same as multiperson control, except it doesn't require all designated individuals to be present to perform a task.
     2) Privileged account management(PAM) - Password Vaulting, Command Proxying, Monitoring, Credential Management
   C. Incident Management
     1) Build an incident response program - Incident Response Plan
@@ -1191,7 +1245,9 @@
     2) Emergency management
       % Exigent circumstances are used in situations where immediate action is necessary to prevent the imminent destruction of evidence, escape of a suspect, or harm to individuals or law enforcement officers.
 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 8. Software Development Security
   A. Software Development Lifecycle
@@ -1232,6 +1288,7 @@
     7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
       % The phase of the software acquisition process in which the product is actually deployed is the Monitoring phase.
       % The use of Open-source libraries should be tracked and subject to regular security testing, as should any other closed-source library use.
+      & Licensing is a distinguishing characteristic of maintaining COTS software, since licenses must be appropriately purchased and complied with to prevent piracy or illegal use of the software.
   B. Application Attacks
     1) OWASP top ten 
       - Broken Access Control, Cryptographic failures, Injection, Insecure Design, Security misconfiguration, Vulnerabile and outdated components, Identification and authentication failures, software and data integrity failures
@@ -1244,6 +1301,7 @@
       % Single quotes are essential in input for a SQL injection attack because they allow the attacker to escape the built-in SQL query.
       % SQL injection attacks allow attackers to include their own SQL commands in the commands issued by a web application to a database.
     4) Understanding cross-site scripting - Use input validation
+      & Input validation is a potential security issue with the source code of the applications that are connected via the API, but not in the API itself.
       % Conducting cross-site scripting is a type of attack rather than a hardening technique, making it not a standard method for improving application security.
       % Cross-site scripting (XSS) is a type of security vulnerability typically found in web applications.
       % A programmer can implement the most effective way to prevent XSS by validating input, coding defensively, escaping metacharacters, and rejecting all script-like input.
@@ -1291,5 +1349,9 @@
       % You can often combine seemingly innocuous fields to uniquely identify an individual.
       % Anonymization techniques remove all data so that it is difficult to identify the original identities.
     9) Data obfuscation - Rainbow Table attack, Tokenization, Masking
+
+
+
+
 
 
