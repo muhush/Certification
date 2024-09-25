@@ -763,6 +763,8 @@
       % Rule-based access control (RBAC) uses a set of pre-defined rules that determine access permissions based on conditions such as time of day, IP address, or other criteria.
         A rule-based access control model uses global rules applied to all users and other subjects equally.
       % Role-Based Access Control (RBAC) offers several advantages: Low-Security Cost, By grouping permissions into roles, and Easier to Implement with well-defined roles and responsibilities.
+      & Context-dependent access means that users must be in the correct environment and context in order to perform specific actions.
+      & Content-dependent access means that users are restricted based on the type os information that an object holds, such as healthcare or financial information
     2) Network access control(NAC) - EAP(Supplicant), RADIUS (Authentication Server)
       % The network access server is the client within a RADIUS architecture.
       % NAC enforces security policies by evaluating devices before allowing them access to the network.
@@ -935,7 +937,7 @@
       % RADIUS typically uses UDP, which is less reliable than TCP, and does not fully encrypt the authentication session, only the password.
       % Diameter supports more complex network access scenarios and is commonly used in modern telecommunications
       % TACACS is the original version of the protocol and is less sophisticated compared to TACACS+, lacking full encryption and the use of TCP for reliable communications.
-      % TACACS+ is an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
+      % TACACS+ is an open-standard remote connection protocol and an authentication protocol that fully encrypts the authentication session, uses the reliable TCP protocol and will work on Cisco devices.
       % The protocol that uses port 1812 to communicate with dial-up users is RADIUS.
       % The port TCP 49 is for TACACS+.
       % SESAME (Secure European System for Applications in a Multi-vendor Environment) is an authentication protocol that was designed to address some of the known vulnerabilities in Kerberos,
@@ -1095,7 +1097,7 @@
     2) Code tests 
       - Code Security Tests(SAST[Static] = SCA[Software Composition Analysis], DAST[Dynamic] = Synthetic transaction, IAST[Interactive])
       & Dynamic application security testing (DAST) is performed while the application is executing.
-      & Static application security testing (SAST) involves testing application code without executing it.
+      & Static application security testing (SAST) involves testing application code without executing it. It requires access to the actual source code.
       * Different test types are complementary, rather than competitors!
       % Static code testing software analyzes code without executing it, checking for syntax errors, coding standards, and other issues.
       % A white box test is fully knowledgeable about the software code and its operations and functions.
@@ -1147,6 +1149,7 @@
         level of organizational impact of incidents, and number of false positives (i.e., false detection alerts/alarms).
     4) Audits and assessments - User Access Reviews
       & Auditing is critical to being able to establish accountability, since it records the activities that users perform and the events that occur in the system.
+      & An audit is a specific event consisting of a tailored, systematic assessment of a particular system or process to determine if it meets particular standard.
       & External auditors lack familiarity with the organization's people, internal processes, and infrastructure which is an advantage of using an external auditor; lack of familiarity facilitates a more objective audit.
       & Logs should be reviewed both before and after a security assessment to ensure the text executed as planned and to discover any anomalies that may have occurred during the test.
       % Account reviews should verify that every ACTIVE account is associated with a current employee.
@@ -1233,7 +1236,8 @@
     7) Containment techniques
       % When we divide networks into logical segments, grouped by types of users or systems, we have performed segmentation.
       % When we move compromised systems to a network that is completely disconnected from the rest of the network, we have performed isolation. That is not the case in this scenario.
-      % Microsegmentation can be implemented using internal segmentation firewalls (ISFWs), transactions between zones are filtered, and it can be implemented with virtual systems and virtual networks.
+      % micro-segmentation can be implemented using internal segmentation firewalls (ISFWs), transactions between zones are filtered, and it can be implemented with virtual systems and virtual networks.
+        It can be separated on sensitive hosts or even applications from other hosts, applications, or networks.
     8) Incident eradication and recovery - Eradication(Remove all traces), Recovery, Attackers Compromise Systems
     9) Validation
     10) Post-incident activities - Incident Summary Report
