@@ -10,7 +10,7 @@
       % A patch management process includes evaluating patches, testing patches, and auditing patches.
       % Accessibility of data, objects, and resources is the goal of availability.
     5) Authenticity and nonrepudiation - physical signature, digital signature, bio-security, video surveillance
-  B. Security Governance
+  B. Security Governance - Professional(standard form), Industry(laws regulation), External(regulatory agencies), Internal(senior management)
       % Security governance seeks to compare the security processes and infrastructure used within the organization with knowledge and insight obtained from external sources.
       % Security governance should include acquisitions, divestitures, and governance committees.
       % A divestiture occurs when something is being removed from the organization, whether a device, service, employee, or partnership.
@@ -300,7 +300,7 @@
       % Process isolation is a security measure that ensures different programs run separately, preventing them from accessing or interfering with each other.
       % An execution domain provides a secure environment where processes with elevated privileges can operate, isolated from other processes to maintain security and prevent unauthorized access to critical resources.
     2) Security models
-      - Bell-LaPadula Model(confidentiality, No read up, no write down), Biba Model(integrity, no read down, no write up, invocation rule)
+      - Bell-LaPadula Model(confidentiality, No read up, no write down, simple security rule, Star property rule), Biba Model(integrity, no read down, no write up, invocation rule)
       * The Bell-LaPadula model is rarely implemented outside of military applications
       * The Bell-LaPadula model and Biba models are important for the exam but rarely used in the real world
       % The tranquility principle ensures that the security labels of subjects and objects do not change dynamically, maintaining system stability and preventing the bypassing of security controls by altering security levels.
@@ -419,6 +419,7 @@
   E. Embedded Systems Security
     1) Industrial control systems and operational technology
       - SCADA(supervisory control and data acquisition, Remote Central), DCS(Controlling processes), PLC
+      & Programmable logic controller, Human-machine interface, data historian
       % SCADA is used to gather information from remote sensors via telemetry and operate in a large utility company to manage and operate their equipment.
       % Distributed Control System (DCS) is used to control industrial processes. It is a network of industrial control system devices that are interconnected but may be part of a closed network.
       % Programmable Logic Controller (PLCs) is a device used to monitor and control industrial equipment.
@@ -578,6 +579,9 @@
       % Chosen plaintext attack allows the attacker to encrypt plaintexts of their choosing, gaining information to decrypt other messages 
         or deduce the encryption key, rather than analyzing ciphertext for patterns.
       % Chosen ciphertext attacks require access to the algorithm and work by having the attacker perform encryption that results in an expected ciphertext.
+        The attacker generally has access to the cryptographic system and can choose ciphertext to be decrypted into plaintext.
+      - Known-plaintext attack
+      & An attacker has not only ciphertext but also known plaintext that corresponds with it, enabling the attacker to compare the known plaintext with its ciphertext results to determine any relationships between the two.
     3) Eavesdropping attacks - Man-in-the-middle attack, Replay attack, SSL Stripping
       % RSH(Remote Shell) is an older protocol that transmits data, including passwords, in plaintext, making it vulnerable to interception by attackers like man-in-the-middle.
       % In a replay attack, the malicious individual intercepts an encrypted message between two parties (often a request for authentication) and then later replays the captured message to open a new session.
@@ -725,13 +729,14 @@
       % The implicit deny principle ensures that access to an object is denied unless access has been expressly allowed (or explicitly granted) to a subject.
       % Stateful inspection firewalls are able to grant a broader range of access for authorized users and activities and actively watch for and block unauthorized users and activities.
         It enables the real-time modification of the filtering rules based on traffic content and context. 
+      & Circuit-level(End-to-end communication session), Application(Characteristics), Packet-filtering(traffic characteristic such as IP address), Stateful inspection(connection state of the inbound and outbound)
       % SOCKS is a circuit-level proxy firewall that provides a secure channel between two computers.
       % Application-level proxy firewalls inspect detrimentally the contents of packets at the application layer to introduce significant latency and overhead, leading to a more noticeable impact on network performance.
       % Firewalls use a rule-based access control model with rules expressed in an access control list.
       & A next-generation firewall typically is a multifunction device that incorporates firewall, proxy, and intrusion detection/prevention services.
     5) Proxy servers - Forward Proxies, Reverse Proxies, Transparent Proxies
     6) Load balancers - Autoscaling, Round-Robin Scheduling, Session Persistence
-    7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443
+    7) VPNs and VPN concentrators - IPsec(Layer 3, L2TP), TCP Port 443, TLS VPN, L2TP/IPSec VPN, Client-to-site VPN, Site-to-site VPN
       % A VPN is a secure tunnel used to establish connections across a potentially insecure intermediary network. Intranet, subnet, extranet, and VLAN are examples of network segmentation.
       % L2TP (Layer 2 Tunneling Protocol) over IPSec (Internet Protocol Security) uses encryption to protect transmitted traffic and supports the transmission of multiple protocols.
       * Split-tunnel VPNs provide users with a false sense of security
@@ -912,6 +917,7 @@
       % Signature dynamics, also known as dynamic signature verification, analyzes both the physical motions involved in signing (such as speed, pressure, and rhythm)
         and the static features of the signature itself (such as the shape and style).
       % A capacitance motion detector senses changes in the electrical or magnetic field surrounding a monitored object.
+      & A photoelectric sensor measures changes in light, such as those that may interrupt a beam of light or shadows in a lighted room.
       % Iris scanners are the most accurate, noninvasive biometric control from those listed.
     4) Registration and identity proofing
       - Request, Approval, Identity proofing, Issuance
@@ -1110,11 +1116,14 @@
     4) Interface testing - APIs(Application Programming Interface), User, Security, Physical
       % An interface is a point of interaction or communication between two systems, devices, or software components.
       % User interface testing includes assessments of both graphical user interfaces (GUIs) and command-line interfaces (CLIs) for a software program.
+      & It examines the connections and entry/exit points between hardware and software from both a functional and security perspective.
     5) Misuse case testing
       % In misuse case testing the testers first enumerate known misuse/abuse cases (possible ways).
+      & It involves assessing the different scenarios where software may be misused or abused.
     6) Test coverage analysis - Percentage software => Test Coverage = Cases Tested / Total Cases
       & It is the depth and level of detail an assessment must address, including which parts of a system, application, or process will be covered by the assessment, and how much is going to be tested.
     7) Code repositories - Integrity Measurement
+      & Software library is a collection of software components, such as piece of code, functions, and so on, that can be used across many different software development projects.
     8) Third-party code - Libraries, SDKs(Software Development Kits)
     9) Software risk analysis and mitigation - Sandboxing
   E. Disaster Recovery Planning
@@ -1132,7 +1141,7 @@
         It could contribute to determining if data loss has occurred with backups or normal processing.
     3) Restoring backups
       % Retention time refers to the duration for which backup media, such as tapes, are kept before their data is considered outdated and can be overwritten with new data.
-    4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Offsite Storage
+    4) Disaster recovery sites - Hot Sites(Fully operational), Cold Sites(Empty), Warm Sites(not maintained), Mobile site(Physical relocation), Offsite Storage
       % Contracts typically focus on ensuring that the vendor provides a functional offsite facility that meets the agreed-upon criteria, such as availability, cost, testing access, and general site availability.
       % A redundant site is fully equipped and operational, allowing it to take over functions almost immediately in the event of a failure at the primary site.
       % A primary consideration for this mirrored site is the location. Some financial guidelines require a mirrored site to be a minimum distance away, such as at least 20 miles away.
@@ -1160,7 +1169,8 @@
       % An on-site assessment is a third-party assessment tool where auditors visit the site of the organization to interview personnel and observe their operating habits.
       % a security control assessment (SCA) is the formal evaluation of a security infrastructure’s individual mechanisms against a baseline or reliability expectation.
     5) Control management - Every Rule Has An Exception
-      % Compensating controls are specifically designed to mitigate the risk of exceptions to security policies by providing alternative security measures.
+      % Compensating controls are specifically designed to long-term mitigate the risk of exceptions to security policies by providing alternative security measures.
+      & A preventive control prevents an individual from committing a malicious act or violating a policy.
       % Administrative controls involve policies, procedures, and guidelines to manage people's behavior and operations, not directly focused on exceptions.
 
 
@@ -1289,6 +1299,7 @@
       % Interpreters translate source code into machine language when the software runs.
         An interpreter directly executes instructions written in a programming or scripting language without previously converting them into machine code, differing from decompilers which work with already compiled code.
       % Reverse engineering involves examining and analyzing the components, structure, and functionality of an application or system to understand how it works typically involving decompiling or disassembling object code (which is compiled code).
+      & First generation (introduced machine language), Second (hardware-specific symbolic representation), Fourth (high-level languages and domain-specific), Fifth (knowledge-based programming)
     7) Acquired software - COTS(Commercial Off the Shelf), Software as a Service, Open-source
       % The phase of the software acquisition process in which the product is actually deployed is the Monitoring phase.
       % The use of Open-source libraries should be tracked and subject to regular security testing, as should any other closed-source library use.
