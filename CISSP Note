@@ -188,9 +188,7 @@
     3) User habits
     4) Measuring compliance and security
 
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 2. Asset Security
   A. Data Security
@@ -201,7 +199,6 @@
       % a data in motion use case is specifically concerned about information that users are retrieving.
     2) Data security policies
       - Data classification, Data Lifecycle Policy (Retention, Disposal)
-      % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
       % Record retention policies define the amount of time to keep data, and laws or regulations often drive these policies.
       % Data remanence is data remnants on media, and data destruction methods remove data remnants.
       % Slack space is the unused space in a cluster.
