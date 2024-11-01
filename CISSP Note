@@ -79,6 +79,7 @@
     1) Security policy framework - policies > standard(details) > guidelines(advice) / procedures    
       * Policy, standards, and procedures are mandatory. Guidelines are optional
       % The security policy is an overview or generalization of an organization’s security needs.
+      & The common development process of creating a security policy includes initial and evaluation, development, approval, publication, implementation, and maintenance.
     2) Security Policies
       % An Acceptable Use Policy (AUP) defines the guidelines and restrictions for how users are allowed to employ company resources, such as hardware, software, internet access, and data.
       % An information policy defines how data is categorized based on its sensitivity and importance, which helps in determining the appropriate security measures and handling procedures.
